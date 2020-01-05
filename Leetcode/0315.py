@@ -1,3 +1,7 @@
+# Basic Idea:
+# visite num in the list from right to left
+# save the num visited into a datastructure so that it can be queried within a range
+
 # Solution 1. Segment Tree
      
 class SegTree:
@@ -25,7 +29,8 @@ class SegTree:
             return root.count
         if start > root.end or end < root.start:
             return 0
-        return cls.query(root.left, start, end) + cls.query(root.right, start, end)
+        return (cls.query(root.left, start, end) + 
+                cls.query(root.right, start, end) )
         
 class Solution:
     def countSmaller(self, nums: List[int]) -> List[int]:

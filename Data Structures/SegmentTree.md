@@ -5,7 +5,8 @@
 __Example:__
 
 [315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
-
+[327. Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/)
+[493. Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
 
 * build: time O(n) space O(n)
 * update: time O(logn)
@@ -38,6 +39,27 @@ class SegTree:
             return root.count
         if start > root.end or end < root.start:
             return 0
-        return cls.query(root.left, start, end) + cls.query(root.right, start, end)
-        
+        return cls.query(root.left, start, end) + cls.query(root.right, start, end)     
 ```
+
+## 2. range update, single point query
+
+__Example:__
+
+[218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+
+
+By default:
+* build: time O(N) space O(N)
+* update: time O(N)
+* query: time O(logN)
+where N is the range of the number
+
+applying range compression:
+* build: time O(n) space O(n)
+* update: time O(n)
+* query: time O(logn)
+
+applying lazy propagation:
+* update: time O(logn)
+
