@@ -6,20 +6,11 @@
 <br></br>
 ## second level
 
----
-### 1. third level
+### third level
 
-...
+### third level
 
----
-### 2. third level
-
-...
-
----
-### 3. third level
-
-...
+### third level
 
 
 ```python
@@ -29,6 +20,7 @@ print('hello')
 举一个实际的例子：
 >求图中A点到B点的最短路径（点与点之间的距离是正整数）。
 
+---
 
 这一节课的先修内容有：
 * point
