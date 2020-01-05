@@ -33,6 +33,6 @@ print('hello')
 C++ 、Python 的同学请阅读
 http://zh-google-styleguide.readthedocs.io/en/latest/
 
-Java 的同学请阅读 link(https://google.github.io/styleguide/javaguide.html)
+Java 的同学请阅读 [link](https://google.github.io/styleguide/javaguide.html)
 
 
