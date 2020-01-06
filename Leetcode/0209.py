@@ -11,6 +11,7 @@ Solution 2. Two Pointers
   Basic idea: 
   use i, j as the sum range, if range[i to j] meets the target, then for increasing j', i' must be > i
   so we can use same direction two pointers
+  Time O(n)
   i is the master pointer - for loop
   j is the slave pointer - while loop
 
