@@ -7,7 +7,7 @@ Solution 1. Brute force
   We can do Binary Search in prefix sum
   Time reduced to O(nlogn)
   
- Solution 2. Two Pointers
+Solution 2. Two Pointers
   Basic idea: 
   use i, j as the sum range, if range[i to j] meets the target, then for increasing j', i' must be > i
   so we can use same direction two pointers
