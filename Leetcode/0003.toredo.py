@@ -10,12 +10,16 @@ class Solution:
         j = 0
         curr_letters = set()
         
+        # master pointer use for loop
         for i in range(len(s)):
+            # slave pointer use while loop
+            # move j until cannot
             while j < len(s) and s[j] not in curr_letters:
                 curr_letters.add(s[j])
                 j += 1
-            
+            # save result
             res = max(res, j-i)
+            # move i
             curr_letters.remove(s[i])
             
         return res        
