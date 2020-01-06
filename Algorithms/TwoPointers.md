@@ -13,7 +13,7 @@ __Examples:__
 * master pointer i - for loop
 * slave pointer j - while loop
 * Algorithm:
-  1. move j (while we should include j element)
+  1. move j (while we should include element j)
   2. save result (arr[i:j])
   3. move i (using for)
 * Time O(n)
