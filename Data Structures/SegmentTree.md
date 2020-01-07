@@ -42,7 +42,7 @@ class SegTree:
         return cls.query(root.left, start, end) + cls.query(root.right, start, end)     
 ```
 
-## 2. range update, single point query
+## 2. range update, single point query (for offline data)
 
 __Example:__
 
@@ -60,6 +60,8 @@ applying range compression:
 * update: time O(n)
 * query: time O(logn)
 
-applying lazy propagation:
+applying Lazy propagation:
 * update: time O(logn)
 
+### Lazy propagation
+if current node range was covered by todo range, then update the current node, update the lazy val of children
