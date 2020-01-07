@@ -1,14 +1,27 @@
 # Union Find
-Good for
-> Used to check connectivity in Graph (online)
-check, query, check, query ... 
 
+## Overview 
 
+Find with path compression, get amortize O(1) time
 
-> Find with path compression
-> Union by rank is optional
+Union by rank is optional
 
 Data stored in array or dict
+
+__Good for:__
+
+Check connectivity in Graph (online)
+
+union, query, union, query ... 
+
+__Not Good for:__
+
+node needs to be removed from a union (delete edge)
+
+
+
+
+## Template
 
 ```python
 class UnionFind:
@@ -30,6 +43,9 @@ class UnionFind:
 
 
 __Example:__
+
+Minimum Spanning Tree (Kruskal's Algorithm)
+
 [305. Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)
 
 [261. Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)
