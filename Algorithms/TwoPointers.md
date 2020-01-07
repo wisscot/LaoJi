@@ -2,6 +2,8 @@
 
 ## Same-Direction
 
+### working on arrays
+
 __Examples:__
 
 [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
@@ -18,3 +20,7 @@ __Examples:__
   3. move i (using for)
 * Time O(n)
 
+### working on single linked list
+Find loop / find location
+
+## Backwards-Direction
