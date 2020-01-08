@@ -2,12 +2,6 @@
 
 ## 1. Good for single point update, range query
 
-__Example:__
-
-[315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
-[327. Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/)
-[493. Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
-
 * build: time O(n) space O(n)
 * update: time O(logn)
 * query: time O(logn)
@@ -42,11 +36,14 @@ class SegTree:
         return cls.query(root.left, start, end) + cls.query(root.right, start, end)     
 ```
 
-## 2. range update, single point query (for offline data)
-
 __Example:__
 
-[218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+[315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+[327. Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/)
+[493. Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
+
+
+## 2. range update, single point query (for offline data)
 
 
 By default:
@@ -65,3 +62,8 @@ applying Lazy propagation:
 
 ### Lazy propagation
 if current node range was covered by todo range, then update the current node, update the lazy val of children
+
+__Example:__
+
+[218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+
