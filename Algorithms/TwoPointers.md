@@ -2,7 +2,7 @@
 
 ## Same-Direction
 
-### working on arrays
+### On arrays
 
 __Examples:__
 
@@ -20,7 +20,7 @@ __Examples:__
   3. move i (using for)
 * Time O(n)
 
-### working on single linked list
+### On single linked list
 Find loop / find location
 
 ## Backwards-Direction
