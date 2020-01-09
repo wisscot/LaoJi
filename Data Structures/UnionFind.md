@@ -44,7 +44,8 @@ class UnionFind:
 
 __Example:__
 
-Minimum Spanning Tree (Kruskal's Algorithm)
+Minimum Spanning Tree (Kruskal's Algorithm)\
+for undirected graph with positive weight
 
 [305. Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)
 

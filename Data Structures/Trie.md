@@ -5,7 +5,7 @@
 Good for strings / words search
 
 
-Template
+## Template
 ```python
 class TrieNode:
     def __init__(self):
