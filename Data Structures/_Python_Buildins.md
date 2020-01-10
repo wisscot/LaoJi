@@ -37,3 +37,6 @@ can be read in functions, but not changed.  Unless declare global xxx. 
 
 ## Sort by key:
 sorted(list, key=lambda item: (item[1], item[0]))
+
+## zip:
+zip(nums, nums[3:])    -> [(num0, num3), (num1, num4), ...]  two lists do not have to be the same length
