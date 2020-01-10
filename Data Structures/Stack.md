@@ -13,3 +13,6 @@ recursive is trivial, use iterative to understand stack used in recursive
 
 ## Monotonous stack
 
+__Examples:__
+
+[84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
