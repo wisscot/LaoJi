@@ -2,7 +2,7 @@
 
 ## Overview 
 
-Good for strings / words search
+Good for strings / words search which needs __words prefix__
 
 
 Template
@@ -35,3 +35,4 @@ wild card '.' needs dfs
 [212. Word Search II](https://leetcode.com/problems/word-search-ii/)
 difficult
 
+[425. Word Squares](https://leetcode.com/problems/word-squares/)
