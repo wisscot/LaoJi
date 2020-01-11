@@ -12,6 +12,7 @@ use an extra stack to store corresponding min
 [394. Decode String](https://leetcode.com/problems/decode-string/)\
 recursive is trivial, use iterative to understand stack used in recursive
 
+Calculator 1, 2, 3, 4
 
 ## Monotonous stack
 
