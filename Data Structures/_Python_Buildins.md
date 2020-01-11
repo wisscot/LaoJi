@@ -13,10 +13,6 @@ check string is letters a-zA-Z:        s.isapha()
 int to bin: bin(int)   ->  '0b10'
 bin to in: int('111', 2) 
 
-## &:
-int & int: binary and operation
-set & set: Intersection of two sets
-
 ## Dictionary:
 list frequency dictionary: import collections:     dict = collections.Counter(list)          Counter.most_common(k)  return most common k using heapq
 comprehension:      dict = {a:foo(a) for a in list if ...}
@@ -40,3 +36,17 @@ sorted(list, key=lambda item: (item[1], item[0]))
 
 ## zip:
 zip(nums, nums[3:])    -> [(num0, num3), (num1, num4), ...]  two lists do not have to be the same length
+
+## int:
+3//2 -> 1      -3//2 -> -2      int(-3/2) -> -1
+
+## ~
+| 0  | 1  | 2  | 3  | 4  |
+|----|----|----|----|----|
+| -5 | -4 | -3 | -2 | -1 |
+| ~4 | ~3 | ~2 | ~1 | ~0 |
+
+## &:
+int & int: binary and operation
+set & set: Intersection of two sets
+
