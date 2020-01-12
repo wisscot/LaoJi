@@ -1,14 +1,21 @@
 # Python Buildins 
 
 ## String
-reverse: string[::-1]   \
-String to Bytes:   b = s.encode()    or    b = s.encode('utf-8')  \
-Bytes to String:   s = b.decode()    or    s = b.decode('utf-8')  \
-char to ASCII num:     ord('a')  -> 97  \
-ASCII num to char:      chr(97)  -> 'a' \
-check string is num:       s.isdigit()  \
-check string is letters a-zA-Z:        s.isapha()
+reverse: string[::-1]   
 
+String to Bytes: &emsp; b = s.encode() &emsp; or &emsp; b = s.encode('utf-8')  \
+Bytes to String: &emsp; s = b.decode() &emsp; or &emsp; s = b.decode('utf-8')    
+
+char to ASCII num: &emsp; ord('a')  -> 97  \
+ASCII num to char: &emsp; chr(97)  -> 'a' 
+
+check string is num: &emsp; s.isdigit()  \
+check string is letters a-zA-Z: &emsp; s.isapha()
+
+string.ascii_uppercase\
+string.ascii_lowercase\
+string.ascii_letters
+     
 ## Bin
 int to bin str : bin(2)  ->  '0b10'    \
 bin str to int : int('111', 2)      \
@@ -22,7 +29,7 @@ list = [a for a in list if ...]
 list frequency dictionary: \
 count = collections.Counter(list)          \
 count.most_common(k) :  return most common k using heapq    \
-init a dict with default value an empty list:     collections.defaultdict(list)
+init a dict with default value an empty list:    collections.defaultdict(list)
 dict.keys()   dict.values()     dict.items()
 sorted(count, key=lambda vid: (count[vid], vid))     get keys in count
 

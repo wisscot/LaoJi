@@ -36,3 +36,8 @@ http://zh-google-styleguide.readthedocs.io/en/latest/
 Java 的同学请阅读 [link](https://google.github.io/styleguide/javaguide.html)
 
 
+Markdown space: (            ) inside the parensis, \
+&emsp;invisible uft-8 control charactor \xc2\xa0, \
+&emsp;same as typing __\&nbsp;__ \
+Two spaces - Type __\&ensp;__ \
+Four spaces - Type __\&emsp;__
