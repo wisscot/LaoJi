@@ -26,33 +26,39 @@ dict = {a:foo(a) for a in list if ...}
 list = [a for a in list if ...]
 
 ## Dictionary
-list frequency dictionary: \
-count = collections.Counter(list)          \
-count.most_common(k) :  return most common k using heapq    \
-init a dict with default value an empty list:    collections.defaultdict(list)
-dict.keys()   dict.values()     dict.items()
-sorted(count, key=lambda vid: (count[vid], vid))     get keys in count
+dict.keys() &emsp; dict.values() &emsp; dict.items()
 
 ## List
-Initialize a 2D list:     [[None]*n for _ in range(n)]      Do Not use [[xx]*cols]*rows
-Delete an element:     del a[3]     del a[2:4]    queue.pop(0)    stack.pop(-1)   list_a.remove('an item')
-Find first occurrence:      a.index(3) 
-max(arr[i:j] or [0])   to avoid empty list
-pos[5:10] = [1,2]    to replace the list subarray
-pos[5:5] = [1,2]     to insert to current list
+Initialize a 2D list:     \
+ &emsp; [[None]*n for _ in range(n)]\
+ &emsp; Do Not use [[xx]*cols]*rows \
+ 
+Delete an element:     \
+ &emsp; del A[3]     del A[2:4]    A.pop(0)  A[2:4] = [] 
+          A.remove('item')   
+          
+Find first occurrence: \
+ &emsp; a.index('item')  
+ 
+max(arr[i:j] or [0]) &emsp; use or to avoid empty list  
+
+pos[5:10] = [1,2] &emsp; to replace the list subarray   \
+pos[5:5] = [1,2] &emsp; to insert to current list  
 
 ## Global variable
-can be read in functions, but not changed.  Unless declare global xxx. 
+Can be read in functions, but not changed.  Unless declare global xxx. 
 
 ## Sort by key
-sorted(list, key=lambda item: (item[1], item[0]))
+sorted(list, key=lambda item: (item[1], item[0]))   \
+sorted([x for x in dict], key=dict.get)
 
 ## zip
-zip(nums, nums[3:])    -> [(num0, num3), (num1, num4), ...]  two lists do not have to be the same length
+zip(nums, nums[3:])    -> [(num0, num3), (num1, num4), ...]  \
+&emsp; two lists do not have to be the same length
 
 ## int
-3//2 -> 1      -3//2 -> -2      int(-3/2) -> -1
-1 + True -> 2       1 + False -> 0    True*3 -> 3
+3 // 2 -> 1  &emsp;  -3 // 2 -> -2  &emsp;  int(-3/2) -> -1 \
+1 + True -> 2  &emsp;  1 + False -> 0  &emsp;  True * 3 -> 3
 
 ## ~
 | 0  | 1  | 2  | 3  | 4  |
@@ -60,7 +66,7 @@ zip(nums, nums[3:])    -> [(num0, num3), (num1, num4), ...]  two lists do not ha
 | -5 | -4 | -3 | -2 | -1 |
 | ~4 | ~3 | ~2 | ~1 | ~0 |
 
-## & and |
+## & |
 int & int: binary and operation\
 int | int: binary or operation
 
@@ -72,10 +78,17 @@ set | set: Combination of two sets
 
 ## itertools
 itertools.product(A,B) -> ((x,y) for x in A for y in B)
-> for v1, (r1, c1) in enumerate(itertools.product(range(5), range(6))):  ...
+```python
+for v1, (r1, c1) in enumerate(itertools.product(range(5), range(6))):  
+    ...
+```
 
-## collections.Counter()
-count = collections.Counter(items)
-count -> {item1:count1, item2:count2, ...}
-count.most_common(k) -> [(item, count), ...]
-    - return most common k (item, count) using heapq internally
+## collections
+
+count = collections.Counter(items)  \
+count -> {item1:count1, item2:count2, ...}  \
+count.most_common(k) -> [(item, count), ...]    \
+&emsp; - return most common k (item, count) using heapq internally 
+    
+collections.defaultdict(list) \
+&emsp; - init a dict with default value an empty list
