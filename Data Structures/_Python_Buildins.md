@@ -74,4 +74,8 @@ set | set: Combination of two sets
 itertools.product(A,B) -> ((x,y) for x in A for y in B)
 > for v1, (r1, c1) in enumerate(itertools.product(range(5), range(6))):  ...
 
-
+## collections.Counter()
+count = collections.Counter(items)
+count -> {item1:count1, item2:count2, ...}
+count.most_common(k) -> [(item, count), ...]
+    - return most common k (item, count) using heapq internally
