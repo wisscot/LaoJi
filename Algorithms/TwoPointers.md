@@ -1,6 +1,6 @@
 # Two Pointers
 
-## Same-Direction
+## Forwards two pointers
 
 ### On arrays
 
@@ -23,7 +23,6 @@ __Examples:__
 ### On single linked list
 Find loop / find location with slow/fast pointers
 
-## Backwards-Direction
-
+## Backwards two pointers
 
 [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
