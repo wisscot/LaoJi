@@ -24,6 +24,9 @@ based on the solution above
 [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 todo, multiple solution
 
+[Kth Largest in N Arrays](https://www.lintcode.com/problem/kth-largest-in-n-arrays/description?_from=ladder&&fromId=106)\
+typical heap usage
+
 [295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)    \
 with min heap and max heap
 
