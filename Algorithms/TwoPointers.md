@@ -17,7 +17,7 @@ __Examples:__
 * Algorithm:
   1. move j (while we should include element j)
   2. save result (arr[i:j])
-  3. move i (using for)
+  3. move i (in for loop)
 * Time O(n)
 
 ### On single linked list
