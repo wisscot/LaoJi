@@ -23,6 +23,11 @@ __Examples:__
 ### On single linked list
 Find loop / find location with slow/fast pointers
 
-## Backwards two pointers
+## Towards two pointers
 
-[611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
+[611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  \
+use large edge as master pointer
+
+[1. Two Sum](https://leetcode.com/problems/two-sum/) \
+mutiple solutions
+
