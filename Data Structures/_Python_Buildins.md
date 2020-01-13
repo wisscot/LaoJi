@@ -9,7 +9,7 @@ Bytes to String: &emsp; s = b.decode() &emsp; or &emsp; s = b.decode('utf-8')
 char to ASCII num: &emsp; ord('a')  -> 97  \
 ASCII num to char: &emsp; chr(97)  -> 'a' 
 
-check string is num: &emsp; s.isdigit()  \
+check string is num: &emsp; s.isdigit() &emsp; Not good for negative number\
 check string is letters a-zA-Z: &emsp; s.isapha()
 
 string.ascii_uppercase\

@@ -15,7 +15,10 @@ recursive is trivial, use iterative to understand stack used in recursive
 Calculator I, II, III, IV\
 [227. Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)\
 operations include + - * / \
-for parensis () ust add a recursion
+for parensis () just add a recursion
+
+[150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+not difficult, but be careful with details
 
 ## Monotonous stack
 
