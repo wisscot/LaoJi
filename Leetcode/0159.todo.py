@@ -1,4 +1,6 @@
 # 159. Longest Substring with At Most Two Distinct Characters
+
+Basic idea:
 Two pointers
 Be careful with the slave pointer j stop condition
 

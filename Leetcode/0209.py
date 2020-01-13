@@ -1,4 +1,5 @@
 # 209. Minimum Size Subarray Sum
+
 Solution 1. Brute force
   Basic idea: enumerate all combination of i, j , sum from i to j
   Time O(n^3)
@@ -10,10 +11,11 @@ Solution 1. Brute force
 Solution 2. Two Pointers
   Basic idea: 
   use i, j as the sum range, if range[i to j] meets the target, then for increasing j', i' must be > i
-  so we can use same direction two pointers
+  so we can use forwards two pointers
   Time O(n)
   i is the master pointer - for loop
   j is the slave pointer - while loop
+
 
 class Solution:
     def minSubArrayLen(self, s: int, nums: List[int]) -> int:

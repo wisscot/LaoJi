@@ -6,5 +6,9 @@
    i==0 or j==0 or __i==len(borad)-1 or j==len(board[0])-1__
 
 2. while loop\
-   check i += 1 in the end of loop\
-   check i += 1 also in "continue" section
+   check __i += 1__ in the end of loop\
+   check __i += 1__ also in "__continue__" section
+
+3. heapq\
+   heapq.heappop(__hq__)    \
+   heapq.heappush(__hq__, item)
