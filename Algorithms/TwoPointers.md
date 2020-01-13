@@ -21,7 +21,7 @@ __Examples:__
 * Time O(n)
 
 ### On single linked list
-Find loop / find location
+Find loop / find location with slow/fast pointers
 
 ## Backwards-Direction
 
