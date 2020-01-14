@@ -21,7 +21,7 @@ either start from a point or from a line
 [Kth Smallest Sum In Two Sorted Arrays](https://www.lintcode.com/problem/kth-smallest-sum-in-two-sorted-arrays/description?_from=ladder&&fromId=106)\
 based on the solution above
 
-[23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+[23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)\
 todo, multiple solution
 
 [Kth Largest in N Arrays](https://www.lintcode.com/problem/kth-largest-in-n-arrays/description?_from=ladder&&fromId=106)\
