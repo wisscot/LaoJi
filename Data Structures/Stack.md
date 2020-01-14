@@ -17,7 +17,7 @@ Calculator I, II, III, IV\
 operations include + - * / \
 for parensis () just add a recursion
 
-[150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+[150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)\
 not difficult, but be careful with details
 
 ## Monotonous stack
