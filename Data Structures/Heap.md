@@ -33,7 +33,8 @@ with min heap and max heap
 [480. Sliding Window Median](https://leetcode.com/problems/sliding-window-median/) \
 similar to 295 but harder, requires implementing heap with adding hash
 
-[407. Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)
+[407. Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/) \
+barrel principle
 
 [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)\
 1D version of trapping rain water, don't need heap, use two pointers or mono stack
