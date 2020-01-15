@@ -10,5 +10,7 @@
    check __i += 1__ also in "__continue__" section
 
 3. heapq\
-   heapq.heappop(__hq__)    \
-   heapq.heappush(__hq__, item)
+   heapq.heappop(__hq__)  &emsp;  ~~__hp.pop()__~~ \
+   heapq.heappush(__hq__, item)\
+   
+   
