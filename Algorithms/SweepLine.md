@@ -1,6 +1,15 @@
 # Sweep Line
 
-## 
+## Good for interval problems
+
+Such as meeting rooms, sheduler, interval intersection, interval empty, etc.
+
+Step 1. get all key events timestamp/position (remove duplicate)
+\
+Step 2. save events to dictionary, use event timestamp/position as key
+\
+Step 3. go over all unique timestamps, process and finally get result
+
 
 __Examples:__
 
@@ -9,7 +18,7 @@ typical line sweep
 
 [218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)  
 \
-line sweep with hashheap (needs removal)
+line sweep with hashheap (needs removal) or without
 \
 segment tree
 

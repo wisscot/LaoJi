@@ -4,6 +4,17 @@
 
 ### On arrays
 
+master pointer i - for loop
+\
+slave pointer j - while loop
+
+Algorithm:
+  1. move j (while we should include element j)
+  2. save result (arr[i:j])
+  3. move i (in for loop)
+
+Time O(n)
+
 __Examples:__
 
 [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
@@ -14,13 +25,6 @@ __Examples:__
 
 [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
-* master pointer i - for loop
-* slave pointer j - while loop
-* Algorithm:
-  1. move j (while we should include element j)
-  2. save result (arr[i:j])
-  3. move i (in for loop)
-* Time O(n)
 
 ### Quick Select
 

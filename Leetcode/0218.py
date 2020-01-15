@@ -1,10 +1,9 @@
-218. The Skyline Problem
+# 218. The Skyline Problem
 
 Basic idea:
 The only positions will change height (need output) are within those start and end of buildings (key positions)
 The skyline are basical the max height for every position
 so the problem became checking if the max height changes at those key positions
-
 Below are mutiple ways to get maximum height at those positions
 
 
@@ -14,14 +13,13 @@ see if its the same as the one to the left
 
 
 Solution 1: Line Sweep with heapq
-
 lets use pin to denote the top left corner of a building and use a heap for max height
 when we encounter a key poistion,
 we remove all pins that ends at this position and
 we add all pins that starts at this position,
 then we can get the max height at this position
 
-The removal in heapq is O(n), so overall time is O(n^2), can be improved with hashheap
+The removal in heapq is O(n), so overall time is still O(n^2), can be improved with hashheap
 
 class Solution:
     def getSkyline(self, buildings: List[List[int]]) -> List[List[int]]:
@@ -45,8 +43,8 @@ class Solution:
             
             # remove all building pins end at this position
             for pin in end_pins[pos]:
-                hq.remove(pin) #todo
-                heapq.heapify(hq) #todo
+                hq.remove(pin) #to improve
+                heapq.heapify(hq)
                 # the time complexity to remove in heapq in O(n)
                 # we need to implement our own heap to achieve O(logn)
                 # build a HashHeap
@@ -64,10 +62,10 @@ class Solution:
         return res
 
 
-Solution 1 - Improve 1: use hashheap for removal
+Solution 1 - Improve 1: implement hashheap for removal
 
 
-Solution 1 - Improve 2: no need for hashheap
+Solution 1 - Improve 2: without hashheap
 
 actually we dont have to delete every pin that ends at current position,
 we only need to remove the ones that is higher than current max,
@@ -77,13 +75,14 @@ so we need to update the pin to include end -> (-height, start, end)
 
         ...
         for start, end, height in buildings:            
-            pin = (-height, start, end)
+            pin = (-height, start, end)     <-- updated
 
         ...
         for pos in keypos:
+
             # remove higher building pins end at this position
-            while hp and hp[0][2]<= pos:
-                heapq.heappop(hp)
+            while hp and hp[0][2]<= pos:    <-- updated
+                heapq.heappop(hp)           <-- updated
 
 
 
