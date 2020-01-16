@@ -6,4 +6,15 @@ Step 2. Recurrence for entries interms of smaller subproblem\
 &emsp; &emsp;&emsp;&emsp;   T(i, j-1) if ...
 Step 3. Base cases
 
-## 
+
+Types of DP
+* Sliding arrays??
+* Partition
+* Game
+* Interval
+
+__Examples:__
+
+
+[64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
+

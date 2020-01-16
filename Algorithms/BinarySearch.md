@@ -16,14 +16,11 @@ typical binary search on result
 \
 binary search on result on decimal
 
-[183. Wood Cut](https://www.lintcode.com/problem/wood-cut/description?_from=ladder&&fromId=106)
+[Lint183. Wood Cut](https://www.lintcode.com/problem/wood-cut/description?_from=ladder&&fromId=106)
 
+[Lint437. Copy Books](https://www.lintcode.com/problem/copy-books/description?_from=ladder&&fromId=106)
 
-[woodcut]
-
-[copybooks]
-
-[copybooks II](https://www.lintcode.com/problem/copy-books-ii/?_from=ladder&&fromId=106)
+[Lint438. Copy Books II](https://www.lintcode.com/problem/copy-books-ii/?_from=ladder&&fromId=106)
 \
 Similar to I
 
