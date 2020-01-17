@@ -30,3 +30,10 @@ Interval
 
 [312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)
 
+[152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+\
+use min max as states, redo it
+
+[198. House Robber](https://leetcode.com/problems/house-robber/)
+
+
