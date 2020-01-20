@@ -30,7 +30,9 @@ similar idea to plane in the sky problem, just count how many planes in the sky 
 \
 same idea, max of number of planes in the sky
 
-
+[1326. Minimum Number of Taps to Open to Water a Garden](https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/)
+\
+simplify it
 
 
 

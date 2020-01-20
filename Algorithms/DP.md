@@ -29,6 +29,8 @@ redo it
 Interval
 
 [312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)
+\
+think from last step
 
 [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 \
@@ -36,4 +38,10 @@ use min max as states, redo it
 
 [198. House Robber](https://leetcode.com/problems/house-robber/)
 
+[221. Maximal Square](https://leetcode.com/problems/maximal-square/)
+\
+redo, challedge: one pass
 
+[674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)
+\
+Difficulty: easy. Challedge: elegant
