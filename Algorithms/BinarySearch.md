@@ -1,5 +1,32 @@
 # Binary Search
 
+__Template:__
+```python
+while left < right - 1:
+    mid = (left+right) // 2
+    if check(mid): # assume find a smaller val
+        right = mid
+    else:
+        left = mid
+
+if check(left): # check left and right separately
+    return left
+return right
+```
+
+## Binary Search on array
+
+Python module: bisect
+* bisect.bisect_left(nums, val)
+* bisect.bisect_right(nums, val)
+* bisect.insort_left(nums, val)
+* bisect.insort_right(nums, val)
+
+nums is assumed to be sorted\
+[1,2,3,3,3,4]  search 3 here\
+     ^     ^
+    left  right
+
 ## Binary Search on result
 
 Good for a problem that is easy to verify a proposed solution is correct or not, \
