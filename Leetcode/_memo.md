@@ -13,4 +13,5 @@
    heapq.heappop(__hq__)  &emsp;  ~~__hp.pop()__~~ \
    heapq.heappush(__hq__, item)\
    
-   
+4. equals sign\
+   ==  and = 

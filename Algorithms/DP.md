@@ -1,5 +1,6 @@
 # Dynamic Programming
 
+## Overview
 Feelings: \
 So easy to make mistake even using recursive way ... \
 Have to be extremely careful
@@ -10,6 +11,24 @@ Step 2. Recurrence for entries interms of smaller subproblem\
 &emsp;  T(i, j) =  T(i-1,j) if ... \
 &emsp;&emsp; &emsp; = T(i, j-1) if ...\
 Step 3. Base cases
+
+
+## Optimization
+O(mn) can sometimes reduced to O(n) as only two rows need\
+             i-1,j-1   i-1,j
+                     \  ^ 
+             i,j-1   <  i,j
+if its like 
+             i-1,j-1   i-1,j
+                        ^ 
+             i,j-1   <  i,j
+Then only 1d array is necessary by sweeping from left to right
+it its like
+             i-1,j-1   i-1,j
+                     \   ^ 
+             i,j-1      i,j
+Then we can use 1d array to sweep from right to left
+
 
 
 __Examples:__
@@ -49,3 +68,23 @@ Difficulty: easy. Challedge: elegant
 [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 \
 typical
+
+[72. Edit Distance](https://leetcode.com/problems/edit-distance/)
+
+[97. Interleaving String](https://leetcode.com/problems/interleaving-string/)
+\
+can reduce one dimension
+
+[Lint623. K Edit Distance](https://www.lintcode.com/problem/k-edit-distance/)\
+difficult, dp + dfs + trie
+
+
+### Backpack
+
+[Lint92. Backpack](https://www.lintcode.com/problem/backpack)\
+[Lint125. Backpack II](https://www.lintcode.com/problem/backpack-ii/)\
+[Lint440. Backpack III](https://www.lintcode.com/problem/backpack-iii/)\
+\
+original Backpack
+
+[89. k Sum](https://www.lintcode.com/problem/k-sum/)
