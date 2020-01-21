@@ -31,7 +31,6 @@ while queue:
                 queue.append(neighbor)
 ```
 
-
 ## Applications
 * Tree search by layer
 * Coonected components (alternative UnionFind)
