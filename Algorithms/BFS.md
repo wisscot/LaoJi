@@ -4,32 +4,31 @@
 
 Template 1: No layer BFS
 ```python
-from collections import deque
-queue = deque()
-seen = set()  #等价于Java版本中的set
-seen.add(start)
-queue.append(start)
+queue = collections.deque([root])
+visited = set([root])
+
 while len(queue):
     head = queue.popleft()
     for neighbor in head.neighbors:
-        if neighbor not in seen:
-            seen.add(neighbor)
+        if neighbor not in visited:
+            visited.add(neighbor)
             queue.append(neighbor)
 ```
-Seen and Queue are always togeter
+Visited and Queue are always togeter
 
 
 Template 2: Layer by layer BFS
 ```python
 queue = collections.deque([root])
-seen = set([root])
+visited = set([root])
 
 while queue:
+    numlayer += 1
     for _ in range(len(queue)):
         head = queue.popleft()
         for neighbor in head.neighbors:
-            if neighbor not in seen:
-                seen.add(neighbor)
+            if neighbor not in visited:
+                visited.add(neighbor)
                 queue.append(neighbor)
 ```
 
@@ -37,8 +36,9 @@ while queue:
 Prefer BFS over DFS 
 
 __Applications:__
-
-* Find shortest path
+* Tree search by layer
+* Coonected components (alternative UnionFind)
+* Find shortest path in graph (simple graph)
 * Topological sort (directed graph)
 
 __Examples:__
