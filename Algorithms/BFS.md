@@ -13,9 +13,8 @@ while len(queue):
         if neighbor not in visited:
             visited.add(neighbor)
             queue.append(neighbor)
+# Visited and Queue are always togeter
 ```
-Visited and Queue are always togeter
-
 
 Template 2: Layer by layer BFS
 ```python
@@ -33,13 +32,13 @@ while queue:
 ```
 
 
-Prefer BFS over DFS 
-
-__Applications:__
+## Applications
 * Tree search by layer
 * Coonected components (alternative UnionFind)
 * Find shortest path in graph (simple graph)
 * Topological sort (directed graph)
+
+Prefer BFS over DFS 
 
 __Examples:__
 
