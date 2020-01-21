@@ -45,3 +45,7 @@ redo, challedge: one pass
 [674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)
 \
 Difficulty: easy. Challedge: elegant
+
+[1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+\
+typical
