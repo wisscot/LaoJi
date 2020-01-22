@@ -13,7 +13,7 @@ Step 2. Recurrence for entries interms of smaller subproblem\
 Step 3. Base cases
 
 
-## Optimization
+## Space Optimization
 O(mn) can sometimes reduced to O(n) as only two rows need\
              i-1,j-1   i-1,j
                      \  ^ 
