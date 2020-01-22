@@ -15,3 +15,6 @@
    
 4. equals sign\
    ==  and = 
+
+5. DP\
+   T\[__i+1__]  word[i]

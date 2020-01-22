@@ -75,7 +75,8 @@ typical
 \
 can reduce one dimension
 
-[Lint623. K Edit Distance](https://www.lintcode.com/problem/k-edit-distance/)\
+[Lint623. K Edit Distance](https://www.lintcode.com/problem/k-edit-distance/)
+\
 difficult, dp + dfs + trie
 
 

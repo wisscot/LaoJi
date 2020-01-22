@@ -19,8 +19,6 @@ __Not Good for:__
 node needs to be removed from a union (delete edge)
 
 
-
-
 ## Template
 
 ```python
