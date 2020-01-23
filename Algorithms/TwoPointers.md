@@ -29,12 +29,15 @@ __Examples:__
 ### Quick Select
 
 __Examples:__
+
 [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)  \
 todo
 
 ### On single linked list
 Find loop / find location with slow/fast pointers
 
+
+&nbsp;
 ## Towards two pointers
 
 [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  \
@@ -46,8 +49,8 @@ mutiple solutions
 [Two Sum - Less than or equal to target](https://www.lintcode.com/problem/two-sum-less-than-or-equal-to-target/description?_from=ladder&&fromId=106)
 
 
-
-# One pointer
+&nbsp;
+## One pointer
 
 [163. Missing Ranges](https://leetcode.com/problems/missing-ranges/ ) 
 
