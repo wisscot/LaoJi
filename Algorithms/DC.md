@@ -4,7 +4,7 @@
 Divide a problem into two or more sub-problems of the same or related type
 
 
-## Sorting Example
+## Sorting 
 
 [912. Sort an Array](https://leetcode.com/problems/sort-an-array/)
 
@@ -50,3 +50,9 @@ class Solution:
         self.quicksort(nums, left, j-1)
         self.quicksort(nums, j+1, right)
 ```
+
+## Merge Sort
+
+## Bucket Sort ?
+
+[164. Maximum Gap](https://leetcode.com/problems/maximum-gap/)

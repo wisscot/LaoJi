@@ -4,6 +4,7 @@
 
 Good for strings / words search which needs __words prefix__
 
+> if there's no child, make child, if there's child, going down
 
 ## Template
 ```python

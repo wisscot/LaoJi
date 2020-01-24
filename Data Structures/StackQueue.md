@@ -20,6 +20,14 @@ for parensis () just add a recursion
 [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)\
 easy with stack, but be careful with details
 
+[251. Flatten 2D Vector](https://leetcode.com/problems/flatten-2d-vector/)
+\
+Iterator
+
+[173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+\
+Iterator
+
 ## Monotonous stack
 
 * used to find the first item greater or smaller in the left and right side in an array

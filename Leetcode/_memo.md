@@ -33,3 +33,4 @@
 3. key_value for dictionary
    char_child for dictionary in trie
 
+6. curr, prev, nxt, idx, index
