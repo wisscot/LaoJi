@@ -1,14 +1,11 @@
 def f(a, b):
     
     res = []
+    loc = 0
     def f1(c):
         res.append(1)
-        return f2(2)
-        
-    def f2(d):
-        return d
-        
+        return loc
+                
     print(f1(1))
-    print(res)
     
 f(1,2)
