@@ -6,25 +6,23 @@
    i==0 or j==0 or __i==len(borad)-1 or j==len(board[0])-1__
 
 2. while loop\
-   check __i += 1__ in the end of loop\
-   check __i += 1__ also in "__continue__" section
+    __i += 1__ in the end of loop\
+    __i += 1__ also in "__continue__" section
 
 3. heapq\
-   heapq.heappop(__hq__)  &emsp;  ~~__hp.pop()__~~ \
-   heapq.heappush(__hq__, item)\
+   ~~__hp.pop()__~~ &emsp;   heapq.heappop(__hq__)  \
+   heapq.heappush(__hq__, item)
    
 4. equals sign\
    ==  and = 
 
 5. DP\
-   T\[__i+1__]  word[i]
+   T\[__i+1__]  &emsp;  word\[__i__]
 
 
-## Nameing Convension
+## Naming Convension
 
 1. left, right, mid for two pointers
-
-2. res
 
 3. duplicates for list: nums, items, array
 
@@ -34,3 +32,5 @@
    char_child for dictionary in trie
 
 6. curr, prev, nxt, idx, index
+
+2. res
