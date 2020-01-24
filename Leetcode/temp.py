@@ -1,11 +1,9 @@
-def f(a, b):
-    
-    res = []
-    loc = 0
-    def f1(c):
-        res.append(1)
-        return loc
-                
-    print(f1(1))
-    
-f(1,2)
+
+def myrange(start):
+    while True:
+        yield start
+        start += 1
+
+for num in myrange(1):
+    print(num)
+

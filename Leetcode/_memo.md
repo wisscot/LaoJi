@@ -15,3 +15,21 @@
    
 4. equals sign\
    ==  and = 
+
+5. DP\
+   T\[__i+1__]  word[i]
+
+
+## Nameing Convension
+
+1. left, right, mid for two pointers
+
+2. res
+
+3. duplicates for list: nums, items, array
+
+4. node, head, char
+
+3. key_value for dictionary
+   char_child for dictionary in trie
+

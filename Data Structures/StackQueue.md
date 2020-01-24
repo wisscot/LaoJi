@@ -36,3 +36,17 @@ can be solved based on #84
 
 [654. Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree/)\
 found the need to find first greater element in left and right
+
+&nbsp;
+
+
+# Deque
+
+## Monotonous queue
+
+__Examples:__
+
+[239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+\
+with heap, similar to skyline problem\
+or with monotonous queue

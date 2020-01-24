@@ -13,7 +13,7 @@ Step 2. Recurrence for entries interms of smaller subproblem\
 Step 3. Base cases
 
 
-## Optimization
+## Space Optimization
 O(mn) can sometimes reduced to O(n) as only two rows need\
              i-1,j-1   i-1,j
                      \  ^ 
@@ -75,7 +75,8 @@ typical
 \
 can reduce one dimension
 
-[Lint623. K Edit Distance](https://www.lintcode.com/problem/k-edit-distance/)\
+[Lint623. K Edit Distance](https://www.lintcode.com/problem/k-edit-distance/)
+\
 difficult, dp + dfs + trie
 
 
