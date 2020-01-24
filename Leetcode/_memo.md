@@ -9,6 +9,8 @@
     __i += 1__ in the end of loop\
     __i += 1__ also in "__continue__" section
 
+3. BFS check if in __visited__
+
 3. heapq\
    ~~__hp.pop()__~~ &emsp;   heapq.heappop(__hq__)  \
    heapq.heappush(__hq__, item)
