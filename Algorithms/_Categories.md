@@ -108,9 +108,10 @@ Basic idea: DP
 # pseudo code
 for i=1 to n: 
     for j = 1 to n:
-        dist(i, j) = ∞ # initiation
+        dist(i, j) = ∞ # initiation adjecent matrix
 for all (i, j) ∈ E:
     dist(i, j) = l(i, j) # initiation
+    
 for k = 1 to n:
     for i=1 to n: 
         for j = 1 to n:
