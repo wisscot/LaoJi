@@ -33,6 +33,12 @@
 3. key_value for dictionary
    char_child for dictionary in trie
 
-6. curr, prev, nxt, idx, index
+6. curr, prev, nxt, idx, index, neib, dist
+
+7. u, v, w, e, 
+
+7. count, cnt
+
+8. hqueue
 
 2. res
