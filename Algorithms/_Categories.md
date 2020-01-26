@@ -89,10 +89,8 @@ def dijkstra(self, graph, source):
             continue
         
         for nb, w in graph[currnode]:
-            nbdist = d + w
-            if nbdist < dist[nb]:
-                dist[nb] = nbdist
-                heapq.heappush(hqueue, (currdist+w, nb))
+            dist[nb] = min(dist[nb], d+w]
+            heapq.heappush(hqueue, (d+w, nb))
 ```
 
 Time: O(|E|log|E|)
