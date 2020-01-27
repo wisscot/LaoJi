@@ -1,67 +1,9 @@
-# Sorting 
-
-[912. Sort an Array](https://leetcode.com/problems/sort-an-array/)
-
-## Quick Sort
-
-Code1: easy to explain, use more space
-```python
-def quicksort(self, nums):
-    if len(nums) <= 1:
-        return nums
-
-    pivot = random.choice(nums)
-    lt = [v for v in nums if v < pivot]
-    eq = [v for v in nums if v == pivot]
-    gt = [v for v in nums if v > pivot]
-
-    return self.quicksort(lt) + eq + self.quicksort(gt)
-```
-
-Code2: typical
-Time: O(nlogn) Space:O(1)
-```python
-class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
-        self.quicksort(nums, 0, len(nums)-1)
-        return nums
-    
-    def quicksort(self, nums, left, right):
-    
-        if left >= right:
-            return 
-        pivot = nums[right]
-        # ssssssssbbbbbsbssbbbbp
-        # l       j    i       r
-        j = left  # Do NOT assign 0 to j
-        for i in range(left, right): 
-            if nums[i] < pivot:
-                nums[i], nums[j] = nums[j], nums[i]
-                j += 1
-        nums[right], nums[j] = nums[j], nums[right] # not nums[-1]
-        # sssssspbbbbbbbbb
-        # l     j        r
-        self.quicksort(nums, left, j-1)
-        self.quicksort(nums, j+1, right)
-```
-
-## Merge Sort
-
-## Bucket Sort ?
-
-[164. Maximum Gap](https://leetcode.com/problems/maximum-gap/)
-
-## Radix Sort ?
-
-<br></br>
-
 # Shortest Path in Graph
 
 Type: weighted/unweighted, directed\
 Note: directed graph is more general, we can code undirected graph to directed graph
 
-
-__Exapmle:__
+__Exapmle:__
 
 [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)
 
@@ -152,7 +94,7 @@ Time: O(|V|^3)
 
 Negative weight cycle detect: if there is a negative weight cycle, then from some vertex to itself, it will be negative.  So we only need to check any(dist(u,u) ∀ u ∈ V) is negative.
 
-
+# Minimum weight of Graph
 ## Minimum Spanning Tree (MST)
 
 Undirected graph only
