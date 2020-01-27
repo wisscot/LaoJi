@@ -51,7 +51,7 @@ class Solution:
 
 [164. Maximum Gap](https://leetcode.com/problems/maximum-gap/)
 
-
+## Radix Sort ?
 
 <br></br>
 
@@ -122,7 +122,7 @@ either pass vertex i or not pass i
 
 Base Case: \
 D(0,u,u) = 0\
-D(0,u,v) = w(u,v) ∀ known edges \ 
+D(0,u,v) = w(u,v) ∀ known edges \
 D(0,u,v) = ∞ ∀ all other edges 
 
 we can reduce the 'i' dimension to save space:\
@@ -150,7 +150,7 @@ for k = 1 to n:
 ```
 Time: O(|V|^3)
 
-Negative weight cycle detect: if there is a negative weight cycle, then from some vertex to itself, it will be negative.  So we noly need to check any(dist(u,u) ∀ u ∈ V) is negative.
+Negative weight cycle detect: if there is a negative weight cycle, then from some vertex to itself, it will be negative.  So we only need to check any(dist(u,u) ∀ u ∈ V) is negative.
 
 
 ## Minimum Spanning Tree (MST)
