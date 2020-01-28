@@ -29,8 +29,10 @@ If there is a negative cycle, Dijkstra algo will go into inf loop
 # Step 3. add neighbor to heapq if new dist is shorter
 def dijkstra(self, graph, source):
     
-    # graph: {node:[(neighbor, edgeweight), ...]}
+    # graph -> {node:[(neighbor, edgeweight), ...]}
+    
     hqueue = [(0, source)] # init priority queue [(dist, node), ...]
+    
     dist = [float('inf')]*len(graph) # init dist from source
     dist[i] = 0
     
