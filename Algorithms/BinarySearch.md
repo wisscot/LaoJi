@@ -43,11 +43,11 @@ and the result must have a upper bound and lower bound
 __Examples:__
 
 [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)
-\
+0127g \
 typical binary search on result
 
 [Lint586. Sqrt(x) II](https://www.lintcode.com/problem/sqrtx-ii/description?_from=ladder&&fromId=106)
-\
+0127b \
 binary search on result on decimal
 
 [Lint183. Wood Cut](https://www.lintcode.com/problem/wood-cut/description?_from=ladder&&fromId=106)

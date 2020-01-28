@@ -10,11 +10,9 @@ class Solution:
     """
     def sqrt(self, x):
         # write your code here
-        low, high = 0, x
-        if x < 1.0:
-            high = 1.0
+        low, high = 0, x+1 # this is to consider cases of 0<x<1
             
-        while high-low > 1e-10:
+        while low < hight - 1e-10:
             mid = (low+high)/2
             if mid*mid < x:
                 low = mid
