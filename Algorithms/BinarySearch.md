@@ -24,8 +24,11 @@ Python module: bisect
 
 nums is assumed to be sorted\
 [1,2,3,3,3,4]  search 3 here\
-&nbsp;&nbsp;^     ^
-    left  right
+&nbsp;^     ^    \
+    left  right \
+left is the first accurance\
+right is the next of last accurance\
+if target not exists, then bisect_left and bisect_right is the same
 
 ## Binary Search on result
 
