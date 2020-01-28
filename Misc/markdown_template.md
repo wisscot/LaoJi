@@ -36,6 +36,6 @@ http://zh-google-styleguide.readthedocs.io/en/latest/
 Java 的同学请阅读 [link](https://google.github.io/styleguide/javaguide.html)
 
 
-Markdown space - Type __\&nbsp;__  or copy this '     '\
-Two spaces - Type __\&ensp;__ \
-Four spaces - Type __\&emsp;__ or copy this '      '
+Markdown space - Type __\&nbsp;__  or copy this '&nbsp;'\
+Two spaces - Type __\&ensp;__ '&ensp;'\
+Four spaces - Type __\&emsp;__ or copy this '&emsp;'
