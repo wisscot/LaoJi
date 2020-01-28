@@ -24,10 +24,12 @@ Python module: bisect
 
 nums is assumed to be sorted\
 target = 3
+
 | [ | 1, | 2, | 3, | 3, | 3, | 4 | ] |
 |---|----|----|----|----|----|---|---|
 |   |    |    | ^  |    |    | ^ |   |
 |   |    |    | l  |    |    | r |   |
+
 bisect_left returns the first accurance\
 bisect_right returns the next of last accurance\
 if target not exists, then bisect_left and bisect_right return the same
