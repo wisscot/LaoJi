@@ -13,7 +13,7 @@ class Solution:
     """
     def woodCut(self, L, k):
         # write your code here
-        lower, upper = 1, max(L or [0])
+        lower, upper = 1, max(L) #lower bound is 1
         
         while lower < upper - 1:
             mid = (lower+upper)//2

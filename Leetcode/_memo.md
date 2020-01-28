@@ -24,9 +24,9 @@
 
 ## Naming Convension
 
-1. left, right, mid for two pointers
+1. left, right, lower, upper, mid, target for two pointers
 
-3. duplicates for list: nums, items, array
+3. duplicates for list: nums, items, array, arr
 
 4. node, head, char
 

@@ -60,7 +60,7 @@ class Solution:
         for airplane in airplanes:
             keytimes += [(airplane.start,1), (airplane.end,0)]
             
-        res, count = 0, 0
+        res, count = 0, 0 
         for _, takeoff in sorted(keytimes):
             if takeoff:
                 count += 1

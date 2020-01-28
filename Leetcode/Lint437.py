@@ -16,32 +16,30 @@ class Solution:
     """
     def copyBooks(self, pages, k):
         # write your code here
+        
         if not pages:
             return 0
             
         lower, upper = max(pages), sum(pages)
         
         while lower < upper - 1:
-            mid = (lower+upper) // 2
-            if self.numperson(pages, mid) <= k: 
-            # when equals, move upper, because result can be smaller
+            mid = (lower+upper)//2
+            if self.can_copy(pages, k, mid):
                 upper = mid
             else:
                 lower = mid
                 
-        if self.numperson(pages, lower) <= k:
+        if self.can_copy(pages, k, lower):
             return lower
         return upper
-        
-    def numperson(self, pages, timeperiod):
-        res = 1
-        
-        cumu = 0
+            
+    def can_copy(self, pages, k, timing): # easy made mistake
+        need = 1
+        currfinish = 0
         for page in pages:
-            if cumu + page > timeperiod:
-                cumu = page
-                res += 1
+            if currfinish + page > timing:
+                need += 1
+                currfinish = page
             else:
-                cumu += page
-                
-        return res
+                currfinish += page
+        return need <= k

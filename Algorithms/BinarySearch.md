@@ -51,18 +51,20 @@ typical binary search on result
 binary search on result on decimal
 
 [Lint183. Wood Cut](https://www.lintcode.com/problem/wood-cut/description?_from=ladder&&fromId=106)
+0128b 
 
 [Lint437. Copy Books](https://www.lintcode.com/problem/copy-books/description?_from=ladder&&fromId=106)
+0128b
 
 [Lint438. Copy Books II](https://www.lintcode.com/problem/copy-books-ii/?_from=ladder&&fromId=106)
-\
-Similar to I
+0128g\
+Similar to Copy Books
 
 [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
-\
+0128g\
 Two solutions
 
 [644. Maximum Average Subarray II](https://leetcode.com/problems/maximum-average-subarray-ii/)
-worth do again\
+0128b again\
 Typical Binary search on result
 

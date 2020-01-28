@@ -9,7 +9,7 @@ presum = [0]
 for num in nums:
     presum.append(presum[-1]+num)
 
-# presum[i] = sum nums[0], nums[1], ... nums[i-1]
+# presum[i] = the sum of the first i numbers  0, 1, ..., i-1
 # sum i,...,j = presum[j+1] - presum[i]
 ```
 
