@@ -28,7 +28,7 @@ target = 3
 | [ | 1, | 2, | 3, | 3, | 3, | 4 | ] |
 |---|----|----|----|----|----|---|---|
 |   |    |    | ^  |    |    | ^ |   |
-|   |    |    |left|    |    |right| |
+|   |    |    | l  |    |    | r |   |
 
 bisect_left returns the first accurance\
 bisect_right returns the next of last accurance\
