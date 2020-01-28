@@ -3,7 +3,7 @@
 ## String
 reverse: string[::-1]   
 
-String to Bytes: &emsp; b = s.encode() &emsp; or &emsp; b = s.encode('utf-8')  \
+String to Bytes:  b = s.encode() &emsp; or &emsp; b = s.encode('utf-8')  \
 Bytes to String: &emsp; s = b.decode() &emsp; or &emsp; s = b.decode('utf-8')    
 
 char to ASCII num: &emsp; ord('a')  -> 97  \

@@ -24,7 +24,7 @@ Python module: bisect
 
 nums is assumed to be sorted\
 [1,2,3,3,3,4]  search 3 here\
-     ^     ^
+&nbsp;&nbsp;^     ^
     left  right
 
 ## Binary Search on result
