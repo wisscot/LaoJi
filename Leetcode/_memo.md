@@ -26,6 +26,8 @@
 
 1. left, right, lower, upper, mid, target for two pointers
 
+2. i, j, k, i_, j_, k_  for new i j k
+
 3. duplicates for list: nums, items, array, arr
 
 4. node, head, char
