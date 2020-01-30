@@ -18,12 +18,14 @@ O(mn) can sometimes reduced to O(n) as only two rows need\
              i-1,j-1   i-1,j
                      \  ^ 
              i,j-1   <  i,j
+
 if its like 
              i-1,j-1   i-1,j
                         ^ 
              i,j-1   <  i,j
 Then only 1d array is necessary by sweeping from left to right
-it its like
+
+if its like
              i-1,j-1   i-1,j
                      \   ^ 
              i,j-1      i,j
@@ -79,9 +81,6 @@ can reduce one dimension
 \
 difficult, dp + dfs + trie
 
-
-### Backpack
-
 [Lint92. Backpack](https://www.lintcode.com/problem/backpack)\
 [Lint125. Backpack II](https://www.lintcode.com/problem/backpack-ii/)\
 [Lint440. Backpack III](https://www.lintcode.com/problem/backpack-iii/)\
@@ -89,3 +88,7 @@ difficult, dp + dfs + trie
 original Backpack
 
 [89. k Sum](https://www.lintcode.com/problem/k-sum/)
+
+TAG 
+[727. Minimum Window Subsequence](https://leetcode.com/problems/minimum-window-subsequence/)
+0130b

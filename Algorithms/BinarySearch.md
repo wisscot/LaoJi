@@ -34,6 +34,18 @@ bisect_left returns the first accurance\
 bisect_right returns the next of last accurance\
 if target not exists, then bisect_left and bisect_right return the same
 
+__Examples:__
+
+[153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+\
+if not distint number, prove no O(logn) algorithm exists, such as [1,1,1,1,0,1,1,1,1,1,1]
+
+[33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+
+[162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+
+
+
 ## Binary Search on result
 
 Good for a problem that is easy to verify a proposed solution is correct or not, \

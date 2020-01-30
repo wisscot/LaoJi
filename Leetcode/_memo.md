@@ -28,18 +28,18 @@
 
 2. i, j, k, i_, j_, k_  for new i j k
 
-3. duplicates for list: nums, items, array, arr
+3. num, val, accu, item, count, cnt, char
 
-4. node, head, char
+3. duplicates for list: nums, vals, items, array, arr
 
-3. key_value for dictionary
-   char_child for dictionary in trie
+4. node, head, root
 
 6. curr, prev, nxt, idx, index, neib, dist
 
-7. u, v, w, e, 
+7. u, v, w, e,  for graph
 
-7. count, cnt
+3. key_value for dictionary
+   char_child for dictionary in trie
 
 8. hqueue
 
