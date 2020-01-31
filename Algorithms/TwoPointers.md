@@ -2,7 +2,7 @@
 
 ## Forwards two pointers
 
-### On arrays
+On arrays:
 
 master pointer i - for loop
 \
@@ -15,6 +15,9 @@ Algorithm:
 
 Time O(n)
 
+On single linked list:\
+Find loop / find location with slow/fast pointers
+
 __Examples:__
 
 [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
@@ -26,18 +29,7 @@ __Examples:__
 [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
 
-### Quick Select
 
-__Examples:__
-
-[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)  \
-todo
-
-### On single linked list
-Find loop / find location with slow/fast pointers
-
-
-&nbsp;
 ## Towards two pointers
 
 [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  \
@@ -48,9 +40,7 @@ mutiple solutions
 
 [Two Sum - Less than or equal to target](https://www.lintcode.com/problem/two-sum-less-than-or-equal-to-target/description?_from=ladder&&fromId=106)
 
-
-&nbsp;
-## One pointer
-
 [163. Missing Ranges](https://leetcode.com/problems/missing-ranges/ ) 
+\
+only one pointer is needed
 

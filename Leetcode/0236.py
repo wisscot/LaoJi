@@ -17,6 +17,7 @@ Explanation: The LCA of nodes 5 and 1 is 3.
 Basic idea: Binary Tree Traversal
 
 
+# Solution 1: DC
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         lca, _ = self.search(root, p, q)
@@ -40,3 +41,33 @@ class Solution:
             return (None, 0)
         else:
             return (root, currcnt)
+
+
+# Solution 2: dfs get root->target path
+# then compare two path
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        
+        pathP = []
+        pathQ = []
+        
+        self.dfs(root, p, [], pathP)
+        self.dfs(root, q, [], pathQ)
+        
+        pathP = pathP[0]
+        pathQ = pathQ[0]
+        
+        for node in pathP[::-1]:
+            if node in pathQ:
+                return node
+    
+    def dfs(self, root, target, path, res):
+        if root is None:
+            return
+        
+        path.append(root)
+        if root == target:
+            res.append(list(path))
+        self.dfs(root.left, target, path, res)
+        self.dfs(root.right, target, path, res)
+        path.pop()

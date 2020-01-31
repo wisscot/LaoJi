@@ -55,28 +55,28 @@ and the result must have a upper bound and lower bound
 __Examples:__
 
 [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)
-0127g \
+0127P \
 typical binary search on result
 
 [Lint586. Sqrt(x) II](https://www.lintcode.com/problem/sqrtx-ii/description?_from=ladder&&fromId=106)
-0127b \
+0127F \
 binary search on result on decimal
 
 [Lint183. Wood Cut](https://www.lintcode.com/problem/wood-cut/description?_from=ladder&&fromId=106)
-0128b 
+0128F 
 
 [Lint437. Copy Books](https://www.lintcode.com/problem/copy-books/description?_from=ladder&&fromId=106)
-0128b
+0128F
 
 [Lint438. Copy Books II](https://www.lintcode.com/problem/copy-books-ii/?_from=ladder&&fromId=106)
-0128g\
+0128P \
 Similar to Copy Books
 
 [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
-0128g\
+0128P \
 Two solutions
 
 [644. Maximum Average Subarray II](https://leetcode.com/problems/maximum-average-subarray-ii/)
-0128b again\
+0128F again\
 Typical Binary search on result
 

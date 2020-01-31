@@ -28,6 +28,7 @@ Iterator
 \
 Iterator
 
+
 ## Monotonous stack
 
 * used to find the first item greater or smaller in the left and right side in an array

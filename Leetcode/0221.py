@@ -18,24 +18,23 @@ Output: 4
 Basic idea: DP
 
 class Solution:
-    """
-    @param matrix: a matrix of 0 and 1
-    @return: an integer
-    """
-    
-    def maxSquare(self, matrix):
-        # write your code here
-        res = 0
-
-        import functools
-        @functools.lru_cache(None)
-        def dp(i,j):
-            if i<0 or j<0 or matrix[i][j] == 0:
-                return 0
-            return  1+min(dp(i-1,j-1), dp(i-1,j), dp(i,j-1))
+    def maximalSquare(self, matrix: List[List[str]]) -> int:
+        if not matrix:
+            return 0
         
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):
-                res = max(res, dp(i,j))
+                matrix[i][j] = int(matrix[i][j])
                 
-        return res**2
+        for i in range(1, len(matrix)):
+            for j in range(1, len(matrix[0])):
+                if matrix[i][j] == 0:
+                    continue
+                matrix[i][j] = max(matrix[i][j], 
+                                   1 + min(matrix[i-1][j-1],
+                                           matrix[i-1][j],
+                                           matrix[i][j-1])
+                                  )
+                
+        side = max(max(matrix[i]) for i in range(len(matrix)))
+        return side**2

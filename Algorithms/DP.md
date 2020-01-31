@@ -59,10 +59,6 @@ use min max as states, redo it
 
 [198. House Robber](https://leetcode.com/problems/house-robber/)
 
-[221. Maximal Square](https://leetcode.com/problems/maximal-square/)
-\
-redo, challedge: one pass
-
 [674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)
 \
 Difficulty: easy. Challedge: elegant
@@ -91,4 +87,8 @@ original Backpack
 
 TAG 
 [727. Minimum Window Subsequence](https://leetcode.com/problems/minimum-window-subsequence/)
-0130b
+0130F
+
+TAG
+[221. Maximal Square](https://leetcode.com/problems/maximal-square/)
+0131P
