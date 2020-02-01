@@ -44,8 +44,11 @@ Delete an element:     \
    A.pop(3)   del A[3]   del A[2:4]   A[2:4] = []   A.remove('item')   
           
 Find first occurrence: \
-   a.index('item')  
- 
+   arr.index('item')  \
+   arr.index('item', start, end)  find item in arr[start:end] \
+   arr.find('item')  \
+   arr.find('item', start, end)  similar to index, but return -1 if not found
+
 max(arr[i:j] or [0])   use or to avoid empty list  
 
 pos[5:10] = [1,2]   to replace the list subarray   \
