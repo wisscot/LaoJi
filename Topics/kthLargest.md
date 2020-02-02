@@ -39,12 +39,9 @@ def quick_select(self, nums, k, left, right):
     return pivot
 ``` 
 
-__Examples:__
-
-[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)  \
-
-
 ## Examples
+
+[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
 [324. Wiggle Sort II](https://leetcode.com/problems/wiggle-sort-ii/)\
 Find median in O(n)

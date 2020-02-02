@@ -9,10 +9,11 @@
 ```python
 class SegTree:
     # build the tree in __init__
+    # assume nums sorted
     def __init__(self, start_i, end_i, nums):
         self.start, self.end = nums[start_i], nums[end_i]
-        self.left, self.right = None, None
         self.count = 0
+        self.left, self.right = None, None
         if start_i < end_i:
             mid = (start_i+end_i)//2
             self.left = SegTree(start_i, mid, nums)
@@ -38,8 +39,11 @@ class SegTree:
 
 __Example:__
 
+TAG
 [315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+
 [327. Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/)
+
 [493. Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
 
 

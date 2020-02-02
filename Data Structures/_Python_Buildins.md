@@ -32,7 +32,12 @@ list = [a for a in list if ...]
 
 
 ## dict
-dict.keys()   dict.values()   dict.items()
+dict.keys()   \
+dict.values()   \
+dict.items()   return [(key,value), ...] \
+
+dict.pop(key)    remove key and return value
+dict.get(key, defaultValue)   return default value if key not exists
 
 
 ## list
@@ -61,7 +66,7 @@ pos[5:5] = [1,2]   to insert to current list
 Can be read in functions, but not changed.  Unless declare global xxx. 
 
 
-## Sort by key
+## Sort
 sorted(list, key=lambda item: (item[1], item[0]))   \
 sorted([x for x in dict], key=dict.get)
 
@@ -116,3 +121,9 @@ count.most_common(k) -> [(item, count), ...]    \
     
 collections.defaultdict(list) \
      - init a dict with default value an empty list
+
+collections.OrderedDict(items) \
+     - {x1:y1, x2:y2, ... } as coming sequence
+     - updating value does not move position
+     - d.popitem()   ->    return (xn,yn) and remove
+     - d.move_to_end(x2)   ->    { ... x2:y2}

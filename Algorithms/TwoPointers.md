@@ -28,6 +28,11 @@ __Examples:__
 
 [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
+[75. Sort Colors](https://leetcode.com/problems/sort-colors/)
+\
+challenge - sort into lt, eq, gt three parts
+
+[Lint143. Sort Colors II](https://www.lintcode.com/problem/sort-colors-ii/description)
 
 
 ## Towards two pointers
@@ -55,7 +60,7 @@ mutiple solutions
 [Lint31. Partition Array](https://www.lintcode.com/problem/partition-array/description)
 
 [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  
-0201F again\
+0201F 0202F again\
 use large edge as master pointer
 
 [16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/)
@@ -65,4 +70,5 @@ convert to 2sum closest
 [163. Missing Ranges](https://leetcode.com/problems/missing-ranges/) 
 \
 only one pointer is needed
+
 
