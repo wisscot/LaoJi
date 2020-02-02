@@ -55,7 +55,7 @@ and the result must have a upper bound and lower bound
 __Examples:__
 
 [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)
-0127P \
+0127G \
 typical binary search on result
 
 [Lint586. Sqrt(x) II](https://www.lintcode.com/problem/sqrtx-ii/description?_from=ladder&&fromId=106)
@@ -69,11 +69,11 @@ binary search on result on decimal
 0128F
 
 [Lint438. Copy Books II](https://www.lintcode.com/problem/copy-books-ii/?_from=ladder&&fromId=106)
-0128P \
+0128G \
 Similar to Copy Books
 
 [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
-0128P \
+0128G \
 Two solutions
 
 [644. Maximum Average Subarray II](https://leetcode.com/problems/maximum-average-subarray-ii/)

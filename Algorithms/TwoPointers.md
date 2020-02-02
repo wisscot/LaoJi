@@ -32,15 +32,37 @@ __Examples:__
 
 ## Towards two pointers
 
-[611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  \
-use large edge as master pointer
+On array:
 
+i, j are moving simutanouly from two ends
+
+Algorithm:
+  1. i, j = 0, len - 1
+  2. move i or j by 1
+  3. save result e.g. count = j - i
+
+[125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+0201G \
+[680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
+0201G \
+
+TAG
 [1. Two Sum](https://leetcode.com/problems/two-sum/) \
 mutiple solutions
 
-[Two Sum - Less than or equal to target](https://www.lintcode.com/problem/two-sum-less-than-or-equal-to-target/description?_from=ladder&&fromId=106)
+[Lint609. Two Sum - Less than or equal to target](https://www.lintcode.com/problem/two-sum-less-than-or-equal-to-target/)
 
-[163. Missing Ranges](https://leetcode.com/problems/missing-ranges/ ) 
+[Lint31. Partition Array](https://www.lintcode.com/problem/partition-array/description)
+
+[611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  
+0201F again\
+use large edge as master pointer
+
+[16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/)
+\
+convert to 2sum closest
+
+[163. Missing Ranges](https://leetcode.com/problems/missing-ranges/) 
 \
 only one pointer is needed
 

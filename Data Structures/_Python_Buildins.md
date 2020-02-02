@@ -45,9 +45,11 @@ Delete an element:     \
           
 Find first occurrence: \
    arr.index('item')  \
-   arr.index('item', start, end)  find item in arr[start:end] \
+   arr.index('item', start, end)   find item in arr[start:end] \
    arr.find('item')  \
-   arr.find('item', start, end)  similar to index, but return -1 if not found
+   arr.find('item', start, end)   similar to index, but return -1 if not found
+
+arr.count('item')   return how many 'item' elements
 
 max(arr[i:j] or [0])   use or to avoid empty list  
 

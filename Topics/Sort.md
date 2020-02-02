@@ -24,7 +24,8 @@ def quicksort(self, nums):
     return self.quicksort(lt) + eq + self.quicksort(gt)
 ```
 
-Code2: typical
+Code2: typical 
+Forward two pointers, using last num as pivot
 Time: O(nlogn) Space:O(1)
 ```python
 class Solution:
@@ -37,18 +38,55 @@ class Solution:
         if left >= right:
             return 
         pivot = nums[right]
-        # ssssssssbbbbbsbssbbbbp
-        # l       j    i       r
+        # ...ssssssssbbbbbsbssbbbbp...
+        #    ^       ^    ^       ^
+        #    l       j    i       r
         j = left  # Do NOT assign 0 to j
         for i in range(left, right): 
             if nums[i] < pivot:
                 nums[i], nums[j] = nums[j], nums[i]
                 j += 1
         nums[right], nums[j] = nums[j], nums[right] # not nums[-1]
-        # sssssspbbbbbbbbb
-        # l     j        r
+        # ...sssssspbbbbbbbbb...
+        #    l     j        r
         self.quicksort(nums, left, j-1)
         self.quicksort(nums, j+1, right)
+```
+
+Code 3: typical 
+Towards two pointers, using mid as pivot
+Time: O(nlogn) Space:O(1)
+```python
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        self.quicksort(nums, 0, len(nums)-1)
+        return nums
+    
+    def quicksort(self, nums, left, right): # inclusive
+    
+        if left >= right:
+            return 
+        pivot = random.choice(nums[left:right+1])
+        i, j = left, right
+        # ssssssssbsbsbsbbbbbbbb
+        # ^       ^    ^       ^
+        # l       i    j       r
+        while i <= j:
+            while i<=j and nums[i] < pivot:
+                i += 1
+            while i<=j and nums[j] > pivot:
+                j -= 1
+            if i <= j:
+                nums[i], nums[j] = nums[j], nums[i]
+                i += 1
+                j -= 1
+        
+        # ssssssbbbbbbbbbb
+        # l    ji        r
+        # left side are all <= pivot
+        # right side are all >= pivot
+        self.quicksort(nums, left, j)
+        self.quicksort(nums, i, right)
 ```
 
 ## Merge Sort
