@@ -18,7 +18,7 @@ def search(nums, target, path, res):
         
     path.append(some value)
     self.search(next level)
-    path.pop() # backtracking
+    path.pop() # backtracking, NOT path.pop(val)
 ```
 Time Complexity: O(num of solutions * time to construct a solution)
 
@@ -36,4 +36,12 @@ typical backtracking
 [Lint10. String Permutation II](https://www.lintcode.com/problem/string-permutation-ii/description)
 
 [Lint90. k Sum II](https://www.lintcode.com/problem/k-sum-ii/description)
+
+[51. N-Queens](https://leetcode.com/problems/n-queens/)
+
+[17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+
+[212. Word Search II](https://leetcode.com/problems/word-search-ii/)
+\
+DFS + Trie
 
