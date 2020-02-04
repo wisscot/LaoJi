@@ -19,7 +19,7 @@ string.ascii_letters
 s.ljust(maxWidth)    by default filled with spaces \
 s.rjust(maxWidth)
 
-news = s.replace(char1, char2)
+s = s.replace(char1, char2)
 
 
 ## bin
