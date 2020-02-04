@@ -19,6 +19,8 @@ string.ascii_letters
 s.ljust(maxWidth)    by default filled with spaces \
 s.rjust(maxWidth)
 
+news = s.replace(char1, char2)
+
 
 ## bin
 int to bin str :   bin(2)  ->  '0b10'    \
