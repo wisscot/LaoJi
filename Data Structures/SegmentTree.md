@@ -2,9 +2,15 @@
 
 ## 1. Good for single point update, range query
 
-* build: time O(n) space O(n)
-* update: time O(logn)
-* query: time O(logn)
+* build: Has to include all __Sorted and Unique__ nums waiting for update\
+  Time O(n) space O(n)
+  
+* update: time Has to be an existing leaf node \
+  Time O(logn)  
+
+* query: Any range \
+  Time O(logn)   
+  
 
 ```python
 class SegTree:
@@ -70,4 +76,8 @@ if current node range was covered by todo range, then update the current node, u
 __Example:__
 
 [218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+\
+better use sweepLine algorithm
+
+
 

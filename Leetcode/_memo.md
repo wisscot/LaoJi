@@ -12,25 +12,27 @@
 3. BFS check if in __visited__
 
 3. heapq\
-   ~~__hp.pop()__~~ &emsp;   heapq.heappop(__hq__)  \
+   ~~__hp.pop()__~~  ->  heapq.heappop(__hq__)  \
    heapq.heappush(__hq__, item)
    
 4. equals sign\
-   ==  and = 
+   ==  or  = 
 
 5. DP\
-   T\[__i+1__]  &emsp;  word\[__i__]
+   T = [[0] * (__n+1__) for _ in range(__m+1__)]    \
+   T\[__i+1__]   word\[__i__]   \
+   presum\[__i+1__]   nums\[__i__] 
 
 
 ## Naming Convension
 
-1. left, right, lower, upper, mid, target for two pointers
+1. left, right, lower, upper, mid, target
 
 2. i, j, k, i_, j_, k_  for new i j k
 
 3. num, val, accu, item, count, cnt, char
 
-3. duplicates for list: nums, vals, items, array, arr
+3. nums, vals, items, array, arr, cands
 
 4. node, head, root
 
@@ -38,8 +40,7 @@
 
 7. u, v, w, e,  for graph
 
-3. key_value for dictionary
-   char_child for dictionary in trie
+3. key_value, char_child
 
 8. hqueue
 

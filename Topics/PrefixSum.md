@@ -18,15 +18,15 @@ TAG
 
 [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
 
-[Lint139. Subarray Sum Closest](https://www.lintcode.com/problem/subarray-sum-closest/description?_from=ladder&&fromId=106)
+[Lint139. Subarray Sum Closest](https://www.lintcode.com/problem/subarray-sum-closest/)
 
-[Lint402. Continuous Subarray Sum](https://www.lintcode.com/problem/continuous-subarray-sum/description?_from=ladder&&fromId=106)
+[Lint402. Continuous Subarray Sum](https://www.lintcode.com/problem/continuous-subarray-sum/)
 
-[403. Continuous Subarray Sum II](https://www.lintcode.com/problem/continuous-subarray-sum-ii/my-submissions)
+[403. Continuous Subarray Sum II](https://www.lintcode.com/problem/continuous-subarray-sum-ii/)
 \
 arr -> circle
 
-[Lint404. Subarray Sum II](https://www.lintcode.com/problem/subarray-sum-ii/description?_from=ladder&&fromId=106)
+[Lint404. Subarray Sum II](https://www.lintcode.com/problem/subarray-sum-ii/)
 \
 subarray sum to be in a range
 
@@ -35,7 +35,7 @@ subarray sum to be in a range
 
 1D -> 2D
 
-[Lint405. Submatrix Sum](https://www.lintcode.com/problem/submatrix-sum/description?_from=ladder&&fromId=106)
+[Lint405. Submatrix Sum](https://www.lintcode.com/problem/submatrix-sum/)
 \
 fix i, j then it becomes a 1d subarray sum problem O(n)
 

@@ -125,7 +125,9 @@ collections.defaultdict(list) \
      - init a dict with default value an empty list
 
 collections.OrderedDict(items) \
-     - {x1:y1, x2:y2, ... } as coming sequence
+     - {k1:v1, k2:v2, ... } as coming sequence
      - updating value does not move position
-     - d.popitem()   ->    return (xn,yn) and remove
-     - d.move_to_end(x2)   ->    { ... x2:y2}
+     - d.popitem()   ->    return last (k,v) and remove
+     - d.move_to_end(k)   ->    { ... k:v}
+     - next(iter(self.count))   ->    peek first key
+     - next(reversed(self.count))   ->    peek last key

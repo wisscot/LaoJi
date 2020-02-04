@@ -11,13 +11,13 @@ Basic idea: Prefix sum
 Solution 1:
 calculation matrix prefix sum
 then enumerate left top corners and right bottom corners 
-Time: O(n^4)
+Time: O((mn)^2)
 
 Solution 2:
 fix row i,j
-treat col[i...j] as one num
-then we can apply subarray prifix sum
-Time: O(n^3)
+treat col[i...j] as one tall cell
+then we can reduce it to subarray prefixsum
+Time: O(m*m*n)
 
 # Solution 2
 class Solution:
@@ -27,26 +27,32 @@ class Solution:
     """
     def submatrixSum(self, matrix):
         # write your code here
-        res = []
+        m, n = len(matrix), len(matrix[0])
         for i in range(len(matrix)):
-            prefixsum = [0] 
-            for num in matrix[i]:
-                prefixsum.append(prefixsum[-1]+num)
-            
-            for i_ in range(i, len(matrix)):
-                if i_>i:
-                    prefixsum_ = [0]
-                    for num in matrix[i_]:
-                        prefixsum_.append(prefixsum_[-1]+num)
-                    for j in range(len(prefixsum)):
-                        prefixsum[j] += prefixsum_[j]
-                        
-                sum_index = {}
-                for j, num in enumerate(prefixsum):
-                    if num in sum_index:
-                        return [[i, sum_index[num]], [i_, j-1]]
-                    sum_index[num] = j
+            tall_cells = [0] * n
+            for j in range(i, m):
+                for k in range(n):
+                    tall_cells[k] += matrix[j][k]
+                res = self.subarraySum(tall_cells)
+                if res:
+                    col_1, col_2 = res
+                    return [[i, col_1], [j, col_2]]
+
+    def subarraySum(self, nums):
+        n = len(nums)
+        presum = [0]
+        for num in nums:
+            presum.append(presum[-1]+num)
+
+        sum_index = {}
+        for i, psum in enumerate(presum):
+            if psum in sum_index:
+                return sum_index[psum], i-1
+            sum_index[psum] = i
                     
+                        
+                
+
                     
                         
                 
