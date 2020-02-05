@@ -61,3 +61,5 @@ Topo sort
 [269. Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
 \
 Topo sort
+
+[752. Open the Lock](https://leetcode.com/problems/open-the-lock/)

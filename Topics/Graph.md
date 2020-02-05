@@ -7,6 +7,11 @@ __Exapmle:__
 
 [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)
 
+TAG
+[743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+\
+Dijkstra's Algorithm
+
 ## BFS
 
 No weight on edge (w(e)=1 ∀ e ∈ E)
@@ -33,20 +38,20 @@ def dijkstra(self, graph, source):
     
     hqueue = [(0, source)] # init priority queue [(dist, node), ...]
     
-    dist = [float('inf')]*len(graph) # init dist from source
-    dist[i] = 0
+    node_dist = {} # save finalized (minimum dist) nodes here
     
     while hqueue:
         # node can be added to hqueue mutiple times
         # need to process after pop 
         d, node = heapq.heappop(hqueue)
-        if d > dist[node]: 
+        if node in node_dist: 
             continue
-        
+        node_dist[node] = d
+
         for nb, w in graph[currnode]:
-            if dist[nb] > d+w:
-                dist[nb] = d+w
-                heapq.heappush(hqueue, (d+w, nb))
+            if nb in node_dist:
+                continue
+            heapq.heappush(hqueue, (d+w, nb))
 ```
 
 Time: O(|E|log|E|)
