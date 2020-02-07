@@ -28,6 +28,7 @@
 
 7. check for variables duplicate misuse, especially i, j, k ... 
 
+8. zip() is an iterator, cannot be used twice 
 
 ## Naming Convension
 

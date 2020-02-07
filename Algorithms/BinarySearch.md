@@ -30,19 +30,30 @@ target = 3
 |   |    |    | ^  |    |    | ^ |   |
 |   |    |    | l  |    |    | r |   |
 
-bisect_left returns the first accurance\
-bisect_right returns the next of last accurance\
-if target not exists, then bisect_left and bisect_right return the same
+* bisect_left returns the first accurance (left insert position)
+
+* bisect_right returns the next of last accurance (right insert position)
+
+* If target not exists, then bisect_left and bisect_right return the same.
+
+```python
+# Tips: Bisect alwasy returns equal or greater position, 
+#       to find the number equal or less position, use
+bisect.bisect_left(nums, val+1) - 1
+```
 
 __Examples:__
 
 [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 \
-if not distint number, prove no O(logn) algorithm exists, such as [1,1,1,1,0,1,1,1,1,1,1]
+if not distint number, proved no O(logn) algorithm exists, such as [1,1,1,1,0,1,1,1,1,1,1]
 
 [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
 [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+
+TAG
+[1146. Snapshot Array](https://leetcode.com/problems/snapshot-array/)
 
 
 
@@ -82,3 +93,7 @@ Typical Binary search on result
 
 TAG
 [410. Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
+
+TAG
+[1011. Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
+0207G, Done

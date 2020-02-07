@@ -1,7 +1,5 @@
 # Sorting 
 
-[912. Sort an Array](https://leetcode.com/problems/sort-an-array/)
-
 ## Quick Sort
 
 Basic idea: Divide and Conquer
@@ -141,10 +139,6 @@ def coutingsort(self, nums, i):
 
 Bucket sort assumes that the input is drawn from a uniform distribution and has an average-case running time of O(n)
 
-<br>
-
-__Examples:__\
-[164. Maximum Gap](https://leetcode.com/problems/maximum-gap/)
 
 ## Time Complexity Analysis
 
@@ -168,9 +162,20 @@ Unstable: Quick Sort, Heap Sort
 
 ## Examples
 
+
+[912. Sort an Array](https://leetcode.com/problems/sort-an-array/)
+\
+Sorting Practice
+
 [399. Nuts & Bolts Problem](https://www.lintcode.com/problem/nuts-bolts-problem/)
 \
 quick sort, but pivot must be from outside
 
+[164. Maximum Gap](https://leetcode.com/problems/maximum-gap/)
+
+TAG
+[1057. Campus Bikes](https://leetcode.com/problems/campus-bikes/)
+\
+Bucket Sort
 
 

@@ -4,7 +4,7 @@
 ## string
 reverse: string[::-1]   
 
-String to Bytes:  b = s.encode()   or   b = s.encode('utf-8')  \
+String to Bytes:   b = s.encode()   or   b = s.encode('utf-8')  \
 Bytes to String:   s = b.decode()   or   s = b.decode('utf-8')    
 char to ASCII num:   ord('a')  -> 97  \
 ASCII num to char:   chr(97)  -> 'a' 

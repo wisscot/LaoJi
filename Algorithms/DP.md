@@ -96,3 +96,6 @@ TAG
 TAG
 [801. Minimum Swaps To Make Sequences Increasing](https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/)
 
+TAG
+[1048. Longest String Chain](https://leetcode.com/problems/longest-string-chain/)
+
