@@ -57,3 +57,6 @@ TAG
 \
 Real world DFS
 
+TAG
+[1219. Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold/)
+0207G Done
