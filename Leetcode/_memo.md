@@ -21,7 +21,6 @@
 5. DP   \
    T = [[0] * (__n+1__) for _ in range(__m+1__)]    \
    T\[__i+1__]   word\[__i__]   \
-   presum\[__i+1__]   nums\[__i__] 
 
 6. DFS  \
    def search(..., i, j ... )  DO NOT USE i, j (temporary variables)

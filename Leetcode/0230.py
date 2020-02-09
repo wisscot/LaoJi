@@ -35,11 +35,6 @@ def generator(root):
         yield from generator(root.right)
 
 class Solution:
-    """
-    @param root: the given BST
-    @param k: the given k
-    @return: the kth smallest element in BST
-    """
     def kthSmallest(self, root, k):
         # write your code here
         gen = generator(root)

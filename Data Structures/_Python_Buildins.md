@@ -38,8 +38,9 @@ dict.keys()   \
 dict.values()   \
 dict.items()   return [(key,value), ...] \
 
-dict.pop(key)    remove key and return value
+dict.pop(key)   remove key and return value
 dict.get(key, defaultValue)   return default value if key not exists
+dict.setdefault(key, defaultvalue)   return defaultValue if key not exists, else return val of key and set key:val
 
 
 ## list
@@ -116,18 +117,27 @@ for v1, (r1, c1) in enumerate(itertools.product(range(5), range(6))):
 ```
 
 ## collections
-count = collections.Counter(items)  \
-count -> {item1:count1, item2:count2, ...}  \
-count.most_common(k) -> [(item, count), ...]    \
-     - return most common k (item, count) using heapq internally 
-    
-collections.defaultdict(list) \
-     - init a dict with default value an empty list
 
-collections.OrderedDict(items) \
-     - {k1:v1, k2:v2, ... } as coming sequence
-     - updating value does not move position
-     - d.popitem()   ->    return last (k,v) and remove
-     - d.move_to_end(k)   ->    { ... k:v}
-     - next(iter(self.count))   ->    peek first key
-     - next(reversed(self.count))   ->    peek last key
+```python
+count = collections.Counter(items)
+# {item1:count1, item2:count2, ...}
+count.most_common(k) -> [(item, count), ...]
+# return most common k (item, count) using heapq internally 
+count1 - count2 -> item in count1 if item is more in count1 than count2
+
+```
+
+```python
+collections.defaultdict(list)
+# init a dict with default value an empty list
+```
+
+```python
+collections.OrderedDict(items)
+# {k1:v1, k2:v2, ... } as coming sequence  
+# updating value does not move position  
+d.popitem()   ->    return last (k,v) and remove 
+d.move_to_end(k)   ->    { ... k:v}
+next(iter(self.count))   ->    peek first key
+next(reversed(self.count))   ->    peek last key
+```
