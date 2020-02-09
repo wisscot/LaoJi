@@ -101,3 +101,7 @@ TAG
 
 TAG
 [552. Student Attendance Record II](https://leetcode.com/problems/student-attendance-record-ii/)
+
+[1349. Maximum Students Taking Exam](https://leetcode.com/problems/maximum-students-taking-exam/)
+\
+DP + Bitmask

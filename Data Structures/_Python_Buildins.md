@@ -22,9 +22,14 @@ s.rjust(maxWidth)
 s = s.replace(char1, char2)
 
 
+## int
+3 // 2 -> 1     -3 // 2 -> -2     int(-3/2) -> -1 \
+1 + True -> 2     1 + False -> 0     True * 3 -> 3
+
+
 ## bin
 int to bin str :   bin(2)  ->  '0b10'    \
-bin str to int :   int('111', 2)      \
+bin str to int :   int('111', 2)   int('0b111', 2)  \
 divmod(num,2) -> last digit in bin and remain val
 
 
@@ -77,11 +82,6 @@ sorted([x for x in dict], key=dict.get)
 ## zip
 zip(nums, nums[3:])    -> [(num0, num3), (num1, num4), ...]  \
      two lists can be with different length
-
-
-## int
-3 // 2 -> 1     -3 // 2 -> -2     int(-3/2) -> -1 \
-1 + True -> 2     1 + False -> 0     True * 3 -> 3
 
 
 ## ~
