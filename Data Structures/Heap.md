@@ -1,28 +1,61 @@
 # Heap / Priority Queue
 
+
 ## Overview 
 
-* Get min/max in time O(1)
-* Update in time O(logn)
-* Remove min/max in time O(logn)
-* Building (bottom up) in time O(n)
+Heap queue (Priority queue) doesnot support remove, while Heap supports
+
+Time Complexity:
+* Get min/max  __O(1)__
+
+* Update  __O(logn)__
+
+* Remove min/max  __O(logn)__
+
+* Building (bottom up / sip down) __O(n)__
+
+* Remove any __O(n)__
+
 
 ## Application
 
-* Get min/max online with removal
+* Get min/max with removal online 
+
 * Get kth largest online
+
 * Get median online
 
+
+## Merge K sorted arrs / liked list
+
+- Solution 0: Brute Force   \
+  Time O(nlogn) where n is the total number of nodes
+
+- Solution 1: Use merge two sorted lists which takes O(n)   \
+  merge every two for each layer    \
+  Time O(nlogk)
+
+- Solution 1+: Use merge two sorted lists which takes O(n)  \
+  Divide and Conquer (top down) \
+  Time O(nlogk)
+
+- Solution 2: Heapq \
+  Time: O(nlogk)
+
+
 __Examples:__
+
+[23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+0210F \
+3 solutions 
+
+[264. Ugly Number II](https://leetcode.com/problems/ugly-number-ii/)
 
 [378. Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)\
 either start from a point or from a line
 
 [Lint465. Kth Smallest Sum In Two Sorted Arrays](https://www.lintcode.com/problem/kth-smallest-sum-in-two-sorted-arrays/)\
 based on the solution above
-
-[23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)\
-todo, multiple solution
 
 [Lint543. Kth Largest in N Arrays](https://www.lintcode.com/problem/kth-largest-in-n-arrays/)\
 typical heap usage

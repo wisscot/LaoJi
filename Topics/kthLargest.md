@@ -2,8 +2,9 @@
 
 ## Heapq
 
-Time O(klogn)
 ```python
+# Time O(klogn)
+
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         
@@ -18,8 +19,9 @@ class Solution:
 
 ## Quick Select
 
-Time O(n) average, O(n^2) worst
 ```python
+# Time O(n) average, O(n^2) worst
+
 def quick_select(self, nums, k, left, right):
     pivot = nums[right]
     # ...ssssssbbbbbbsbsbsbp...
@@ -39,6 +41,28 @@ def quick_select(self, nums, k, left, right):
     return pivot
 ``` 
 
+```python
+# Another intuitive way, refer to QuickSort intuitive implementation
+```
+
+## Find top K largest/smallest number 
+
+- Solution 0: Brute Force, Find max, remove, repeat (offline) \
+  Time O(nk)
+
+- Solution 1: Sort and get first K (offline)    \
+  Time O(nlogn)
+
+- Solution 2: Min heap and get first K (offline)    \
+  Time O(n + Klogn) \
+  Time O(nlogn)    (online)
+
+- Solution 3: Max heap (len==k) and get all (online)    \
+  Time O(nlogK)
+
+- Solution 4: quick select, find kth, then loop once, sort (Offline)    \
+  Time O(n + KlogK)
+
 ## Examples
 
 [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
@@ -46,3 +70,6 @@ def quick_select(self, nums, k, left, right):
 [324. Wiggle Sort II](https://leetcode.com/problems/wiggle-sort-ii/)\
 Find median in O(n)
 
+[973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+0210G\
+Top K minimum, 5 solutions
