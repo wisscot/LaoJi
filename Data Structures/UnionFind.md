@@ -17,11 +17,12 @@ Check connectivity in Graph (online)
 union, query, union, query ... 
 
    
- 
+
 __Not Good for:__
 
 node needs to be removed from a union (delete edge)
 
+   
 
 ## Template
 
@@ -44,7 +45,7 @@ class UnionFind:
 ```
 
 
-__Example:__
+## Example:
 
 Minimum Spanning Tree (Kruskal's Algorithm)\
 for undirected graph with positive weight
