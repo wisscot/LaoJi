@@ -1,5 +1,6 @@
 # MEMO
 
+
 ## Easily made mistakes
 
 1. 2d array get/set on boarder \
@@ -29,13 +30,14 @@
 
 8. zip() is an iterator, cannot be used twice 
 
+
 ## Naming Convension
 
 1. left, right, lower, upper, mid, target
 
 2. i, j, k, i_, j_, k_  for new i j k
 
-3. num, val, accu, item, count, cnt, char
+3. num, val, maxval, minval, accu, incr, item, count, cnt, char
 
 3. nums, vals, items, array, arr, cands
 
