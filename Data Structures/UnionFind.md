@@ -8,12 +8,14 @@ Union by rank is optional
 
 Data stored in array or dict
 
+   
 __Good for:__
 
 Check connectivity in Graph (online)
 
 union, query, union, query ... 
 
+   
 __Not Good for:__
 
 node needs to be removed from a union (delete edge)
@@ -46,8 +48,11 @@ Minimum Spanning Tree (Kruskal's Algorithm)\
 for undirected graph with positive weight
 
 [305. Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)
+0210F again
 
 [261. Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)
+0210F
 
 [721. Accounts Merge](https://leetcode.com/problems/accounts-merge/)
+
 

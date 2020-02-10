@@ -1,6 +1,10 @@
 # 261. Graph Valid Tree
 
 '''
+Given n nodes labeled from 0 to n-1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
+'''
+
+
 Basic idea:
 
 Solution 1:
@@ -13,7 +17,34 @@ A graph is tree iff
     1. num of edges is n-1
     2. only one connected block
 
-'''
+
+# Solution 1
+class Solution:
+	def validTree(self, n: int, edges: List[List[int]]) -> bool:
+		if len(edges) != n - 1:
+			return False
+		
+		graph = self.build_graph(n, edges)
+		
+		queue = collections.deque([0])
+		visited = set([0])	
+		while queue:
+			node = queue.popleft()
+			for child in graph[node]:
+				if child in visited:
+					continue
+				queue.append(child)
+				visited.add(child)
+		
+		return len(visited) == n
+
+	def build_graph(self, n, edges):
+		graph = {node:[] for node in range(n)}
+		for n1, n2 in edges:
+			graph[n1].append(n2)
+			graph[n2].append(n1)
+		return graph			
+
 
 # Solution 2
 class UnionFind:
