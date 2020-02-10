@@ -11,10 +11,12 @@ If n is the length of array, assume the following constraints are satisfied:
 1 ≤ m ≤ min(50, n)
 '''
 
-Basic idea: Binary Search on result
+Solution 1: Binary Search on result
 
-Another way: DP (slower)
+Solution 2: DP (slower)
 
+
+# Solution 1. Binary Search
 class Solution:
     def splitArray(self, nums: List[int], m: int) -> int:
         lower, upper = max(nums), sum(nums)
@@ -40,3 +42,25 @@ class Solution:
             else:
                 accu += num
         return bucket <= bucket_instock
+        
+        
+# Solution 2. DP
+class Solution:
+    def splitArray(self, nums: List[int], m: int) -> int:
+        if not nums: return 0
+        accums = [0]
+        for num in nums:
+            accums.append(accums[-1]+num)
+            
+        n = len(nums)
+        T = [[0]*(n+1) for _ in range(m+1)]
+        for i in range(1, m+1):
+            for j in range(1, n+1):
+                if i > j:
+                    continue
+                if i == 1:
+                    T[i][j] = accums[j]
+                    continue
+                T[i][j] = min([max(T[i-1][j-1-k], accums[j]-accums[j-k-1]) for k in range(j-i+1)])
+        return T[-1][-1]
+    

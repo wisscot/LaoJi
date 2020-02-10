@@ -57,3 +57,11 @@ TAG
 \
 Real world DFS
 
+TAG
+[1219. Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold/)
+0207G Done
+
+TAG
+[1088. Confusing Number II](https://leetcode.com/problems/confusing-number-ii/)
+0208G \ 
+Math and DFS

@@ -18,15 +18,13 @@ If you have figured out the O(n) solution, try coding another solution using the
 
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        presum = [0]
-        for num in nums:
-            presum.append(presum[-1]+num)
+        for i in range(1, len(nums)):
+            nums[i] += nums[i-1]
             
         prevmin = 0
         res = float('-inf')
-        for i in range(1, len(presum)):
-            currsum = presum[i] - prevmin
-            res = max(res, currsum)
-            prevmin = min(prevmin, presum[i])
+        for num in nums:
+            res = max(res, num - prevmin)
+            prevmin = min(prevmin, num)
             
         return res

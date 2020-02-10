@@ -30,7 +30,7 @@ class SegTree:
         if not root:
             return
         if root.start <= val <= root.end:
-            root.count += 1
+            root.count += 1 # preorder update, sum -> increment, min/max needs postorder
             cls.update(root.left, val)
             cls.update(root.right, val)
             
@@ -47,6 +47,7 @@ __Example:__
 
 TAG
 [315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+0209G Done
 
 [327. Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/)
 

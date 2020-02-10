@@ -97,3 +97,8 @@ TAG
 TAG
 [1011. Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
 0207G, Done
+
+TAG
+[1231. Divide Chocolate](https://leetcode.com/problems/divide-chocolate/)
+\
+Similar to 410, Binary Search or DP

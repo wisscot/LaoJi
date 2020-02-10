@@ -1,5 +1,6 @@
 # MEMO
 
+
 ## Easily made mistakes
 
 1. 2d array get/set on boarder \
@@ -21,7 +22,6 @@
 5. DP   \
    T = [[0] * (__n+1__) for _ in range(__m+1__)]    \
    T\[__i+1__]   word\[__i__]   \
-   presum\[__i+1__]   nums\[__i__] 
 
 6. DFS  \
    def search(..., i, j ... )  DO NOT USE i, j (temporary variables)
@@ -30,13 +30,14 @@
 
 8. zip() is an iterator, cannot be used twice 
 
+
 ## Naming Convension
 
 1. left, right, lower, upper, mid, target
 
 2. i, j, k, i_, j_, k_  for new i j k
 
-3. num, val, accu, item, count, cnt, char
+3. num, val, maxval, minval, accu, incr, item, count, cnt, char
 
 3. nums, vals, items, array, arr, cands
 

@@ -63,3 +63,6 @@ Topo sort
 Topo sort
 
 [752. Open the Lock](https://leetcode.com/problems/open-the-lock/)
+
+TAG
+[1197. Minimum Knight Moves](https://leetcode.com/problems/minimum-knight-moves/)

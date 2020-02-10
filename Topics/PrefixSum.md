@@ -5,16 +5,18 @@ when dealing with __subarray number sum__ problems
 ## Subarray Sum
 
 ```python
-presum = [0]
-for num in nums:
-    presum.append(presum[-1]+num)
+presum = list(nums)
+for i in range(1, len(nums)):
+    presum[i] += presum[i-1]
+    # presum[i] = the sum of the first i numbers  0, 1, ..., i
 
-# presum[i] = the sum of the first i numbers  0, 1, ..., i-1
-# sum i,...,j = presum[j+1] - presum[i]
+sum(j ... i) = presum[i] - (presum[j-1] if j > 0 else 0)
+count = collections.Counter({0:1})
 ```
 
 TAG
 [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+0208G Done
 
 [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
 
@@ -35,7 +37,8 @@ subarray sum to be in a range
 
 1D -> 2D
 
-[Lint405. Submatrix Sum](https://www.lintcode.com/problem/submatrix-sum/)
-\
+TAG
+[1074. Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)
+0208G \
 fix i, j then it becomes a 1d subarray sum problem O(n)
 
