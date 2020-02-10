@@ -9,6 +9,7 @@ Union by rank is optional
 Data stored in array or dict
 
    
+
 __Good for:__
 
 Check connectivity in Graph (online)
@@ -16,6 +17,7 @@ Check connectivity in Graph (online)
 union, query, union, query ... 
 
    
+ 
 __Not Good for:__
 
 node needs to be removed from a union (delete edge)
