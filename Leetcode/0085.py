@@ -1,10 +1,13 @@
 # 85. Maximal Rectangle
 
 '''
+Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
+'''
+
 Basic idea:
 Count how many continus ones at and above current position
 for each row, this problem convert to Largest_Rectangle_in_Histogram problem (Leetcode 84).
-'''
+
 
 class Solution:
     """

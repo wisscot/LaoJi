@@ -24,23 +24,34 @@ Solution 1: Brute force
 use a deque to push and pop, get max by loop over the deque
 Time O(nk)
 
-Solution 2: Heapq with hashheap
+
+Solution 2: Heapq w/ hashheap
 use a heap to store current subarray, add new one and remove expired one,
 removal needs O(n) time, but we can implement hashheap like in problem 480
 Time O(nlogk)
 
-Solution 3: Heapq without hashheap
+
+Solution 2+: Heapq w/o hashheap
 Similar to the idea of 218.skyline,
 we dont need to remove every num expired,
 just remove the ones which expired but still on the top of the heap
 Time O(nlogk)
 
+
+Solution 3: Mono deque (recommend)
+
+for num older and smaller, there's no reason to stay in the deque,
+because it can never be the max,
+so we can use deque to store a descending queue,
+for each incoming num:
+    if incoming num is greater, then pop all smaller out,
+    while top num in the queue expired, also pop it (popleft)
+
+Time O(n)
+
+
+# Solution 2+
 class Solution:
-    """
-    @param nums: A list of integers.
-    @param k: An integer
-    @return: The maximum number inside the window at each moving.
-    """
     def maxSlidingWindow(self, nums, k):
         # write your code here
         import heapq
@@ -66,48 +77,21 @@ class Solution:
         return res
 
 
-Solution 4: Mono deque (recommend)
-for num older and smaller, there's no reason to stay in the deque,
-because it can never be the max,
-so we can use deque to store a descending queue,
-for each incoming num:
-    if incoming num is greater, then pop all smaller out,
-    while top num in the queue expired, also pop out
-
-Time O(n)
-
+# Solution 3
 class Solution:
-    """
-    @param nums: A list of integers.
-    @param k: An integer
-    @return: The maximum number inside the window at each moving.
-    """
-    def maxSlidingWindow(self, nums, k):
-        # write your code here
-        import collections
-        if not nums:
-            return []
-        
+    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         queue = collections.deque()
-        for i, num in enumerate(nums[:k-1]): # save k-1 nums
-            self.push(queue, num, i)
         
-        left = 0
         res = []
-        for i in range(k-1, len(nums)):
-            num = nums[i]
-            while queue and queue[0][1]<left: # expired num
+        for i, num in enumerate(nums):
+            while queue and queue[-1][1] < num:
+                queue.pop()
+            queue.append((i, num))
+            if queue[0][0] <= i - k:
                 queue.popleft()
+            
+            if i >= k-1:
+                res.append(queue[0][1])
                 
-            self.push(queue, num, i) # push in new num
-
-            res.append(queue[0][0])
-            left += 1
-
         return res
-
-    def push(self, queue, num, i):
-        while queue and queue[-1][0]<=num:
-            queue.pop()
-        queue.append((num, i))
         

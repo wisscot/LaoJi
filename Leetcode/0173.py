@@ -7,32 +7,24 @@ Calling next() will return the next smallest number in the BST.
 
 Basic idea:
 In-order traverse
+
+Solution 1: 
 put everything at the root left side to a stack, the last one is the next
 then get its right, repeat above
 
+Solution 2:
+Python generator, next()
+
 # Solution 1:
 class BSTIterator:
-    """
-    @param: root: The root of binary tree.
-    """
     def __init__(self, root):
-        # do intialization if necessary
         self.stack = []
         node = root
         
-
-    """
-    @return: True if there has next node, or false
-    """
     def hasNext(self):
-        # write your code here
         return self.stack
 
-    """
-    @return: return next node
-    """
     def next(self):
-        # write your code here
         curr = self.stack.pop()
         
         node = curr.right
@@ -43,29 +35,24 @@ class BSTIterator:
         return curr
         
 
-# Solution 2: recursive generator (python)
-# from leetcode discussion
-def tree_generator(node):
-    if node.left:
-        yield from tree_generator(node.left)
-        
-    yield node.val
+# Solution 2: 
+def bst_gen(root):
+    if root is None:
+        return
+    yield from bst_gen(root.left)
+    yield root.val
+    yield from bst_gen(root.right)
     
-    if node.right:
-        yield from tree_generator(node.right)
-
 class BSTIterator:
+
     def __init__(self, root: TreeNode):
-        if root is not None:
-            self.generator = tree_generator(root)
-            self.next_value = next(self.generator)
-        else:
-            self.next_value = None
+        self.gen = bst_gen(root)
+        self.nextval = next(self.gen, None)
 
     def next(self) -> int:
-        val = self.next_value
-        self.next_value = next(self.generator, None)
+        val = self.nextval
+        self.nextval = next(self.gen, None)
         return val
 
     def hasNext(self) -> bool:
-        return self.next_value is not None
+        return self.nextval is not None
