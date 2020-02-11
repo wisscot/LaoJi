@@ -11,12 +11,13 @@ slave pointer j - while loop
 Algorithm:
   1. move j (while we should include element j)
   2. save result (arr[i:j])
-  3. move i (in for loop)
+  3. move i (outer for loop)
 
 Time O(n)
 
 On single linked list:\
 Find loop / find location with slow/fast pointers
+
 
 __Examples:__
 
@@ -35,6 +36,7 @@ challenge - sort into lt, eq, gt three parts
 [Lint143. Sort Colors II](https://www.lintcode.com/problem/sort-colors-ii/description)
 
 
+
 ## Towards two pointers
 
 On array:
@@ -45,6 +47,9 @@ Algorithm:
   1. i, j = 0, len - 1
   2. move i or j by 1
   3. save result e.g. count = j - i
+
+
+__Examples:__
 
 [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 0201G \

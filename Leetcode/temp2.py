@@ -1,35 +1,42 @@
-DIRECTIONS = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+class UnionFind:
+	def __init__(self):
+		self.p = {}
+		self.islandnum = 0
+	
+	def find(self, x): # path compression
+		if x!= self.p[x]:
+			self.p[point] = self.find(self.p[point])
+		return self.p[point]
+
+	def union(self, x, y):
+		rx, ry = self.find(x), self.find(y)
+		if rx == ry:
+			return
+		self.p[rx] = ry
+		self.islandnum -= 1
+
+DIRECTIONS = [(1,0), (0,1), (-1,0), (0.-1)]
 class Solution:
-    def cleanRoom(self, robot):
-        """
-        :type robot: Robot
-        :rtype: None
-        """
-        cleaned = set()
-        self.search(robot, cleaned, 0, 0, 0)
-        
-    def search(self, robot, cleaned, i, j, facing):
-        # assume position i, j is valid and not cleaned
-        robot.clean()
-        cleaned.add((i,j))
-        
-        for i in range(4):
-            new_facing = (facing+i) % 4
-            i_ = i + DIRECTIONS[new_facing][0]
-            j_ = j + DIRECTIONS[new_facing][1]
-            if not (i_, j_) in cleaned and robot.move():
-                # treat cleaned as a virtual wall
-                # for a wall, think the robot hit the wall and come back
-                # equals to after search and then goback status
-                self.search(robot, cleaned, i_, j_, new_facing)
-                self.goback(robot)
-            
-            robot.turnRight()
-            
-    def goback(self, robot):
-        robot.turnRight()
-        robot.turnRight()
-        robot.move()             
-        robot.turnRight()
-        robot.turnRight()
-        
+	def numIslands2(self, m: int, n: int, positions: List[List[int]]) -> List[int]:
+	
+        uf = UnionFind()
+        visited = set()
+
+        for pos in positions:
+            uf.islandnum += 1
+            x, y = pos
+            for dx, dy in DIRECTIONS:
+                x_ = x + dx
+                y_ = y + dy
+                if not self.within(x_, y_, m, n):
+                    continue
+                if (x_, y_) not in visited:
+                    continue
+                uf.union((x,y), (x_, y_))
+
+            visited.add((x,y))
+
+        return uf.islandnum
+			
+	def within(self, x, y, m, n):
+		return 0 <= x < m and 0 <= y < n

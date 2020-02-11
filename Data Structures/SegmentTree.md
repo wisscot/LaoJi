@@ -1,5 +1,6 @@
 # Segment Tree
 
+
 ## 1. Good for single point update, range query
 
 * build: Has to include all __Sorted and Unique__ nums waiting for update\
@@ -54,8 +55,7 @@ TAG
 [493. Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
 
 
-## 2. range update, single point query (for offline data)
-
+## 2. Range update, single point query (Not recommend)
 
 By default:
 * build: time O(N) space O(N)
@@ -71,7 +71,7 @@ applying range compression:
 applying Lazy propagation:
 * update: time O(logn)
 
-### Lazy propagation
+__Lazy propagation:__ 
 if current node range was covered by todo range, then update the current node, update the lazy val of children
 
 __Example:__
