@@ -1,4 +1,4 @@
-# Stack
+# Stack & Queue
 
 ##  Regular stack
 
@@ -37,7 +37,8 @@ Iterator
 
 __Examples:__
 
-[84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)\
+[84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+0210G\
 a typical mono stack problem
 
 [85. Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)\
@@ -46,10 +47,6 @@ can be solved based on #84
 [654. Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree/)\
 found the need to find first greater element in left and right
 
-&nbsp;
-
-
-# Deque
 
 ## Monotonous queue
 

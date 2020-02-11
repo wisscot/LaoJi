@@ -1,6 +1,10 @@
 # 84. Largest Rectangle in Histogram
 
 '''
+Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
+'''
+
+
 Basic idea:
   1. enumerate all possible large rectangle and get max
   2. every possible large rectangle will reach one of the tops
@@ -14,7 +18,7 @@ Basic idea:
      - so the largest rectangle based on poped = poped height * ( current_x - stack[-1]'s x)
 
 Time O(n)
-'''
+
 
 class Solution:
     """
