@@ -40,6 +40,8 @@ When Stuck
 
 * Try Segment Tree
 
+* Try Sort
+
 
 ## Coding
 
