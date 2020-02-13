@@ -41,10 +41,10 @@ list = [a for a in list if ...]
 ## dict
 dict.keys()   \
 dict.values()   \
-dict.items()   return [(key,value), ...] \
+dict.items()   return [(key,value), ...] 
 
-dict.pop(key)   remove key and return value
-dict.get(key, defaultValue)   return default value if key not exists
+dict.pop(key)   remove key and return value \
+dict.get(key, defaultValue)   return default value if key not exists  \
 dict.setdefault(key, defaultvalue)   return defaultValue if key not exists, else return val of key and set key:val
 
 
@@ -115,6 +115,9 @@ itertools.product(A,B) -> ((x,y) for x in A for y in B)
 for v1, (r1, c1) in enumerate(itertools.product(range(5), range(6))):  
     ...
 ```
+
+itertools.permutation(A)
+  - A = [1,2,3] -> [(1,2,3), (1,3,2), (2,1,3), (2,3,1), (3,1,2), (3,2,1)]
 
 ## collections
 
