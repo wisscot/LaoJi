@@ -86,7 +86,8 @@ so we need to update the pin to include end -> (-height, start, end)
 
 
 
-Solution 2:
+(ALL BELOW NOT RECOMMEND)
+Solution 2: 
 with Segment Tree
 Time: O(n*N) where n is the number of the building and N is the range of the x
 TLE

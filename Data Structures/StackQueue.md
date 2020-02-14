@@ -14,7 +14,7 @@ __Examples:__
 use an extra stack to store corresponding min
 
 [394. Decode String](https://leetcode.com/problems/decode-string/)
-0211F again\
+0211F 0214G\
 recursive is trivial, use iterative to understand stack used in recursive
 
 Calculator I, II, III, IV\

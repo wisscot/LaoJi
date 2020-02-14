@@ -66,8 +66,10 @@ TAG
 0201G\
 with min heap and max heap
 
-[480. Sliding Window Median](https://leetcode.com/problems/sliding-window-median/) \
-similar to 295 but harder, requires implementing heap with remove (hashheap)  __TODO__
+[480. Sliding Window Median](https://leetcode.com/problems/sliding-window-median/) 
+0214F again\
+similar to 295 but harder, requires implementing heap with remove (hashheap)\
+Or no hashheap, just lazy heap
 
 [407. Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/) \
 barrel principle
