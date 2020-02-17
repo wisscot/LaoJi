@@ -20,6 +20,9 @@ Test Cases:
 * Invalid cases handling
 
 * Edge cases
+  - two input/array/matrix/val are the same
+  - value zero
+  - empty
 
 
 ## Thinking
@@ -41,6 +44,8 @@ When Stuck
 * Try Segment Tree
 
 * Try Sort
+
+* Try convert to Graph
 
 
 ## Coding

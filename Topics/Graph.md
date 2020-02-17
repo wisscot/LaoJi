@@ -53,9 +53,20 @@ def dijkstra(self, graph, source):
                 continue
             heapq.heappush(hqueue, (d+w, nb))
 ```
-
 Time: O(|E|log|E|)
 
+## Bellman-Ford
+
+Same functionality with Disjtra's Algorithm \
+Pros: good with / can detect negative cycle
+
+```python
+# Step 1. assign 0, inf dist to source and other nodes
+# Step 2. loop |V| - 1 times: for all edges (u,v): update_vertex_dist(v)
+```
+Time: O(|V|*|E|)
+
+Negative cycle detect: run loop one more time, see if results remains the same
 
 ## Floyd-Warshall 
 
@@ -95,7 +106,7 @@ for all (i, j) ∈ E:
 for k = 1 to n:
     for i=1 to n: 
         for j = 1 to n:
-            dist(i,j) = min{dist(i,k)+dist(k,j), dist(i,j)}
+            dist(i,j) = min{dist(i,j), dist(i,k)+dist(k,j)}
 ```
 Time: O(|V|^3)
 
