@@ -1,12 +1,5 @@
 # 821. Time Intersection
 
-Basic idea:
-think it as plane take off and touch down, then -> the Lintcode391 planes in the sky problem
-
-use dictionary to store all the information at each key event, like in the skyline problem
-
-
-
 '''Description
 Give two users' ordered online time series, and each section records the user's login time point x and offline time point y. Find out the time periods when both users are online at the same time, and output in ascending order.you need return a list of intervals.
 
@@ -26,13 +19,12 @@ Explanation: There is no time period, both users are online at the same time.
 '''
 
 
-"""
-Definition of Interval.
-class Interval(object):
-    def __init__(self, start, end):
-        self.start = start
-        self.end = end
-"""
+Basic idea:
+think it as plane take off and touch down, then -> the Lintcode391 planes in the sky problem
+
+use dictionary to store all the information at each key event, like in the skyline problem
+
+
 
 class Solution:
     """

@@ -68,7 +68,7 @@ mutiple solutions
 [Lint31. Partition Array](https://www.lintcode.com/problem/partition-array/description)
 
 [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  
-0201F 0202F again\
+0201F 0202F 0214G\
 use large edge as master pointer
 
 [16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/)
