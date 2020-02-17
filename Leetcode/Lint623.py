@@ -44,7 +44,7 @@ DP + Trie + DFS
 
 use T as the row of 2d transfer matrix T[i][j]
 newT is the next row of T
-this is the idea of sliding array
+this is the idea of DP sliding array
 
 edge case: if words contains a empty string, it cannot be marked in Trie
 

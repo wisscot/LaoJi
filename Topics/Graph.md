@@ -57,7 +57,7 @@ Time: O(|E|log|E|)
 
 ## Bellman-Ford
 
-Same functionality with Disjtra's Algorithm \
+Same functionality as Disjtra's Algorithm \
 Pros: good with / can detect negative cycle
 
 ```python

@@ -1,40 +1,31 @@
 # 297. Serialize and Deserialize Binary Tree
 
+'''
+Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.
+'''
 
 Solution 1: BFS
+Solution 2: DFS - preorder traversal
+
+# Solution 1: BFS
 class Codec:
     def serialize(self, root):
-        """Encodes a tree to a single string.
-        :type root: TreeNode
-        :rtype: str
-        """
-        if not root:
-            return ''
-            
         res = []
         queue = collections.deque([root])
+        
         while queue:
-            head = queue.popleft()
-            if head:
-                res.append(str(head.val))
-                queue.append(head.left)
-                queue.append(head.right)
-            else:
+            node = queue.popleft()
+            if node is None:
                 res.append('#')
-            
-        while res and res[-1] == '#':
-            res.pop()
-            
-        print(res)
+                continue
+            res.append(str(node.val))
+            queue.append(node.left)
+            queue.append(node.right)
+        
         return ','.join(res)
         
-        
+    # with deque
     def deserialize(self, data):
-        """Decodes your encoded data to tree.
-        
-        :type data: str
-        :rtype: TreeNode
-        """
         if not data:
             return None
             
@@ -56,37 +47,33 @@ class Codec:
                     queue.append(head.right)
         return root
     
-    
-    # use two pointers deserialize
+    # with iterator
     def deserialize(self, data):
-        # None or ""
-        if not data:
+        if data == '#':
             return None
-
-        bfs_order = [
-            TreeNode(int(val)) if val != '#' else None
-            for val in data.split()
-        ]
-        root = bfs_order[0]
-        fast_index = 1
         
-        nodes, slow_index = [root], 0
-        while slow_index < len(nodes):
-            node = nodes[slow_index]
-            slow_index += 1
-            node.left = bfs_order[fast_index]
-            node.right = bfs_order[fast_index + 1]
-            fast_index += 2
-            
-            if node.left:
-                nodes.append(node.left)
-            if node.right:
-                nodes.append(node.right)
+        vals = iter(data.split(','))
+        root = TreeNode(int(next(vals)))
         
-        return root    
+        currlayer = collections.deque([root])
+        while currlayer:
+            for _ in range(len(currlayer)):
+                node = currlayer.popleft()
+                val = next(vals)
+                node.left = TreeNode(int(val)) if val != '#' else None
+                val = next(vals)
+                node.right = TreeNode(int(val)) if val != '#' else None
+                if node.left:
+                    currlayer.append(node.left)
+                if node.right:
+                    currlayer.append(node.right)
+                
+        return root
         
 
-Solution 2: Preorder traversal tree
+# Solution 2: DFS 
+# Preorder traversal tree
+class Codec:
     def serialize(self, root):
         if not root:
             return '#'

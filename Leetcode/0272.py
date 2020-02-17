@@ -66,7 +66,7 @@ class Solution:
     def moveupper(self, stack):
         # do not pop first
         # leave node in stack if it has right not visited
-        # will be used as parent
+        # as it will be used as parent
         if stack[-1].right:
             node = stack[-1].right
             while node:

@@ -51,10 +51,10 @@ Minimum Spanning Tree (Kruskal's Algorithm)\
 for undirected graph with positive weight
 
 [305. Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)
-0210F again
+0210F 0217G
 
 [261. Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)
-0210F
+0210F 0217G
 
 [721. Accounts Merge](https://leetcode.com/problems/accounts-merge/)
 0211G

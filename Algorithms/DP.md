@@ -61,7 +61,7 @@ use min max as states, redo it
 
 [674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)
 \
-Difficulty: easy. Challedge: elegant
+Easy. Challedge: elegant
 
 [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 \
@@ -80,14 +80,13 @@ difficult, dp + dfs + trie
 [Lint92. Backpack](https://www.lintcode.com/problem/backpack)\
 [Lint125. Backpack II](https://www.lintcode.com/problem/backpack-ii/)\
 [Lint440. Backpack III](https://www.lintcode.com/problem/backpack-iii/)\
-\
 original Backpack
 
 [89. k Sum](https://www.lintcode.com/problem/k-sum/)
 
 TAG 
 [727. Minimum Window Subsequence](https://leetcode.com/problems/minimum-window-subsequence/)
-0130F
+0130F 0217G
 
 TAG
 [221. Maximal Square](https://leetcode.com/problems/maximal-square/)

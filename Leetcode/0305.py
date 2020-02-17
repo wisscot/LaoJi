@@ -9,52 +9,48 @@ union node with adjecent nodes, count how many island
 
 
 class UnionFind:
-    def __init__(self, n):
-        self.p = list(range(n))
-        self.islandnum = 0
+    def __init__(self):
+        self.p = {}
+        self.group = 0
+        
+    def find(self, u):
+        if self.p[u] != u:
+            self.p[u] = self.find(self.p[u])
+        return self.p[u]
     
-    def find(self, x): # path compression
-        if x!= self.p[x]:
-            self.p[x] = self.find(self.p[x])
-        return self.p[x]
-
-    def union(self, x, y):
-        rx, ry = self.find(x), self.find(y)
-        if rx == ry:
+    def union(self, u, v):
+        rootu = self.find(u)
+        rootv = self.find(v)
+        if rootu == rootv:
             return
-        self.p[rx] = ry
-        self.islandnum -= 1
-
-DIRECTIONS = [(1,0), (0,1), (-1,0), (0,-1)]
+        self.p[rootu] = rootv
+        self.group -= 1
+    
+DIRECTIONS = [(1,0),(0,1),(-1,0),(0,-1)]
 class Solution:
     def numIslands2(self, m: int, n: int, positions: List[List[int]]) -> List[int]:
-        def indexof(i,j):
-            return i*n + j
-        
-        uf = UnionFind(m*n)
         grid = [[0]*n for _ in range(m)]
         
+        uf = UnionFind()
         res = []
-        for pos in positions:
-            i, j = pos
+        for i, j in positions:
             if grid[i][j] == 1:
-                res.append(uf.islandnum)
+                res.append(uf.group)
                 continue
                 
-            uf.islandnum += 1
-            grid[i][j] = 1
+            uf.group += 1
+            uf.p[(i,j)] = (i,j)
             for di, dj in DIRECTIONS:
-                i_ = i + di
-                j_ = j + dj
-                if not self.within(i_, j_, m, n):
+                i_, j_ = i + di, j + dj
+                if not self.within(m, n, i_, j_):
                     continue
                 if grid[i_][j_] == 0:
                     continue
-                uf.union(indexof(i,j), indexof(i_, j_))
-            
-            res.append(uf.islandnum)
-
+                uf.union((i, j), (i_, j_))
+            res.append(uf.group)
+            grid[i][j] = 1
+                
         return res
-            
-    def within(self, x, y, m, n):
-        return 0 <= x < m and 0 <= y < n
+    
+    def within(self, m, n, i, j):
+        return 0<=i<m and 0<=j<n

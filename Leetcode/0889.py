@@ -12,10 +12,20 @@ Output: [1,2,3,4,5,6,7]
 '''
 
 Solution 1: DC
+Time O(n^2)   (best O(n))
 
-Time O(n) ave. O(n^2) worst
-Space O(n)
+Solution 2: Iterative
+Go through preorder vals, 
+    append to stack
+    if stack last node val == post order val,
+    then it means the last node in the stack is complete, can pop out
+when pop out, append that node to its parent, left preferred,
+because the way to construct the tree is not unique,
+e.g. pre=[1,2] post=[2,1], the node 2 could be left or right child of 1
+Time O(n)
 
+
+# Solution 1
 def constructFromPrePost(self, pre: List[int], post: List[int]) -> TreeNode:
     if not pre:
         return None
@@ -31,8 +41,7 @@ def constructFromPrePost(self, pre: List[int], post: List[int]) -> TreeNode:
     return root
 
 
-Solution 2: Iterative
-
+# Solution 2
 def constructFromPrePost(self, pre: List[int], post: List[int]) -> TreeNode:
     stack = []
     j = 0
@@ -54,4 +63,5 @@ def constructFromPrePost(self, pre: List[int], post: List[int]) -> TreeNode:
             
         
         
+
 

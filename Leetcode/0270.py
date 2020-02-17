@@ -16,18 +16,15 @@ Time O(logn)
 
 class Solution:
     def closestValue(self, root: TreeNode, target: float) -> int:
-        lower = upper = root.val
-        
+        res = root.val
         while root:
-            if root.val < target:
-                upper = root.val
-                root = root.right
-            else:
-                lower = root.val
-                root = root.left
+            if abs(root.val-target) < abs(res-target):
+                res = root.val
                 
-        if abs(lower-target) < abs(upper-target):
-            return lower
-        return upper
+            if root.val > target:
+                root = root.left
+            else:
+                root = root.right
         
+        return res
         

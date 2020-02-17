@@ -13,28 +13,18 @@ Basic idea: DC
 count of left/right children nodes + itself = 2**(child depth)
 
 
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution:
     def countNodes(self, root: TreeNode) -> int:
-        
         if root is None:
             return 0
+            
+        Ldepth = self.depthof(root.left)
+        Rdepth = self.depthof(root.right)
+        if Ldepth == Rdepth:
+            return 2**Ldepth + self.countNodes(root.right)
+        return 2**Rdepth + self.countNodes(root.left)
         
-        leftdepth = self.depth(root.left)
-        rightdepth = self.depth(root.right)
-        
-        if leftdepth == rightdepth:
-            return 2**leftdepth + self.countNodes(root.right)
-        else:
-            return 2**rightdepth + self.countNodes(root.left)
-        
-    def depth(self, root):
+    def depthof(self, root):
         res = 0
         while root:
             res += 1
