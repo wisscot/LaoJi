@@ -60,7 +60,8 @@ __Examples:__
 0201G \
 
 TAG
-[1. Two Sum](https://leetcode.com/problems/two-sum/) \
+[1. Two Sum](https://leetcode.com/problems/two-sum/) 
+0218G \
 mutiple solutions
 
 [Lint609. Two Sum - Less than or equal to target](https://www.lintcode.com/problem/two-sum-less-than-or-equal-to-target/)
@@ -79,4 +80,7 @@ convert to 2sum closest
 \
 only one pointer is needed
 
+[674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)
+\
+Easy. Challedge: elegant
 

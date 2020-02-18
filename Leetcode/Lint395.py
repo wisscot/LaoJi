@@ -36,12 +36,10 @@ Base case: T[-1] = values[-1]
 
 
 Solution 2:
-at i, current gamer can have at most T(i), then opponent can have at most sum(value[i:])-T(i)
+think from the second player, the max gain he/she can take is currsum - dp[i], right?
+and he/she will have either dp[i+1] or dp[i+2], and the first player will try to minimize that
 
-T(i) = values[i] + max(   values[i] + sum(i+1:)-T(i+1), values[i]+values[i+1]+  sum(i+2:)-T(i+2) )
-                                      ----------------                          ---------------- 
-                                              ^                                         ^
-                                  after opponent decide at i+1                after opponent decide at i+2
+So, currsum - T[i] = min(T[i+1], T[i+2]) 
 
 Time O(n)
 Space O(n) can be reduced to O(1)
@@ -89,8 +87,7 @@ class Solution:
                 return 0
             if i == len(values) - 1: #base case
                 return values[i]
-            return max(values[i]+postfixsum[i+1]-dp(i+1), 
-                       values[i]+values[i+1]+postfixsum[i+2]-dp(i+2))
+            return postfixsum[i]-min(dp(i+1), dp(i+2))
             
         # return dp(0) > dp(1) or dp(0) > dp(2)
         return dp(0) > postfixsum[0] - dp(0)  # alternative way, verify current first take will be greater than opponent

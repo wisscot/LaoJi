@@ -22,6 +22,14 @@ def search(nums, target, path, res):
 ```
 Time Complexity: O(num of solutions * time to construct a solution)
 
+Think of of DFS as tree:
+   * Each node is the search function
+   * Search function parameters are the status of the node
+   * Each edge represents the num/char (think about Trie)
+   * Path stores all edges along the path
+   * Draw the tree and figure out the status of the node and path, and exit condition before coding
+
+
 ## Application
 
 * find all possible solutions
@@ -30,10 +38,11 @@ Time Complexity: O(num of solutions * time to construct a solution)
 ## Examples
 
 [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
-\
+0218F again\
 typical backtracking
 
 [Lint10. String Permutation II](https://www.lintcode.com/problem/string-permutation-ii/description)
+0218F again\
 
 [Lint90. k Sum II](https://www.lintcode.com/problem/k-sum-ii/description)
 

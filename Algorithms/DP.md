@@ -42,8 +42,7 @@ __Examples:__
 [Lint394. Coins in a Line](https://www.lintcode.com/problem/coins-in-a-line/)
 
 [Lint395. Coins in a Line II](https://www.lintcode.com/problem/coins-in-a-line-ii/)
-\
-redo it 
+0218G
 
 [Lint396. Coins in a Line III](https://www.lintcode.com/problem/coins-in-a-line-iii/)
 \
@@ -54,20 +53,17 @@ Interval
 think from last step
 
 [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
-0213F \
-use min max as states, redo it
+0213F 0218G \
+use min max as states
 
 [198. House Robber](https://leetcode.com/problems/house-robber/)
-
-[674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)
-\
-Easy. Challedge: elegant
 
 [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 \
 typical
 
 [72. Edit Distance](https://leetcode.com/problems/edit-distance/)
+0218G \
 
 [97. Interleaving String](https://leetcode.com/problems/interleaving-string/)
 \
@@ -90,7 +86,7 @@ TAG
 
 TAG
 [221. Maximal Square](https://leetcode.com/problems/maximal-square/)
-0131G
+0131G 0218G Done
 
 TAG
 [801. Minimum Swaps To Make Sequences Increasing](https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/)
@@ -104,3 +100,8 @@ TAG
 [1349. Maximum Students Taking Exam](https://leetcode.com/problems/maximum-students-taking-exam/)
 \
 DP + Bitmask
+
+TAG
+[300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+0218G \
+two solutions, this is the basic for Russian Doll Envelopes
