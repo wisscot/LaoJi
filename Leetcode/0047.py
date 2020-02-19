@@ -1,12 +1,17 @@
-# 10. String Permutation II
+# 47. Permutations II
 
 '''
-Given a string, find all permutations of it without duplicates.
-Example 1:
+Given a collection of numbers that might contain duplicates, return all possible unique permutations.
 
-Input: "abb"
+Example:
+
+Input: [1,1,2]
 Output:
-["abb", "bab", "bba"]
+[
+  [1,1,2],
+  [1,2,1],
+  [2,1,1]
+]
 '''
 
 Basic idea: DFS

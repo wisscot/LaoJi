@@ -41,7 +41,7 @@ Think of of DFS as tree:
 0218F again\
 typical backtracking
 
-[Lint10. String Permutation II](https://www.lintcode.com/problem/string-permutation-ii/description)
+[47. Permutations II](https://leetcode.com/problems/permutations-ii/)
 0218F 0219G again\
 
 [Lint90. k Sum II](https://www.lintcode.com/problem/k-sum-ii/description)
