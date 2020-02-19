@@ -15,15 +15,13 @@ if previous one has not been visited,
 then the current one should not be included.
 otherwise, there will be duplicates
 
-Solution 1 is preferred because every node will sweep the whole array,
+Solution 1: every node will sweep the whole array,
 So we do NOT need previous node index status
+
+Solution 2: using count, sweep the key in the count
 
 # Solution 1
 class Solution:
-    """
-    @param str: A string
-    @return: all permutations
-    """
     def stringPermutation2(self, str):
         # write your code here
         
@@ -56,40 +54,24 @@ class Solution:
             visited[i] = False
 
 
-# Solution 2: NOT elegant, just to understand DFS with index
+# Solution 2: count
 class Solution:
     def stringPermutation2(self, str):
         # write your code here
-        
-        if not str:   # <- need to check empty str
-            return ['']
-        
+        count = collections.Counter(str)
         res = []
-        s = sorted(list(str))
-        visited = [False] * len(s)
-        for i in range(len(s)): 
-            if i and s[i] == s[i-1]:
-                continue
-            self.search(s, i, visited, [], res) # <- the status includes current position
-        
+        self.search(len(str), count, [], res)
         return res
         
-    def search(self, s, i, visited, path, res):
-        
-        if visited[i]: # <- check first
-            return
-            
-        if i and s[i] == s[i-1] and not visited[i-1]:
-            return
-        
-        path.append(s[i])  # <- add to path before check
-        if len(path) == len(s):
+    def search(self, n, count, path, res):
+        if len(path) == n:
             res.append(''.join(path))
+            
+        for char in count:
+            if count[char] == 0:
+                continue
+            count[char] -= 1
+            path.append(char)
+            self.search(n, count, path, res)
             path.pop()
-            return
-        
-        visited[i] = True 
-        for j in range(len(s)):
-            self.search(s, j, visited, path, res)
-        path.pop()  # <- back tracking
-        visited[i] = False # <- back tracking
+            count[char] += 1
