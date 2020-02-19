@@ -10,7 +10,7 @@ Basic idea:
 Draw directed graph with IN/OUT
 the stable graph is that any node have either in or out (not both)
 
-Preprocess and get each person's net IN / OUT (balances)
+Preprocess and get each persons net IN / OUT (balances)
 so the goal is to match all INs to OUTs
 kinda like n backpack problem  -> NP-compelete
 
@@ -20,6 +20,9 @@ for each person, he/she can transfer the balance to any other one,
 but if transfer to another same sign person, 
 then the person will have both IN and OUT in the graph,
 so we only try to transfer to opposite sign
+
+Note: when we do one transaction, we transfer all the balance, bacause it would be the same as 
+the guy do transaction with two people
 
 Algorithm: DFS
 

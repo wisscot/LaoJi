@@ -1,6 +1,6 @@
 # Two Pointers
 
-## Forwards two pointers
+## Onwards two pointers
 
 On arrays:
 

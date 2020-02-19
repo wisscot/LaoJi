@@ -45,10 +45,13 @@ note: since the interval e.g 2 to 6 is left inclusive and right exclusive,
       so we need to sort touchdown before takeoff for same time event
 Time: O(nlogn)  sorting donimates
 
-Solution 3:
-Segment Tree
+Solution 3: use count (recommend)
+easier to understand and apply to other line sweep problems
+
+Solution 4: Segment Tree
 
 
+# Solution 2
 class Solution:
     """
     @param airplanes: An interval array
@@ -68,4 +71,26 @@ class Solution:
                 count -= 1
             res = max(res, count)
             
+        return res
+
+
+# Solution 3
+class Solution:
+    def countOfAirplanes(self, airplanes):
+        takeoff_count = collections.Counter()
+        arrival_count = collections.Counter()
+        
+        for schedule in airplanes:
+            takeoff_count[schedule.start] += 1
+            arrival_count[schedule.end] += 1
+            
+        keytimes = takeoff_count.keys() | arrival_count.keys()
+        
+        res = 0
+        plane = 0
+        for keytime in sorted(keytimes):
+            plane -= arrival_count[keytime]
+            plane += takeoff_count[keytime]
+            res = max(res, plane)
+    
         return res

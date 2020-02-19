@@ -30,7 +30,7 @@ Test Cases:
 * Solution 0: Brute force   \
   simulate human brain solving
 
-* Other Solutions
+* Solutions 1/2/..
 
 * Data Structures needed 
 
@@ -46,6 +46,8 @@ When Stuck
 * Try Sort
 
 * Try convert to Graph
+
+* Try find subproblem -> DP/recursion
 
 
 ## Coding
