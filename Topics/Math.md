@@ -13,7 +13,7 @@ How many ways to put n balls into k boxes?
 
 ### Case 1: Easy
 just put ball into boxes one by one, \
-each has k choices, so K^n
+each has k choices, so k^n
 
 ### Case 2 - 4:  
 Solve a sub-problem with __no empty boxes__ first,  \

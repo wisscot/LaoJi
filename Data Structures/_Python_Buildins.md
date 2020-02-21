@@ -45,7 +45,7 @@ dict.items()   return [(key,value), ...]
 
 dict.pop(key)   remove key and return value \
 dict.get(key, defaultValue)   return default value if key not exists  \
-dict.setdefault(key, defaultvalue)   return defaultValue if key not exists, else return val of key and set key:val
+dict.setdefault(key, defaultvalue)   return defaultValue if key not exists, else return existing value
 
 
 ## list
@@ -127,11 +127,10 @@ count = collections.Counter(items)
 count.most_common(k) -> [(item, count), ...]
 # return most common k (item, count) using heapq internally 
 count1 - count2 -> item in count1 if item is more in count1 than count2
-
 ```
 
 ```python
-collections.defaultdict(list)
+collections.defaultdict(list/int/...)
 # init a dict with default value an empty list
 ```
 

@@ -53,7 +53,8 @@ BFS to get all connected nodes
 \
 Shorest Path
 
-[207. Course Schedule](https://leetcode.com/problems/course-schedule/)\
+[207. Course Schedule](https://leetcode.com/problems/course-schedule/)
+0220G \
 [210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
 \
 Topo sort
