@@ -42,11 +42,11 @@ Prefer BFS over DFS
 __Examples:__
 
 [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
-\
-BFS is one way to serialize and deserialize 
+0225F\
+BFS or preorder DFS with iterator
 
 [133. Clone Graph](https://leetcode.com/problems/clone-graph/)
-\
+0225F\
 BFS to get all connected nodes
 
 [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
