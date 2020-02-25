@@ -3,7 +3,7 @@
 
 ## Binary Tree
 
-Recite inorder traverse using stack
+Recite inorder traverse using stack (push left line into stack)
 
 __Examples:__
 
