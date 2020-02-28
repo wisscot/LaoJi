@@ -52,6 +52,7 @@ if not distint number, proved no O(logn) algorithm exists, such as [1,1,1,1,0,1,
 0225G
 
 [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+0228G Done
 
 TAG
 [1146. Snapshot Array](https://leetcode.com/problems/snapshot-array/)
