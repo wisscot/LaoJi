@@ -24,23 +24,6 @@
   - Learn:  next time, spend extra time to estimate ...
 
 
-## Projects
-
-* JMC 
-
-* Nuro
-
-* Bolt Script
-
-* Teach others scripting
-
-* BTC
-
-* Autonoumous
-
-* DEP
-
-
 ## Principles
 
 * Communication
