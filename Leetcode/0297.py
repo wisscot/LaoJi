@@ -69,7 +69,22 @@ class Codec:
                     currlayer.append(node.right)
                 
         return root
-        
+
+    # with two pointers
+    def deserialize(self, data):
+        vals = data.split(',')
+        nodes = [TreeNode(int(val)) if val != '#' else None for val in vals ]
+        i, j = 0, 1
+        while j < len(nodes):
+            if nodes[i] is None:
+                i += 1
+                continue
+            nodes[i].left = nodes[j]
+            nodes[i].right = nodes[j+1]
+            i += 1
+            j += 2
+        return nodes[0]
+                 
 
 # Solution 2: DFS 
 # Preorder traversal tree

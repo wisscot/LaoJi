@@ -3,11 +3,12 @@
 
 ## Binary Tree
 
-Recite inorder traverse using stack
+Recite inorder traverse using stack (push left line into stack)
 
 __Examples:__
 
 [257. Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)
+0228G Done
 
 [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 

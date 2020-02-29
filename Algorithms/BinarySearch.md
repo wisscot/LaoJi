@@ -45,12 +45,14 @@ bisect.bisect_left(nums, val+1) - 1
 __Examples:__
 
 [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
-\
+0225G \
 if not distint number, proved no O(logn) algorithm exists, such as [1,1,1,1,0,1,1,1,1,1,1]
 
 [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+0225G
 
 [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+0228G Done
 
 TAG
 [1146. Snapshot Array](https://leetcode.com/problems/snapshot-array/)
