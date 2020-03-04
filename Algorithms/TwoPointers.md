@@ -13,6 +13,12 @@ Algorithm:
   2. save result (arr[i:j])
   3. move i (outer for loop)
 
+```python
+for i in range(n):
+    while j should be included:
+        j += 1
+    res = j - i
+```
 Time O(n)
 
 On single linked list:\
