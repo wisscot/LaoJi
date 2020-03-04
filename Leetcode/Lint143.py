@@ -7,7 +7,10 @@ Given an array of n objects with k different colors (numbered from 1 to k), sort
 Solution 1: Counting Sort (Naive)
 Time O(n)    Space O(k)
 
-Solution 2: Quick Sort idea
+Solution 2: Quick Sort idea (preferred)
+Time O(nlogk)    Space O(1)
+
+Solution 2+: Quick Sort idea, three parts each time
 Time O(nlogk)    Space O(1)
 
 # Solution 2
@@ -24,26 +27,26 @@ class Solution:
         
     def sort(self, colors, lower, upper, left, right):
         
-        if lower >= upper:
+        if lower == upper:
             return
         
-        pivot = (lower + upper) // 2
+        mid = (lower+upper)//2
         # ....ssssssgggggsgs....gsgss...
         #     l     j    i          r
         j = left
-        for i in range(left, right+1):
-            if colors[i] <= pivot: # has to be <= because pivot is tends to lower
+        for i in range(left, right):
+            if colors[i] <= mid:
                 colors[i], colors[j] = colors[j], colors[i]
                 j += 1
         # ....ssssssggggggggggggggggg
         #     l     j               r
-        self.sort(colors, lower, pivot, left, j-1)
-        self.sort(colors, pivot+1, upper, j, right)
+        self.sort(colors, left, j, lower, mid)
+        self.sort(colors, j, right, mid+1, upper)
         
         
         
         
-# Solution 2: lt, eq, gt  3 parts version
+# Solution 2+: lt, eq, gt  3 parts version
 class Solution:
     def sortColors2(self, colors, k):
         self.sort(colors, 1, k, 0, len(colors)-1)

@@ -6,7 +6,7 @@ Given an array with n objects colored red, white or blue, sort them so that obje
 Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
 '''
 
-Solution 1
+Basic idea:
 Partition into three parts: lt, eq, gt
 with three pointers, left, right and i
 
@@ -22,7 +22,6 @@ class Solution:
             #       l     i        r         
             if nums[i] == 1:
                 i += 1
-                continue
             elif nums[i] == 0:
                 self.swap(nums, i, left)
                 left += 1
@@ -35,6 +34,3 @@ class Solution:
         nums[i], nums[j] = nums[j], nums[i]
         
         
-        
-Solution 2: 
-Partition into two parts

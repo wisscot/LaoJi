@@ -22,6 +22,7 @@ Find loop / find location with slow/fast pointers
 __Examples:__
 
 [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
+0304F \
 
 [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 0213G \
@@ -33,11 +34,10 @@ __Examples:__
 0213G \
 
 [75. Sort Colors](https://leetcode.com/problems/sort-colors/)
-\
-challenge - sort into lt, eq, gt three parts
-
+0304F \
 [Lint143. Sort Colors II](https://www.lintcode.com/problem/sort-colors-ii/description)
-
+0304G \
+challenge - one pass, constant space 
 
 
 ## Towards two pointers
