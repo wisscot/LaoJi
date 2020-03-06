@@ -56,6 +56,7 @@ if not distint number, proved no O(logn) algorithm exists, such as [1,1,1,1,0,1,
 
 TAG
 [1146. Snapshot Array](https://leetcode.com/problems/snapshot-array/)
+0306F again
 
 
 
