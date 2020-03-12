@@ -10,15 +10,14 @@ Also known as BackTracking
 
 ```python
 def search(nums, target, path, res):
-    if should_exit:
+    if exit_condition:
+        res.append(list(path))
         return
     
-    if should_save_result:
-        res.append(list(path))
-        
-    path.append(some value)
-    self.search(next level)
-    path.pop() # backtracking, NOT path.pop(val)
+    for i in range(k):  # tree has k branches
+        path.append(some value)
+        self.search(next level)
+        path.pop() # backtracking, NOT path.pop(val)
 ```
 Time Complexity: O(num of solutions * time to construct a solution)
 
@@ -29,6 +28,11 @@ Think of of DFS as tree:
    * Path stores all edges along the path
    * Draw the tree and figure out the status of the node and path, and exit condition before coding
 
+                        root status
+                 path/                \path         \path   ...
+                node status         node status      X
+                /          \        /         \
+            ...             ...   ...          ...
 
 ## Application
 
@@ -37,14 +41,28 @@ Think of of DFS as tree:
 
 ## Examples
 
+[78. Subsets](https://leetcode.com/problems/subsets/)
+0312G\
+typical backtracking
+
+[22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+0321G\
+typical backtracking
+
 [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
-0218F again\
+0218F 0312G\
+typical backtracking
+
+[46. Permutations](https://leetcode.com/problems/permutations/)
+0312G\
 typical backtracking
 
 [47. Permutations II](https://leetcode.com/problems/permutations-ii/)
-0218F 0219G again\
+0218F 0219G 0312G\
+typical backtracking, two solutions
 
 [Lint90. k Sum II](https://www.lintcode.com/problem/k-sum-ii/description)
+0312G
 
 [51. N-Queens](https://leetcode.com/problems/n-queens/)
 
