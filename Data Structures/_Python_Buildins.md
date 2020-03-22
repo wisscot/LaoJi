@@ -25,7 +25,7 @@ s = s.replace(char1, char2)
 ## int
 3 // 2 -> 1     -3 // 2 -> -2     int(-3/2) -> -1 \
 1 + True -> 2     1 + False -> 0     True * 3 -> 3
-
+pow(x, y, z) -> x**y % z can be used in rolling hash
 
 ## bin
 int to bin str :   bin(2)  ->  '0b10'    \
