@@ -45,7 +45,7 @@ def quick_select(self, nums, k, left, right):
 # Another intuitive way, refer to QuickSort intuitive implementation
 ```
 
-## Find top K largest/smallest number 
+## Find top K largest/smallest numbers 
 
 - Solution 0: Brute Force, Find max, remove, repeat (offline) \
   Time O(nk)
@@ -53,14 +53,14 @@ def quick_select(self, nums, k, left, right):
 - Solution 1: Sort and get first K (offline)    \
   Time O(nlogn)
 
-- Solution 2: Min heap and get first K (offline)    \
+- Solution 2: Min heap and pop first K (offline)    \
   Time O(n + Klogn) \
   Time O(nlogn)    (online)
 
-- Solution 3: Max heap (len==k) and get all (online)    \
+- Solution 3: Max heap (len==k) and go through all (online)    \
   Time O(nlogK)
 
-- Solution 4: quick select, find kth, then loop once, sort (Offline)    \
+- Solution 4: quick select, find kth, then loop once, then sort (Offline)    \
   Time O(n + KlogK)
 
 ## Examples
