@@ -73,7 +73,7 @@ mutiple solutions
 [Lint609. Two Sum - Less than or equal to target](https://www.lintcode.com/problem/two-sum-less-than-or-equal-to-target/)
 0305G Done
 
-[Topics: Sort]
+[Topics: Sort](Sort)
 
 [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  
 0201F 0202F 0214G\
