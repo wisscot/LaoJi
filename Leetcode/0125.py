@@ -15,20 +15,18 @@ Space: O(1)
 # Solution 1:
 class Solution:
     def isPalindrome(self, s):        
-        s = ''.join([char.lower() for char in s if char.isalpha() or char.isdigit()])
+        s = ''.join([char.lower() for char in s if char.isalnum()])
         return s == s[::-1]
 
 # Solution 2
 class Solution:
-    def isPalindrome(self, s):
-        # write your code here
-        
+    def isPalindrome(self, s):        
         left, right = 0, len(s)-1
         while left < right:
-            while left<right and not (s[left].isalpha() or s[left].isdigit()):
+            while left<right and not s[left].isalnum():
                 left += 1
             
-            while left<right and not (s[right].isalpha() or s[right].isdigit()):
+            while left<right and not s[right].isalnum():
                 right -= 1
                 
             if s[left].lower() != s[right].lower():

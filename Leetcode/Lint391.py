@@ -87,10 +87,10 @@ class Solution:
         keytimes = takeoff_count.keys() | arrival_count.keys()
         
         res = 0
-        plane = 0
+        cnt = 0
         for keytime in sorted(keytimes):
-            plane -= arrival_count[keytime]
-            plane += takeoff_count[keytime]
-            res = max(res, plane)
+            cnt -= arrival_count[keytime]
+            cnt += takeoff_count[keytime]
+            res = max(res, cnt)
     
         return res

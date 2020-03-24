@@ -60,8 +60,10 @@ Algorithm:
 
 __Examples:__
 
+[Topics: Sort](Sort)
+
 [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
-0201G \
+0201G 0324F\
 [680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
 0201G \
 
@@ -73,21 +75,19 @@ mutiple solutions
 [Lint609. Two Sum - Less than or equal to target](https://www.lintcode.com/problem/two-sum-less-than-or-equal-to-target/)
 0305G Done
 
-[Topics: Sort](Sort)
-
 [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  
 0201F 0202F 0214G\
 use large edge as master pointer
 
 [16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/)
-\
+0324G\
 convert to 2sum closest
 
 [163. Missing Ranges](https://leetcode.com/problems/missing-ranges/) 
-\
+0324G\
 only one pointer is needed
 
 [674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)
-\
+0324F\
 Easy. Challedge: elegant
 
