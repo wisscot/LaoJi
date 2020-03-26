@@ -14,12 +14,17 @@ Algorithm:
   3. move i (outer for loop)
 
 ```python
-for i in range(n):
-    while j should be included:
-        j += 1
+for j in range(n):
+    while i should be included:
+        i += 1
     res = j - i
 ```
 Time O(n)
+
+... | 1 2 3 | 1 2 3 ... 
+      ^       ^
+      i       j
+    | valid |  
 
 On single linked list:\
 Find loop / find location with slow/fast pointers
