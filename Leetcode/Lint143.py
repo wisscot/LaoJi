@@ -33,7 +33,7 @@ class Solution:
         mid = (lower+upper)//2
         # ....ssssssgggggsgs....gsgss...
         #     l     j    i          r
-        j = left
+        j = left  # ! made mistake mutiple times to assign j=0 !
         for i in range(left, right):
             if colors[i] <= mid:
                 colors[i], colors[j] = colors[j], colors[i]

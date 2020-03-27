@@ -6,6 +6,7 @@ use another variable to keep track how many char completed
 
 Time O(n)
 
+# Solution 1: master on left
 class Solution:
     """
     @param source : A string
@@ -41,3 +42,33 @@ class Solution:
             
         return res
         
+
+# Solution 2: master on right
+class Solution:
+    def minWindow(self, s: str, t: str) -> str:
+        count_t = collections.Counter(t)
+        count_s = collections.Counter()
+        missing = len(t)
+        
+        i = 0
+        min_len = float('inf')
+        res = ''
+        # a b c d e g a b c d
+        # i     j
+        for j in range(len(s)):
+            count_s[s[j]] += 1
+            if count_s[s[j]] <= count_t[s[j]]:
+                missing -= 1
+            
+            while not missing:
+                if j - i + 1 < min_len:
+                    min_len = j - i + 1
+                    res = s[i:j+1]
+                    
+                count_s[s[i]] -= 1
+                if count_s[s[i]] < count_t[s[i]]:
+                    missing += 1
+                    
+                i += 1
+    
+        return res

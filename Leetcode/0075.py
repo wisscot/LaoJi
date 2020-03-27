@@ -7,30 +7,28 @@ Here, we will use the integers 0, 1, and 2 to represent the color red, white, an
 '''
 
 Basic idea:
-Partition into three parts: lt, eq, gt
-with three pointers, left, right and i
+Partition into three parts: 0, 1, 2
+with three pointers
 
 class Solution:
-    def sortColors(self, nums):
-        # write your code here
-        
-        left, right = 0, len(nums) - 1
-        i = 0
-        while i <= right:
-            # lllllleeeeeelge.......gggggggg
-            #       ^     ^        ^
-            #       l     i        r         
-            if nums[i] == 1:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        # 0 0 0 0 1 1 1 2 1 2 2 1 0 2 2 2
+        #         i     j         k
+        i, j, k = 0, 0, len(nums) - 1
+        while j <= k:
+            if nums[j] == 0:
+                self.swap(nums, i, j)
                 i += 1
-            elif nums[i] == 0:
-                self.swap(nums, i, left)
-                left += 1
-                i += 1
-            else:
-                self.swap(nums, i, right)
-                right -= 1
+                j += 1
+            elif nums[j] == 1:
+                j += 1
+            elif nums[j] == 2:
+                self.swap(nums, j, k)
+                k -= 1
                 
     def swap(self, nums, i, j):
-        nums[i], nums[j] = nums[j], nums[i]
-        
+        nums[i], nums[j] = nums[j], nums[i]        
         

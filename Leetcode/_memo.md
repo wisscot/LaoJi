@@ -30,6 +30,8 @@
 
 8. zip() is an iterator, cannot be used twice 
 
+9. two pointer in recursive, i or j start from last left NOT 0
+
 
 ## Naming Convension
 

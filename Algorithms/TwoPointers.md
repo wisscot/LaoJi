@@ -2,52 +2,70 @@
 
 ## Onwards two pointers
 
-On arrays:
 
-master pointer i - for loop
-\
-slave pointer j - while loop
+### Master on right, slave on left (prefer)
 
-Algorithm:
-  1. move j (while we should include element j)
-  2. save result (arr[i:j])
-  3. move i (outer for loop)
+... | 1 2 3 4 1 | 2 3 ... 
+      ^       ^
+      i       j
+    slave   Master
+    |   valid   |  
 
 ```python
 for j in range(n):
-    while i should be included:
+    include [j]
+    while i should be excluded:
+        res = j - i + 1 (shortest)
         i += 1
-    res = j - i
+    res = j - i + 1  (longest)
 ```
 Time O(n)
+
+
+### Master on left, Slave on right (good for shortest)
 
 ... | 1 2 3 | 1 2 3 ... 
       ^       ^
       i       j
+    Master  slave
     | valid |  
 
-On single linked list:\
+
+```python
+for i in range(n):
+    while [j] should be included:
+        include [j]
+        j += 1
+    res = j - i
+```
+Time O(n)
+
+> slave is lazy, so slave on right is good for shorest, slave on left is good for longest 
+
+### On single linked list:
 Find loop / find location with slow/fast pointers
 
 
 __Examples:__
 
 [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
-0304F \
+0304F 0326G\
 
 [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-0213G \
+0213G 0326G\
 
 [159. Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)
-0213G \
+0213G 0326G\
 
 [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
-0213G \
+0213G 0326G\
+
+[Topics: Sort](Sort)
 
 [75. Sort Colors](https://leetcode.com/problems/sort-colors/)
-0304F \
+0304F 0326G\
 [Lint143. Sort Colors II](https://www.lintcode.com/problem/sort-colors-ii/description)
-0304G \
+0304G 0326F\
 challenge - one pass, constant space 
 
 
@@ -64,8 +82,6 @@ Algorithm:
 
 
 __Examples:__
-
-[Topics: Sort](Sort)
 
 [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 0201G 0324F\

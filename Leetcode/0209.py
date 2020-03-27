@@ -10,7 +10,7 @@ Solution 1. Brute force
   
 Solution 2. Two Pointers
   Basic idea: 
-  use i, j as the sum range, if range[i to j] meets the target, then for increasing j', i' must be > i
+  use i, j as the sum range, if range[i to j] meets the target, then for a greater j, i must be greater as well
   so we can use forwards two pointers
   Time O(n)
   i is the master pointer - for loop
@@ -19,7 +19,9 @@ Solution 2. Two Pointers
 
 class Solution:
     def minSubArrayLen(self, s: int, nums: List[int]) -> int:
-        # write your code here
+        ... | 4 2 3 | 4 2 3 ...
+              i       j
+            master  slave   
         
         res = float('inf')
         curr_sum = 0
@@ -35,4 +37,4 @@ class Solution:
             # move i
             curr_sum -= s[i]
         
-        return res if res<float('inf') else -1
+        return res if res<float('inf') else 0

@@ -1,10 +1,14 @@
 # 159. Longest Substring with At Most Two Distinct Characters
 
-Basic idea:
-Two pointers
+Basic idea: Two pointers
+
+Solution 1: master left, slave right
 Be careful with the slave pointer j stop condition
 
+Solution 2: master right, slave left (perfer)
 
+
+# Solution 1
 class Solution:
     def lengthOfLongestSubstringTwoDistinct(self, s: str) -> int:
         res = 0
@@ -33,3 +37,27 @@ class Solution:
         if char in count:
             return len(count) <= k
         return len(count)+1 <= k        
+
+
+# Solution 2
+class Solution:
+    def lengthOfLongestSubstringTwoDistinct(self, s: str) -> int:
+        count = collections.Counter()
+        res = 0
+        
+        # a b c a b c
+        #   i   j
+        # valid: s[i:j+1]
+        
+        i = 0
+        for j in range(len(s)):
+            count[s[j]] += 1
+            while len(count) > 2:
+                count[s[i]] -= 1
+                if count[s[i]] == 0:
+                    count.pop(s[i])
+                i += 1
+            
+            res = max(res, j-i+1)
+            
+        return res
