@@ -34,11 +34,17 @@ UserService -> User Table
 FiendshipService -> Friendship Table
 
 Schema:
+ - Session Table
+    - session_key: string
+    - user_id: fk
+    - expire_at: timestamp
+
  - User Table
     - id: integer
     - username: varchar
     - email: varchar
     - password: varchar (hash, salted)
+    
  - Friendship Table
     - from_user_id: fk
     - to_user_id: fk

@@ -19,7 +19,7 @@ QPS ave. -> 100M * 20 / 86400 = ~20k
 QPS peak -> *5 = ~100k
 most are write op. ->  distributed db / sharding
 
-Storage:
+Space:
 10 message / user / day * 30 B / message -> 300 B / user / day
 300 * 100 MB = 30 GB / day
 

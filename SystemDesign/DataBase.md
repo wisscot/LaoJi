@@ -27,8 +27,6 @@
 ## TTL
   - basically LRU
 
-## How to make it faster
-
 ## Index
   - if no index, have to loop all items to search
   - index can speed up equal query and range query

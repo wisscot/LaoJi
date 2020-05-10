@@ -64,6 +64,7 @@
     - Special Cases
     - Single Point Failure
     - Number of users scaled up
+    - Slow: Database Index / Sharding
     
 
 ## Trade Off
