@@ -1,69 +1,54 @@
 # DataBase
 
-## Type: SQL vs NoSQL
+## Popular DB
+  - MySQL / PostgreSQL -> SQL
+  - Memcached (mem based, key-value -> a big hashtable, no persistance, cache aside)
+  - Redis (mem based, support set / list, can be used as cache/message Queue/Database, has persistance, cache through)
+  - Cassandra, HBase -> Column Family Based, row-key and column-key (column-key for simple range query)
+  - MongoDB, Document based, optimized for write (log)
+  - Rocksdb, key-value hard drive based
+
+## Choose between SQL vs NoSQL
   - most cases, both are ok
-  - If require transaction, then has to be SQL
-  - Performance: NoSQL is better
+  - If require transaction/relationship, then has to be SQL
+  - Performance: NoSQL is better > 1k QPS
   - Sharding: NoSQL is better
+  - NoSQL was design to adress loging problem (lots of log, need write)
+
+## choose based on QPS and read/write
+  - MySQL max ~1k QPS
+  - MongoDB max ~10k QPS
+  - Redis max ~100k - 1M QPS
+
+## PK & FK
+  - primary key: identify the row
+  - foreign key: like reference
+
+## TTL
+  - basically LRU
 
 ## How to make it faster
-  - build index
-    * tree index (b+ tree), support range query
-    * hash index 
+
+## Index
+  - if no index, have to loop all items to search
+  - index can speed up equal query and range query
+  - index implementation
+    - tree index (b+ tree, multiple brach search tree reduce height), support range query
+    - hash index 
+  - index types
+    - composite index (secondary index) -> combine two columes to build index
+    - primary index
+    - condition index
+
+## Sharding:
+  - Vertical Sharding
+  - Horizal Sharding (use Consistent Hashing)
+  - Consistent Hashing (2^64): 1000 virtual nodes per node, find next large hash value -> node to use
+
+## Replica:
+  - SQL (built-in): master - slave model
+  - NoSQL (built-in): Save 3 copies in Consistent Hashing Ring clockwise
 
 
 
-
-## Design User System
-
-### Scenario
-
-sign up, log in, look up, modify  -> most is look up
-^           ^       ^       ^
-write     write     read    write
-
-assume 100M DAU 
-
-sign up, log in, modify : QPS = 100M * 0.1 / 86400 ~100  Peak *3 ~300
-Look up QPS = 100M * 100 / 86400 ~100k  Peak (*3) ~300k
-
-MySQL max ~1k QPS
-MongoDB max ~10k QPS
-Redis max ~100k - 1M QPS
-
-
-### Service
-
-AuthService: for login
-  - keep login:  Session Table with session key / user id / expire at
-
-UserService: for save and look up
-
-FriendshipService: for freind relationship
-  - Friedship type: one- way / two-way
-  - SQL vs NoSQL: 
-    * most cases, both are ok
-    * If require transaction, then has to be SQL
-    * Performance: NoSQL is better
-    * Sharding: NoSQL is better
-  - Sharding:
-    * Vertical Sharding
-    * Horizal Sharding (use Consistent Hashing)
-    * Consistent Hashing (2^64): 1000 virtual nodes per node, find next large hash value -> node to use
-  - Replica:
-    * SQL (built-in): 1 master, 2 slaves
-    * NoSQL (built-in): Save 3 copies in Consistent Hashing Ring clockwise
-
-### Storage
-
-System facing users: Read a lot more than Write
-
-Cache: Key - Value
-    - Memcached (not support persistance)
-    - Redis (support persistance)
-
-Optimize DB query:
-cache.delete(key)  # delete first
-database.set(user) # add to db second
-so that if first step failed, there will be no inconsistance
 
