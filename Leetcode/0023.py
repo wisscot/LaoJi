@@ -98,7 +98,7 @@ class Solution:
         if not lists:
             return None
         
-        hqueue = [(node.val, idx, node) for idx, node in enumerate(lists) if node]
+        hqueue = [(head.val, idx, head) for idx, head in enumerate(lists) if head]
         heapq.heapify(hqueue)  # have to heapify first
         
         dummy = ListNode(0)
