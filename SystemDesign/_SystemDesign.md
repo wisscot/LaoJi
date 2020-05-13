@@ -61,10 +61,10 @@
  - this step is mainly to solver issues 
 
  - Solve potential issues:
-    - Special Cases
     - Single Point Failure
     - Number of users scaled up
     - Slow: Database Index / Sharding
+    - Special Cases
     
 
 ## Trade Off
