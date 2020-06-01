@@ -71,11 +71,9 @@ When Stuck
 * Explain the main logic, skip the helper method
 
 
-## Run a simple test case, like a debugger
+## Run test cases
 
-* list all variables, top down
-
-* run more test cases
+* start from a simple one 
 
 
 ## Optimiztion
