@@ -38,10 +38,15 @@ git fetch origin : localbranch    : delete local branch
 
 
 ## 3. Pull in
-- git fetch -> git merge
+- git fetch, then git merge, or
 - git pull
 
 git fetch : download all new nodes (ALL branches) and update origin/branches pointers \
 git fetch origin \<branch_name> : download new nodes from a branch, point local origin/branch
 
 git diff master origin/master : show difference between master and remote master 
+
+
+## 4. Working locally
+git reset --hard : if changes not committed, reset all modification / removal \
+git clean : if not committed, reset (delete) added files 
