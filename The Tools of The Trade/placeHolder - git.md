@@ -49,4 +49,5 @@ git diff master origin/master : show difference between master and remote master
 
 ## 4. Working locally
 git reset --hard : if changes not committed, reset all modification / removal \
-git clean : if not committed, reset (delete) added files 
+git clean : if not committed, reset (delete) added files \
+  options: -n,  -i,  -f
