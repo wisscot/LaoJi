@@ -15,7 +15,7 @@ git rebase -i \<node_hash> : pop UI to rearrage and pick
 
 git checkout \<branch_name> : checkout \
 git checkout -b \<branch_name> : create and checkout \
-git checkout \<node_hash> / \<branch_name>~2 / HEAD~2 : checkout a specific node
+git checkout \<node_hash> / \<branch_name>\~2 / HEAD\~2 : checkout a specific node
 
 git branch : list branches \ 
 git branch -f \<branch_name> : force branch_name point to HEAD \
