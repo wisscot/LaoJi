@@ -15,9 +15,9 @@ git rebase -i \<node_hash> : pop UI to rearrage and pick
 
 git checkout \<branch_name> : checkout \
 git checkout -b \<branch_name> : create and checkout \
-git checkout \<node_hash> / \<branch_name>~2 / HEAD~2 : checkout a specific node
+git checkout \<node_hash> / \<branch_name>\~2 / HEAD\~2 : checkout a specific node
 
-git branch : list branches \ 
+git branch : list branches \
 git branch -f \<branch_name> : force branch_name point to HEAD \
 git branch -f \<branch_name> \<node_hash> : force branch_name point to a node
 
@@ -48,6 +48,6 @@ git diff master origin/master : show difference between master and remote master
 
 
 ## 4. Working locally
-git reset --hard : if changes not committed, reset all modification / removal \
+git reset --hard : if changes not committed, restore all modifications and all files deleted \
 git clean : if not committed, reset (delete) added files \
   options: -n,  -i,  -f
