@@ -1,7 +1,32 @@
 # SQL
 
+Query
+
 ```sql
 
+--query
+SELECT * FROM xxtable
+
+-- query w/ conditions + sort
+SELECT * FROM xxtable
+WHERE col1 = 'value'
+AND/OR other_conditions
+ORDER BY age DESC/ASC;
+;
+
+-- query + sort on two keys
+ORDER BY age, name;
+
+-- update
+UPDATE xxtable
+SET colume_name = 'sth'
+
+-- delete values
+DELETE FROM xxtable
+```
+
+Create Delete
+```sql
 -- create database
 create database xxxdb;
 
@@ -18,31 +43,5 @@ DROP TABLE xxtable
 INSERT INTO xxtable VALUES (1, "name")
 
 INSERT INTO xxtable (id, name) VALUES (1, "name")
-
---query
-SELECT * FROM xxtable
-
--- query w/ conditions
-SELECT * FROM xxtable
-WHERE name = 'thename'
-AND/OR other_conditions;
-
--- query + sort
-SELECT * FROM xxtable
-WHERE name = 'thename'
-ORDER BY age DESC/ASC;
-
--- query + sort on two keys
-SELECT * FROM xxtable
-WHERE name = 'thename'
-ORDER BY age, name;
-
--- update
-UPDATE xxtable
-SET colume_name = 'sth'
-
--- delete values
-DELETE FROM xxtable
-
 
 ```
