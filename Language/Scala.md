@@ -3,15 +3,26 @@
 ## Resources
 [Python to Scala](https://wrobstory.gitbooks.io/python-to-scala/content/index.html)
 
+## Data Type
+val a = 32654867125132L  (add L to the end of the large integer)
+
+## Common Operations
+item in list/dict  (python)  ->  list/array contains item (scala)
+For number: + - * / % += -= .. (same as python)
+
+
 ## Comprehension
 Note that in many cases, it may be more concise to use map vs a for-comprehension:
 
 ```scala
-scala> for (c <- Array(1, 2, 3)) yield c + 2
-res56: Array[Int] = Array(3, 4, 5)
+for (c <- Array(1, 2, 3)) yield c + 2
+// Array[Int] = Array(3, 4, 5)
 
-scala> Array(1, 2, 3).map(_ + 2)
-res57: Array[Int] = Array(3, 4, 5)
+array.map(_ + 2)
+array.map(func(_))
+
+array.filter(_ > 100)
+array.filterNot(_ > 100)
 ```
 
 Condition:
@@ -46,6 +57,8 @@ ArrayBuffer -> Mutable Array of Varying Length (the go-to mutable sequence)
 enumerate() in python is nums.zipWithIndex in Scala
 nums.zipWithIndex.toMap -> convert to a map, use the last one if duplicat key
 
+parray = array.par -> Convert array to parallel array object for parallel operations
+
 ## Map
 
 val count = Map(1 -> 4, 2 -> 5, 3 -> 6)
@@ -56,6 +69,7 @@ val mut_fruit_count = scala.collection.mutable.Map[String, Int]()
 
 val defaultMap = Map("foo" -> 1, "bar" -> 2).withDefaultValue(3)
 defaultMap("other")
+count.getOrElse("other", 3)
 // return 3, similar to pythono collections.defaultdict
 
 for ((k, v) <- count) ...
@@ -63,6 +77,18 @@ for ((k, v) <- count) ...
 
 Class SortedMap in scala, tree map.  No equivalent in Python. 
 // SortedMap is immutable
+
+count.keys
+count.values
+// get keys and values
+
+count.get(key)   
+count get key
+// both work
+
+map2 = map1 + (key, value)
+map2 = map1 - key
+
 
 ## Tuple
 val foo = (1, 2.3, "hello")
@@ -134,3 +160,14 @@ trait Transmission {
 class Car(...) extends Automobile(...) with Engine with Transmission {
     ...
 }
+
+## Spark RDD:
+val numRange = scala.util.Random.shuffle(1 to 10000)
+val rdd = sc.parallelize(numRange)
+val rdd2 = data.map(_ * 2)
+
+val rdd = sc.textFile("someFiction.txt")
+rdd.take(25).foreach(println)
+//top 25 lines print out
+filtedLines = rdd.filter(line => line.contains("someword"))
+

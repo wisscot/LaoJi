@@ -3,38 +3,36 @@
 Query
 
 ```sql
-
---query
-SELECT * FROM xxtable
-
 -- query w/ conditions + sort
-SELECT * FROM xxtable
+SELECT * 
+FROM table1
 WHERE col1 = 'value'
-AND/OR other_conditions
-ORDER BY age DESC/ASC;
-;
+AND/OR col2 > DATE('2017-01-01')
+ORDER BY col3 DESC/ASC
 
 -- query + sort on two keys
-ORDER BY age, name;
+ORDER BY age, name
 
--- update
-UPDATE xxtable
-SET colume_name = 'sth'
+-- count
+SELECT count(*) AS count
+WHERE ...
 
--- delete values
-DELETE FROM xxtable
+-- count group
+SELECT col1, count(*) AS count
+WHERE ...
+GROUP BY col1
 ```
 
-Create Delete
+CRUD
 ```sql
 -- create database
-create database xxxdb;
+create database xxxdb
 
 -- create table
 CREATE TABLE xxtable (
   id INTEGER,
   name varchar(255)
-);
+)
 
 -- delete table
 DROP TABLE xxtable
@@ -44,4 +42,10 @@ INSERT INTO xxtable VALUES (1, "name")
 
 INSERT INTO xxtable (id, name) VALUES (1, "name")
 
+-- update
+UPDATE xxtable
+SET colume_name = 'sth'
+
+-- delete values
+DELETE FROM xxtable
 ```
