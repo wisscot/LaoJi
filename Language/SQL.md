@@ -46,12 +46,14 @@ CAST(col_int as float)
 -- join
 SELECT table1.col1, table1.col2, table2.col1
 FROM table1
-JOIN table2 ON table1.id=table2.id; -- (nested loop)
+JOIN table2 ON table1.id=table2.id; -- nested loop
 
 -- self join
 SELECT .. 
 FROM thetable AS t1
-JOIN thetable AS t2 ON ... 
+JOIN thetable AS t2 
+ON t1.id = t2.id -- nested loop
+AND t1.id < t2.id -- deduplicate
 ```
 
 Index
