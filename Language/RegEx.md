@@ -34,3 +34,7 @@ $       - End of a String
 (r|s|rs)    - r or s or rs
 
 ()()    - Group 1, 2 -> $1, $2 (Group 0 is the whole regex match)
+
+## Special
+(?i) ...        - case insensitive
+(?i)...(?-i)    - only part case insensitive
