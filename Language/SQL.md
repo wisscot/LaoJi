@@ -75,7 +75,7 @@ CREATE TABLE table1 (
 )
 
 -- delete table
-DROP TABLE xxtable
+DROP TABLE table1
 
 -- insert values
 INSERT INTO table1 VALUES (1, "name")
@@ -84,10 +84,11 @@ INSERT INTO table1 (id, name) VALUES (1, "name")
 
 -- update
 UPDATE table1
-SET col1 = 'sth'
+SET col1 = ... 
+WHERE ...
 
 -- delete values
-DELETE FROM xxtable
+DELETE FROM table1
 
 -- create a view
 CREATE VIEW viewname AS

@@ -1,5 +1,11 @@
 # git
 
+# Git local
+
+
+# Git Remote
+
+
 ## 1. Clone
 - git clone url: clone repo to local
 
@@ -38,14 +44,14 @@ git fetch origin : localbranch    : delete local branch
 
 
 ## 3. Pull in
-- git fetch, then git merge, or
-- git pull
+git pull
 
 git fetch : download all new nodes (ALL branches) and update origin/branches pointers \
 git fetch origin \<branch_name> : download new nodes from a branch, point local origin/branch
 
 git diff master origin/master : show difference between master and remote master 
 
+git merge : merge the fetch
 
 ## 4. Working locally
 git reset --hard : if changes not committed, restore all modifications and all files deleted \
