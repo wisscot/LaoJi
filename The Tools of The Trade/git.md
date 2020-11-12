@@ -1,6 +1,9 @@
 # git
 
-## 0. Local Ops
+## 0. Common commands
+
+git status : check if current is clean
+
 git reset --hard : if changes not committed, undo all changes (including deleted) 
 git clean : if not committed, remove untracked files 
   options: -n,  -i,  -f
@@ -36,8 +39,9 @@ Use Cases:
 - git clone url: clone repo to local
 
 ## 2. Temporarily go to a previous commit and then switch back
-- git log    to see the node hash of interest
+- git log    to see the history and node hash
 - git checkout <node_hash>
+- git checkout <node_hash> or <branch_name>
 
 ## 3. Reset all uncommit change 
 git reset : use locally, move HEAD(cannot be detached) and attached branch pointer to any node
@@ -65,17 +69,14 @@ This is a safe and easy way to rollback to a previous state
 - git revert HEAD HEAD~1 HEAD~2     revert multiple recent commits
 - git revert <node1> <node2> <node3>    better to use this at work
 
+## 7. Push/Fetech local <-> remote branch
+git push origin localbranch:remotebranch    ->  push localbranch to remotebranch 
+git push origin :remotebranch    ->  delete remote branch 
+git fetch origin remotebranch:localbranch    -> fetch remotebranch to localbranch 
+git fetch origin :localbranch    ->  delete local branch 
+
+
 git commit --amend : slight modification, creates parallel node 
-
-git log  :  see what commits have been made 
-
-git status  :  check status 
-
-
-git push origin localbranch : remotebranch    : push localbranch to remotebranch 
-git push origin : remotebranch    : delete remote branch 
-git fetch origin remotebranch : localbranch    : fetch remotebranch to localbranch 
-git fetch origin : localbranch    : delete local branch 
 
 
 ## 3. Pull in
