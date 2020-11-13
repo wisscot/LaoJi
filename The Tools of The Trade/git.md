@@ -75,6 +75,7 @@ git push origin :remotebranch    ->  delete remote branch
 git fetch origin remotebranch:localbranch    -> fetch remotebranch to localbranch 
 git fetch origin :localbranch    ->  delete local branch 
 
+git pull origin remotebranch
 
 git commit --amend : slight modification, creates parallel node 
 
