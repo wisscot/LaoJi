@@ -52,9 +52,9 @@ git reset : use locally, move HEAD(cannot be detached) and attached branch point
   - git reflog              see all the git actions
   - git reset 'HEAD@{1}'     this will undo 'reset HEAD' if it was just ran
 
-## 4. Reset a single file
+## 4. Reset a single file to a version
 - git checkout file_name    to reset it to HEAD
-- git checkout HEAD file_name    same
+- git checkout <node> file_name    reset file to a version
 
 ## 5. Push out
 - git add .
