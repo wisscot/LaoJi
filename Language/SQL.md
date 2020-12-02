@@ -46,7 +46,10 @@ CAST(col_int as float)
 -- join
 SELECT table1.col1, table1.col2, table2.col1
 FROM table1
-JOIN table2 ON table1.id=table2.id; -- nested loop
+INNER JOIN table2 ON table1.id=table2.id; -- nested loop
+
+xxx
+LEFT JOIN xxx 
 
 -- self join
 SELECT .. 
@@ -54,7 +57,15 @@ FROM thetable AS t1
 JOIN thetable AS t2 
 ON t1.id = t2.id -- nested loop
 AND t1.id < t2.id -- deduplicate
+
+-- diff between two table
+SELECT A.*
+FROM A
+    LEFT JOIN B ON (A.col = B.col)
+WHERE B.col IS NULL
+
 ```
+
 
 Index
 ```sql
