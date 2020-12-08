@@ -60,8 +60,14 @@ git reset : use locally, move HEAD(cannot be detached) and attached branch point
  - git checkout -b <local>      to create a new branch
  - git commit      add commit to local branch
  - git pull --rebase     do this on mainline
- - git rebase <mainline>  do this on localbranch, all commit in local branch will be rebased below mainline
+ - git rebase <mainline>  do this on localbranch, all commit in local branch will be rebased after mainline
  - git rebase <local>     do this on mainline to fast-forward
+
+ 5. Pull the latest changes from code base (origin/mainline)
+ Assume we are at local mainline
+ - git commit/stash       commit or stash all changes first to make it clean
+ - git pull --rebase        pull the changes and rebase local changes to go after origin/mainline
+   its possible that the pull has a conflict.  If that happens, use IntelliJ's VCS - continue rebase to merge the conflict interactively. 
 
  5. Push out
 - git add .    or    git clean
