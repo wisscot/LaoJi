@@ -1,5 +1,12 @@
 # Scala 
 
+## Philosophy
+1. Operate with IMMUTABLE value.  Any modification to an object must return ANOTHER object. 
+   - Miracle in multithread and distributed env
+   - helps making sense of the code 
+2. Everything is Object, even the operator 
+
+
 ## Resources
 [Python to Scala](https://wrobstory.gitbooks.io/python-to-scala/content/index.html)
 
@@ -57,7 +64,7 @@ val mut_fruit_count = scala.collection.mutable.Map[String, Int]()
 val defaultMap = Map("foo" -> 1, "bar" -> 2).withDefaultValue(3)
 defaultMap("other")
 count.getOrElse("other", 3)
-// return 3, similar to pythono collections.defaultdict
+// return 3, similar to python collections.defaultdict
 
 for ((k, v) <- count) ...
 // similar to python
@@ -89,99 +96,80 @@ val pairs = Array(1,2,3).zip(Array("four", "five", "six"))
 
 
 ## Exceptions
+
+```scala
 throw new RunTimeException("user define message")
 
-try{..
+try{
+    ...
 } catch {
-  case ex: OneException => print(ex)
+  case e: OneException => print(e)
   case _: OtherException => print("other")
 } finally {
-  print("print this for any catch")
+  println("print this for any catch")
 }
+```
 
+## Object Oriented
 
-## Class
-class Automobile(val a:Int = 1, var b:Int = 2){
+```scala
+
+class A {
     ...
 }
-car = new Automobile(a=3, b=6)
-car.a = 4 // error
-car.b = 4 // ok
+class B(val b:Int) extends A //inheritance
 
-class Automobile(private val a:Int = 4){
+//Abstract Class
+abstract class C(...) {
+    ...  // fields and methods are by default public, can restrict by adding protect or private
+}
+class D(..) extends C {
+    //implementation or override
+}
+
+//"interface"
+//ultimate abstract class, mutiple inheritance, can leave anything unimplemented
+trait H {
     ...
 }
-car.wheels // error
-car.wheels = 5 // error
-
-//Static mehtod in Scala is named "companion objects"
-class Automobile(...){
-    ...
-}
-object Automobile {
-    var wheels = 4
-    var lights = 2
-    def print_uninst_str() = "No 'self' passed to this method, and no instantiation. It's static!"
-}
-Automobile.print_uninst_str()
-
-//Abstract Class -> single inheritance
-abstract class Automobile(val color:String, val make:String) {
-    val door:Int = 6
-    def top_speed():Int
-}
-class Car(color:String, make:String) extends Automobile(color, make) {
-    override val doors = 4 // immutable need override
-    def top_speed() = {...}
-}
-val mycar = new Car(...)
-mycar.top_speed()
-
-//Traits -> preferred over abstract class, mutiple inheritance
-trait Engine {
-    ...
-}
-trait Transmission {
-    ...
-}
-class Car(...) extends Automobile(...) with Engine with Transmission {
+class G(...) extends A with H {
     ...
 }
 
-## Spark RDD:
-val numRange = scala.util.Random.shuffle(1 to 10000)
-val rdd = sc.parallelize(numRange)
-val rdd2 = data.map(_ * 2)
+a.call(b)    equals to    a call b      //this only available for method with one argument
+1 + 2        equals to    1.+(2)        //everything is a object/method
 
-val sample = rdd.takeSample(true, 1000, 123)
-// args: can take second time, how many to take, seed (optional)
+// anonymous class
+val h = new H()
 
-val nums1 = Array.fill(100000)(scala.util.Random.nextDouble)
-val nums2 = Array.fill(100000)(scala.util.Random.nextDouble)
-val rdd = sc.parallelize(nums1)
-val rdd2 = sc.parallelize(nums2)
-val corr = org.apache.spark.mllib.stat.Statistics.corr(rdd, rdd2, "pearson")
-//get correlation between two number datasets
+// object singlton
+object MySingleton{
+    val a = 1
+    def apply(x:Int): Int = x + 1
+}
+MySingleton.apply(2)   equals to    MySingleton(2)
 
-val rdd = sc.textFile("someFiction.txt")
-rdd.take(25).foreach(println)
-//top 25 lines print out
-filtedLines = rdd.filter(line => line.contains("someword"))
+// companion object
+object A {
+    // can access class A's private fields/methods
+    val field: boolean = true
+}
+val v = A.field // "static" field/method
 
-## Spark DataFrame
-import org.apache.spark.sql.SparkSession
-val spark = SparkSession.builder().appName("DFExercise").getOrCreate()
-val df = spark.read.option("header", "true").csv("filename")
+// case class
+// come with companion with apply(), so no need to new
+// sensible equal and hash code
+// serialization
+// pattern matching
+case class Person(...)
+bob = Person(name, age)    equals to    bob = Person.apply(name, age)
 
-df.take(10)
-df.show()
+// generics
+abstract class MyList[T] { // can be any type
+    def head: T
+    def tail: MyList[T]
+}
+val aList = MyList[Int]
+val bList = MyList[String]
 
-df.schema
-df.columns
-
-// To use SQL:
-df.createOrReplaceTempView("viewname")
-val x = spark.sql("""SELECT ...  FROM viewname""")
-
-// Join two df
-val df_joined = df1.join(df2, "col1")
+```
