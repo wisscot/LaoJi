@@ -82,3 +82,10 @@ When Stuck
 
 
 ## Any question
+
+
+## 1m3fdi
+- Did not ask clarification question and did not perform input validation before I gave the hints.
+- The solution contains duplicate code, which can be improved by reusable functions.
+- Not able to reuse the solution to the part 1 when solving the part 2.
+- The data structure of Interval uses List instead of a readable class and causes the solution is hard to read and error prone.
