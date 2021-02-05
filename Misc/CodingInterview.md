@@ -27,27 +27,17 @@ Test Cases:
 
 ## Thinking
 
-* Solution 0: Brute force   \
-  simulate human brain solving
+* Solution 0/1/2: Brute force / ...
 
-* Solutions 1/2/..
-
-* Data Structures needed 
-
-* Layout the outline of the algorithm   \
-  Time complexity, Space complexity
+* Time complexity & Space complexity
 
 When Stuck
-
-* Try if we can guess an answer and verify it -> Binary Search on result
-
-* Try Segment Tree
-
-* Try Sort
-
-* Try convert to Graph
-
-* Try find subproblem -> DP/recursion
+* Try:
+  - if we can guess an answer and verify it -> Binary Search on result
+  - Segment Tree
+  - Sort
+  - convert to Graph
+  - find subproblem -> DP/recursion
 
 
 ## Coding
