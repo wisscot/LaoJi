@@ -44,7 +44,7 @@ for num older and smaller, there's no reason to stay in the deque,
 because it can never be the max,
 so we can use deque to store a descending queue,
 for each incoming num:
-    if incoming num is greater, then pop all smaller out,
+    if incoming num is greater, then pop all smaller out from right,
     while top num in the queue expired, also pop it (popleft)
 
 Time O(n)
