@@ -1,5 +1,9 @@
 # Breath First Search
 
+## Summary
+
+queue 和 visited 是一对好基友，总是同时出现
+
 ## Templates
 
 Template 1: No layer BFS
@@ -11,9 +15,8 @@ while len(queue):
     head = queue.popleft()
     for neighbor in head.neighbors:
         if neighbor not in visited:
-            visited.add(neighbor)
             queue.append(neighbor)
-# Visited and Queue are always togeter
+            visited.add(neighbor)
 ```
 
 Template 2: Layer by layer BFS
@@ -27,8 +30,8 @@ while queue:
         head = queue.popleft()
         for neighbor in head.neighbors:
             if neighbor not in visited:
-                visited.add(neighbor)
                 queue.append(neighbor)
+                visited.add(neighbor)
 ```
 
 ## Applications
@@ -46,7 +49,7 @@ __Examples:__
 BFS or preorder DFS with iterator
 
 [133. Clone Graph](https://leetcode.com/problems/clone-graph/)
-0225F\
+0225F 2021G
 BFS to get all connected nodes
 
 [127. Word Ladder](https://leetcode.com/problems/word-ladder/)

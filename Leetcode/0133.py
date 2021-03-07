@@ -14,8 +14,9 @@ class Node {
 '''
 
 Basic idea:
-Step 1: Clone nodes (BFS)
-Step 2: Clone edges
+Step 1: Get all old nodes (BFS / DFS)
+Step 2: Clone nodes 
+Step 3: Clone edges
 
 class Solution:
     """
