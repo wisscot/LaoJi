@@ -24,7 +24,7 @@ class Codec:
         
         return ','.join(res)
         
-    # with deque
+    # with deque + deque
     def deserialize(self, data):
         if not data:
             return None
@@ -47,7 +47,7 @@ class Codec:
                     queue.append(head.right)
         return root
     
-    # with iterator
+    # with deque + iterator
     def deserialize(self, data):
         if data == '#':
             return None
