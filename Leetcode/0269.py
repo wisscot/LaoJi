@@ -18,8 +18,8 @@ Output: "wertf"
 '''
 
 Basic idea:
-build a graph G = (V, E), where V is the character and E is the directed edge
-Then topo sort
+step 1. build a graph G = (V, E), where V is the character and E is the directed edge
+step 2. topo sort bfs
 
 class Solution:
     def alienOrder(self, words: List[str]) -> str:
