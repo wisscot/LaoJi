@@ -61,7 +61,7 @@ Same functionality as Disjtra's Algorithm \
 Pros: good with / can detect negative cycle
 
 ```python
-# Step 1. assign 0, inf dist to source and other nodes
+# Step 1. assign 0, inf dist to source and other nodes, respectively
 # Step 2. loop |V| - 1 times: for all edges (u,v): update_vertex_dist(v)
 ```
 Time: O(|V|*|E|)
