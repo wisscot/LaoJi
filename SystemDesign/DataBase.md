@@ -12,7 +12,7 @@
   - most cases, both are ok
   - If require transaction/relationship, then has to be SQL
   - Performance: NoSQL is better > 1k QPS
-  - Sharding: NoSQL is better
+  - Sharding/Partition: NoSQL is better
   - NoSQL was design to adress loging problem (lots of log, need write)
 
 ## choose based on QPS and read/write
