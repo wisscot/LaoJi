@@ -26,6 +26,7 @@ count (<=num)    count<=num      count>num        count>num
 so we can use binary search
 
 Time O(nlogn)
+# 2021-03-18 this time complexity is same as sort, we can just sort and then go through to find the duplicate
 
 class Solution:
     """

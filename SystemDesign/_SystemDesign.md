@@ -60,7 +60,7 @@
  - get a working model by following last three steps (Scenario, Services, Storage)
  - this step is mainly to solver issues 
 
- - Solve potential issues:
+ Solve potential issues:
     - Single Point Failure
     - Number of users scaled up
     - Slow: Database Index / Sharding

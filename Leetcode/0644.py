@@ -24,6 +24,9 @@ if exists a subarray [Ai, Ai+1, ..., Aj] that Ai + Ai+1 +... + Aj / (j-i+1) >= T
 that is (Ai - T) + (Ai+1 - T) + ... + (Aj - T) >= 0
 so this becomes a subarray sum problem, which we can use prefix sum to solve
 
+Algorithm: binary search + two pointer
+Time complexity: O(n*log((maxVal-minVal)/1e-5))
+
 
 class Solution:
     """

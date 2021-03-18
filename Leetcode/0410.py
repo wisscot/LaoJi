@@ -11,7 +11,7 @@ If n is the length of array, assume the following constraints are satisfied:
 1 ≤ m ≤ min(50, n)
 '''
 
-Solution 1: Binary Search on result
+Solution 1: Binary Search on result + greedy
 
 Solution 2: DP (slower)
 
