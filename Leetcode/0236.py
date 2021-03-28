@@ -23,11 +23,12 @@ class Solution:
         lca, _ = self.search(root, p, q)
         return lca
     
-    def search(self, root, p, q):
+    def search(self, root, p, q) -> Tuple[TreeNode, int]:
+        # return the lca of p and q, and the count of the p and q in current tree from root
         if root is None:
             return (None, 0)
         
-        cnt = root == p or root == q
+        cnt = int(root == p or root == q)
         leftlca, leftcnt = self.search(root.left, p, q)
         rightlca, rightcnt = self.search(root.right, p, q)
         
@@ -43,7 +44,7 @@ class Solution:
             return (root, currcnt)
 
 
-# Solution 2: dfs get root->target path
+# Solution 2: dfs get root->q and root->q path
 # then compare two path
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':

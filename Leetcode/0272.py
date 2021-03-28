@@ -10,16 +10,14 @@ You may assume k is always valid, that is: k ≤ total nodes.
 You are guaranteed to have only one unique set of k values in the BST that are closest to the target.
 '''
 
-Basic idea:
-Binary Search Tree iterative inorder traversal
+Solution 1: Binary Search Tree iterative inorder traversal
 Step 1. get the stack close node from root to leaf
 Step 2. like two pointers get k close value
         move upperstack upper and lowerstack lower
 Time: O(h + k)
 
-An trivial solution: 
+Solution 2: An trivial O(n) solution: 
 get all numbers inorder, then use binary search and two pointers
-Time: O(n)
 
 # Solution O(h+k)
 class Solution:
