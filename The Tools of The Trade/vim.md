@@ -7,8 +7,7 @@ dd -> delete line \
 u -> undo \
 crtl + r -> redo \
 /word -> search word \
-n -> next \
-shift + n -> previous \
+n/N -> next/previous \
 :%s/word1/word2/g -> find & replace all \
 :%s/word1/word2/gc -> find & replace all, needs confirm \
 h j k l -> move cursor \
