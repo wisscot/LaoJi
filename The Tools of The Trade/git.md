@@ -19,8 +19,9 @@
   
   git merge <branch_name> : merge branch_name into HEAD 
   
-  git checkout <branch_name> or <node_hash> : point HEAD to a node \
-  git checkout -b <branch_name> : create and checkout 
+  ```git switch <branch name>``` : point HEAD to a node \
+  ```git switch -c <branch name>``` : create and checkout 
+  
   
   git branch : list branches \
   git branch -f <branch_name> : force branch_name point to HEAD \
@@ -39,9 +40,8 @@
 - git clone url: clone repo to local
 
  2. Temporarily go to a previous commit and then switch back
-- git log    to see the history and node hash
-- git checkout <node_hash>
-- git checkout <node_hash> or <branch_name>
+- ```git log```    to see the history and node hash
+- ```git switch <node_hash> or <branch_name>```
 
  3. Reset all uncommit change 
   - git reset : use locally, move HEAD(cannot be detached) and attached branch pointer to any node
