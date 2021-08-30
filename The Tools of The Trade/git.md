@@ -27,7 +27,8 @@
   git branch -f <branch_name> : force branch_name point to HEAD \
   git branch -f <branch_name> <node_hash> : force branch_name point to a node
   
-  git cherry_pick <node_hash1> <node_hash2> <node_hash3>  : pick any nodes (changes) from other branch and merge to HEAD
+  ```git cherry_pick <node_hash1> <node_hash2> <node_hash3>```  : pick any nodes (changes) from other branch and merge to HEAD \
+  ```git cherry_pick <hash1>..<hash2>```  : pick a range of nodes, first node not included
   
   git tag versionX : add a tag to HEAD \
   git tag versionX <node_hash> : add a tag to a node \
