@@ -78,9 +78,9 @@
 simply creates a new commit that is the opposite of an existing commit
 The --no-commit flag lets git revert all the commits at once- otherwise you'll be prompted for a message for each commit in the range, littering your history with unnecessary new commits
 This is a safe and easy way to rollback to a previous state
-- git revert HEAD    this will revert what changed in HEAD
-- git revert HEAD HEAD~1 HEAD~2     revert multiple recent commits
-- git revert <node1> <node2> <node3>    better to use this at work
+- ```git revert HEAD```    this will revert what changed in HEAD
+- ```git revert HEAD HEAD~1 HEAD~2```     revert multiple recent commits
+- ```git revert <node1> <node2> <node3>```    better to use this at work
 
  7. Push/Fetech local <-> remote branch
 - git push origin localbranch:remotebranch    ->  push localbranch to remotebranch 
