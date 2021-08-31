@@ -42,7 +42,7 @@
 
 2. Temporarily go to a previous commit and then switch back
   - ```git log```    to see the history and node hash
-  - ```git switch <node_hash> or <branch_name>```
+  - ```git checkout <node_hash> or <branch_name>```
 
 3. Reset all uncommit change 
   - ```git reset``` : use locally, move HEAD(cannot be detached) and attached branch pointer to any node
