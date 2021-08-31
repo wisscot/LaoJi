@@ -38,24 +38,24 @@
 ## Use Cases
 
 1. Clone
-- git clone url: clone repo to local
+- ```git clone url```: clone repo to local
 
  2. Temporarily go to a previous commit and then switch back
 - ```git log```    to see the history and node hash
 - ```git switch <node_hash> or <branch_name>```
 
  3. Reset all uncommit change 
-  - git reset : use locally, move HEAD(cannot be detached) and attached branch pointer to any node
-  - git reset --hard HEAD    this will remove all current local uncommit changes
-  - git reset --hard HEAD~1    this will reset to HEAD~1
+  - ```git reset``` : use locally, move HEAD(cannot be detached) and attached branch pointer to any node
+  - ```git reset --hard HEAD```    this will remove all current local uncommit changes
+  - ```git reset --hard HEAD~1```    this will reset to HEAD~1
   
  4. Undo the reset 
   - git reflog              see all the git actions
   - git reset 'HEAD@{1}'     this will undo 'reset HEAD' if it was just ran
 
  4. Reset a single file to a version
-- git checkout file_name    to reset it to HEAD (disgard changes)
-- git checkout <node> file_name    reset file to a version
+- ```git checkout file_name```    to reset it to HEAD (disgard changes)
+- ```git checkout <node> file_name```    reset file to a version
 
  4. Develop locally on a different branch
  - git checkout -b <local>      to create a new branch
