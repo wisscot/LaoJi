@@ -34,8 +34,6 @@
   git tag versionX <node_hash> : add a tag to a node \
   git describe <node_hash> : show how far from latest tag
   
-  `git rm -r --cached <directory>` remove directory from git tracking, for directory added to .gitignore.  Physical file will not be deleted. 
-  `git rm --cached <file>` remove file from git tracking.
 
 ## Use Cases
 
@@ -83,6 +81,10 @@
  - ```git diff <master> <origin/master>``` : show difference between master and remote master 
  - ```git merge``` : merge the fetch
   
+ 9. Added file/directory to .gitignore but they was tracked by git before
+ - `git rm -r --cached <directory>` remove directory from git tracking, for directory added to .gitignore.  Physical file will not be deleted. 
+ - `git rm --cached <file>` remove file from git tracking.
+
   
 ## Alias
 - g=git
