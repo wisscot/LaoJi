@@ -5,34 +5,34 @@
   ```git status```  check if current is clean
   
   ```git reset --hard``` if changes not committed, undo all changes (including deleted) \
-  git clean : if not committed, remove untracked files 
+  ```git clean``` : if not committed, remove untracked files \
     options: -n,  -i,  -f
   
-  git stash : Stash the changes in a dirty working directory away \
-  git stash list / show / drop / pop / clear
+  ```git stash``` : Stash the changes in a dirty working directory away \
+  ```git stash list / show / drop / pop / clear ```
   
-  git commit: create a new node point HEAD to it 
+  ```git commit```: create a new node point HEAD to it 
   
-  git rebase <branch_name> : rebase current to another branch \
-  git rebase <branch0> <branch1> : rebase branch1 to branch0 \
-  git rebase -i <node_hash> : pop UI to rearrage and pick
+  ```git rebase <branch_name>``` : rebase current to another branch \
+  ```git rebase <branch0> <branch1>``` : rebase branch1 to branch0 \
+  ```git rebase -i <node_hash>``` : pop UI to rearrage and pick
   
-  git merge <branch_name> : merge branch_name into HEAD 
+  ```git merge <branch_name>``` : merge branch_name into HEAD 
   
   ```git switch <branch name>``` : point HEAD to a node \
   ```git switch -c <branch name>``` : create and checkout 
   
   
-  git branch : list branches \
-  git branch -f <branch_name> : force branch_name point to HEAD \
-  git branch -f <branch_name> <node_hash> : force branch_name point to a node
+  ```git branch``` : list branches \
+  ```git branch -f <branch_name>``` : force branch_name point to HEAD \
+  ```git branch -f <branch_name> <node_hash>``` : force branch_name point to a node
   
   ```git cherry_pick <node_hash1> <node_hash2> <node_hash3>```  : pick any nodes (changes) from other branch and merge to HEAD \
   ```git cherry_pick <hash1>..<hash2>```  : pick a range of nodes, first node not included
   
-  git tag versionX : add a tag to HEAD \
-  git tag versionX <node_hash> : add a tag to a node \
-  git describe <node_hash> : show how far from latest tag
+  ```git tag versionX``` : add a tag to HEAD \
+  ```git tag versionX <node_hash>``` : add a tag to a node \
+  ```git describe <node_hash>``` : show how far from latest tag
   
 
 ## Use Cases
