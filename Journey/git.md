@@ -86,7 +86,7 @@
  - `git rm --cached <file>` remove file from git tracking.
 
   
-## Alias
+## Alias from Zsh
 - g=git
 - ga='git add'
 - gaa='git add --all'
