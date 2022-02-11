@@ -3,7 +3,10 @@
 ## Use Cases
 
 ### Create a dummy dataframe for practice 
-```df = pd.DataFrame(data={"col1": [1, 2], "col2": [3, 4]})```
+```
+import pandas as pd
+df = pd.DataFrame(data={"col1": [1, 2], "col2": [3, 4]})
+```
 
 ### Create new column based on other column
 
@@ -18,4 +21,14 @@ def func(number):
 Create multiple clolumns:
 ```df[["new_col1", "new_col2"]] = df.apply(lambda row: [1, 2], result_type='expand', axis=1)```
 
+
+### Sync 
+
+Align df's index to original_df's
+```
+clock = origin_df.timestamp.unique()
+df = df.reindex(clock, method="nearest")
+```
+
+### Interpolation
 
