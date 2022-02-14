@@ -30,5 +30,7 @@ clock = origin_df.timestamp.unique()
 df = df.reindex(clock, method="nearest")
 ```
 
-### Interpolation
-
+### Interpolation on timestamp index
+```
+df.reindex(new_index).interpolate(method="index")
+```
