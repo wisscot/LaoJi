@@ -34,3 +34,11 @@ df = df.reindex(clock, method="nearest")
 ```
 df.reindex(new_index).interpolate(method="index")
 ```
+
+### Join two dataframes
+```
+df_1 = df_1.merge(df_1.reset_index(), how="inner", on="col1")
+```
+```
+df = pd.merge(df_1, df_2, how="inner", left_on=['timestamp','objectName'])
+```
