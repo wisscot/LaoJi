@@ -4,7 +4,7 @@
 
   ```git status```  check if current is clean
   
-  ```git reset --hard``` if changes not committed, undo all changes (including deleted) \
+  ```git reset --hard``` if changes not committed, undo all changes (including deleted), can also be used as move current branch to point to another \
   ```git clean``` : if not committed, remove untracked files \
     options: -n,  -i,  -f
   
