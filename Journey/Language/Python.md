@@ -24,7 +24,7 @@ s = s.replace(char1, char2)
 
 ## int
 3 // 2 -> 1     -3 // 2 -> -2     int(-3/2) -> -1 \
-1 + True -> 2     1 + False -> 0     True * 3 -> 3
+1 + True -> 2     1 + False -> 1     True * 3 -> 3
 pow(x, y, z) -> x**y % z can be used in rolling hash
 
 ## bin
@@ -64,7 +64,7 @@ Find first occurrence: \
 
 arr.count('item')   return how many 'item' elements
 
-max(arr[i:j] or [0])   use or to avoid empty list  
+max(arr[i:j] or [0])   use `or` to avoid empty list  
 
 pos[5:10] = [1,2]   to replace the list subarray   \
 pos[5:5] = [1,2]   to insert to current list  
@@ -75,25 +75,23 @@ Can be read in functions, but not changed.  Unless declare global xxx.
 
 
 ## Sort
-sorted(list, key=lambda item: (item[1], item[0]))   \
-sorted([x for x in dict], key=dict.get)
+sorted(a_list, key=lambda item: (item[1], item[0]))   \
+sorted([x for x in a_dict], key=dict.get)
 
 
 ## zip
-zip(nums, nums[3:])    -> [(num0, num3), (num1, num4), ...]  \
+zip(nums, nums[3:])    -> [(num0, num3), (num1, num4), ..., (num-4, num-1)]  \
      two lists can be with different length
 
 
 ## ~
-| 0  | 1  | 2  | 3  | 4  |
-|----|----|----|----|----|
-| -5 | -4 | -3 | -2 | -1 |
-| ~4 | ~3 | ~2 | ~1 | ~0 |
+| -5 | -4 | -3 | -2 | -1 | 0  | 1  | 2  | 3  | 4  |
+| ~4 | ~3 | ~2 | ~1 | ~0 | ...
 
 
 ## & |
-int & int: binary and operation\
-int | int: binary or operation
+int & int: binary `and` operation\
+int | int: binary `or` operation
 
 set & set: Intersection of two sets\
 set | set: Combination of two sets
