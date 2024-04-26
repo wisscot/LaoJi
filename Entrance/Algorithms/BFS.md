@@ -60,13 +60,13 @@ Medium 2020, 2024
 
 Topo sort
 [269. Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
-2020 
+Premium 2020 
 
 [752. Open the Lock](https://leetcode.com/problems/open-the-lock/)
 Medium 2020 2024
 
 [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
-Hard 2020
+Hard 2020 2024
 BFS or preorder DFS with iterator
 
 TAG

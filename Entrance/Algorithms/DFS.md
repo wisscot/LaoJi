@@ -21,7 +21,7 @@ def search(nums, target, path, res):
 ```
 Time Complexity: O(num of solutions * time to construct a solution)
 
-Think of of DFS as tree:
+Think of DFS as tree:
    * Each node is the search function
    * Search function parameters are the status of the node
    * Each edge represents the num/char (think about Trie)
@@ -42,15 +42,15 @@ Think of of DFS as tree:
 ## Examples
 
 [78. Subsets](https://leetcode.com/problems/subsets/)
-0312G\
+Midium 2020 2024
 typical backtracking
 
 [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
-0321G\
+Medium 2020 2024
 typical backtracking
 
 [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
-0218F 0312G\
+Medium 2020 2024
 typical backtracking
 
 [46. Permutations](https://leetcode.com/problems/permutations/)

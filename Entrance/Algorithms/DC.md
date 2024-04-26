@@ -8,16 +8,16 @@ Recite inorder traverse using stack (push left line into stack)
 __Examples:__
 
 [257. Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)
-0228G Done
+Easy 2020 2024
 
 [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+Medium 2020 2024
 
-TAG
 [222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)
-0217G 
+Easy 2020 2024 
 
 [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
-0217G
+Medium 2020 2024
 
 [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)\
 [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)

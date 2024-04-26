@@ -8,14 +8,14 @@ Note: The solution set must not contain duplicate subsets.
 
 Basic idea: DFS
 
-take it or not take it, e.g.  'abc'
-                                ''
-               take 'a'/                \ not take 'a'     
-                 'a'                    ''
-        take 'b'/   \not take 'b'      /   \
-              'ab'   'a'            ...     ...
-    take 'c'/   \.. ../\..   
-        'abc'   'ab'    
+# take it or not take it, e.g.  'abc'
+#                                 ''
+#                take 'a'/                \ not take 'a'     
+#                  'a'                    ''
+#         take 'b'/   \not take 'b'      /   \
+#               'ab'   'a'            ...     ...
+#     take 'c'/   \.. ../\..   
+#         'abc'   'ab'    
 
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
@@ -28,8 +28,10 @@ class Solution:
             res.append(list(path))
             return
             
+        # not take
         self.search(nums, index+1, path, res)
         
+        # take
         path.append(nums[index])
         self.search(nums, index+1, path, res)
         path.pop()

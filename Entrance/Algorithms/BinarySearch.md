@@ -28,7 +28,7 @@ target = 3
 | [ | 1, | 2, | 3, | 3, | 3, | 4 | ] |
 |---|----|----|----|----|----|---|---|
 |   |    |    | ^  |    |    | ^ |   |
-|   |    |    | l  |    |    | r |   |
+|   |    |    | L  |    |    | R |   |
 
 * bisect_left returns the first accurance (left insert position)
 
@@ -44,15 +44,18 @@ bisect.bisect_left(nums, val+1) - 1
 
 __Examples:__
 
+[704. Binary Search](https://leetcode.com/problems/binary-search/)
+Easy 2024
+
 [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
-0225G \
+Medium 2020 2024
 if not distint number, proved no O(logn) algorithm exists, such as [1,1,1,1,0,1,1,1,1,1,1]
 
 [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-0225G
+Medium 2020 2024
 
 [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
-0228G Done
+Medium 2020 2024
 
 TAG
 [1146. Snapshot Array](https://leetcode.com/problems/snapshot-array/)
@@ -69,15 +72,15 @@ and the result must have a upper bound and lower bound
 __Examples:__
 
 [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)
-0127G \
+Hard 2020 2024
 typical binary search on result
 
 [Lint586. Sqrt(x) II](https://www.lintcode.com/problem/sqrtx-ii/description?_from=ladder&&fromId=106)
-0127F \
+N/A 2020 
 binary search on result on decimal
 
 [Lint183. Wood Cut](https://www.lintcode.com/problem/wood-cut/description?_from=ladder&&fromId=106)
-0128F 
+Hard 2020 2024
 
 [Lint437. Copy Books](https://www.lintcode.com/problem/copy-books/description?_from=ladder&&fromId=106)
 0128F
