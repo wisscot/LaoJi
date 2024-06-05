@@ -36,13 +36,16 @@ Then we can use 1d array to sweep from right to left
 __Examples:__
 
 [64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
+Medium 2019 2024
 
 [91. Decode Ways](https://leetcode.com/problems/decode-ways/)
+Medium 2019 2024
 
 [Lint394. Coins in a Line](https://www.lintcode.com/problem/coins-in-a-line/)
+Medium 2020 2024
 
 [Lint395. Coins in a Line II](https://www.lintcode.com/problem/coins-in-a-line-ii/)
-0218G
+Medium 2020 2024
 
 [Lint396. Coins in a Line III](https://www.lintcode.com/problem/coins-in-a-line-iii/)
 \

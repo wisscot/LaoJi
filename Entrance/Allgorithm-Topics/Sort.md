@@ -35,23 +35,26 @@ class Solution:
     
         if left >= right:
             return 
+        # optional: choose pivot randomly by adding random.choice(range(left, right+1)) and swap it to the right
+        # pivot_index = random.choice(range(left, right + 1))
+        # nums[pivot_index], nums[right] = nums[right], nums[pivot_index]
         pivot = nums[right]
-        # ...ssssssssbbbbbsbssbbbbp...
-        #    ^       ^    ^       ^
-        #    l       j    i       r
-        j = left  # Do NOT assign 0 to j
-        for i in range(left, right): 
-            if nums[i] < pivot:
+        # ...ssssssssgegegesssssggggp...
+        #    ^       ^    ^         ^
+        #    l       i    j         r
+        i = left  # Do NOT assign 0 to i
+        for j in range(left, right): 
+            if nums[j] < pivot:
                 nums[i], nums[j] = nums[j], nums[i]
-                j += 1
-        nums[right], nums[j] = nums[j], nums[right] # not nums[-1]
-        # ...sssssspbbbbbbbbb...
-        #    l     j        r
-        self.quicksort(nums, left, j-1)
-        self.quicksort(nums, j+1, right)
+                i += 1
+        nums[right], nums[i] = nums[i], nums[right] # not nums[-1]
+        # ...sssssspgegegegege...
+        #    l     i         r
+        self.quicksort(nums, left, i-1)
+        self.quicksort(nums, i+1, right)
 ```
 
-Code 3: typical 
+Code 3: typical
 Towards two pointers, using mid as pivot
 Time: O(nlogn) Space:O(1)
 ```python
@@ -66,20 +69,20 @@ class Solution:
             return 
         pivot = random.choice(nums[left:right+1])
         i, j = left, right
-        # ssssssssbsbsbsbbbbbbbb
+        # ssssssssgsgegsgegegegg
         # ^       ^    ^       ^
         # l       i    j       r
         while i <= j:
-            while i<=j and nums[i] < pivot:
+            while nums[i] < pivot:
                 i += 1
-            while i<=j and nums[j] > pivot:
+            while nums[j] > pivot:
                 j -= 1
             if i <= j:
                 nums[i], nums[j] = nums[j], nums[i]
                 i += 1
                 j -= 1
         
-        # ssssssbbbbbbbbbb
+        # sesesegegegegege
         # l    ji        r
         # left side are all <= pivot
         # right side are all >= pivot
@@ -87,26 +90,93 @@ class Solution:
         self.quicksort(nums, i, right)
 ```
 
+Code 4: use three pointers to partition lt, eq, gt
+Time: worse case O(nlogn) Space: O(1)
+```python
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        self.quicksort(nums, 0, len(nums)-1)
+        return nums
+    
+    def quicksort(self, nums, left, right):
+        if left >= right:
+            return 
+        pivot = random.choice(nums[left:right+1])
+        i, j, k = left, left, right
+        while j <= k:
+            if nums[j] < pivot:
+                nums[i], nums[j] = nums[j], nums[i]
+                i += 1
+                j += 1
+            elif nums[j] == pivot:
+                j += 1
+            else:
+                nums[j], nums[k] = nums[k], nums[j]
+                k -= 1
+        # sssssssseeeeeggggg
+        # l       i   k    r
+        self.quicksort(nums, left, i-1)
+        self.quicksort(nums, k+1, right)
+```        
+
+
+
 ## Merge Sort
+```python
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        self.merge_sort(nums)
+        return nums
+    
+    def merge_sort(self, nums):
+        mid = len(nums) // 2
+        left_half = nums[:mid]
+        right_half = nums[mid:]
 
-...
+        # Recursively sort both halves
+        merge_sort(left_half)
+        merge_sort(right_half)
 
-## Counting Sort
+        i = j = k = 0
+
+        # Merge the sorted halves
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] < right_half[j]:
+                nums[k] = left_half[i]
+                i += 1
+            else:
+                nums[k] = right_half[j]
+                j += 1
+            k += 1
+
+        # Check if any element was left
+        while i < len(left_half):
+            nums[k] = left_half[i]
+            i += 1
+            k += 1
+
+        while j < len(right_half):
+            nums[k] = right_half[j]
+            j += 1
+            k += 1
+
+
+## Counting Sort (For integers only)
 
 if the value of all numbers are between 0 and b\
 we can count the numbers in O(n) and then fill into res\
 Time: O(n+b)
 
-## Radix Sort 
 
-Sort integers only
+## Radix Sort  (For integers only)
 
 ```python
 # pseudo code
-for i = 1 to d
+for i = 1 to d  # assume largest number has d digits
     use a stable sort to sort array A on digit i 
-    # counting sort is an option
+    # counting sort is an option with time O((n+10)*d)
 ```
+Time: O(n*d)
 
 ```python
 # Radix Sort with base 10
@@ -154,7 +224,7 @@ Bucket sort assumes that the input is drawn from a uniform distribution and has 
 Comparison Sort: QuickSort, MergeSort and HeapSort
 
 ## Stability
-> A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input array to be sorted.
+**A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input array to be sorted.**
 
 Stable: Insertion Sort, Merge Sort, Bubble Sort
 

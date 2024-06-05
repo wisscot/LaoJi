@@ -10,6 +10,8 @@ Basic idea:
 Partition into three parts: 0, 1, 2
 with three pointers
 
+# assume to the left of i are 0, to the left of j are only 0 or 1, to the right of j are 2
+
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
         """

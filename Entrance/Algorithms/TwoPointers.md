@@ -49,24 +49,26 @@ Find loop / find location with slow/fast pointers
 __Examples:__
 
 [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
-0304F 0326G\
+Medium 2020 2024
 
 [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-0213G 0326G\
+Medium 2020 2024
 
 [159. Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)
-0213G 0326G\
+Locked
 
 [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
-0213G 0326G\
+Hard 2020 2024
 
-[Topics: Sort](Sort)
+[Topics: Sort](../Allgorithm-Topics/Sort.md)
 
 [75. Sort Colors](https://leetcode.com/problems/sort-colors/)
-0304F 0326G\
-[Lint143. Sort Colors II](https://www.lintcode.com/problem/sort-colors-ii/description)
-0304G 0326F\
+Medium 2020 2024
 challenge - one pass, constant space 
+
+[Lint143. Sort Colors II](https://www.lintcode.com/problem/sort-colors-ii/description)
+0304G 0326F
+Quicksort variation 
 
 
 ## Towards two pointers

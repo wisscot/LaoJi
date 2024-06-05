@@ -10,7 +10,7 @@ Time O(n)    Space O(k)
 Solution 2: Quick Sort idea (preferred)
 Time O(nlogk)    Space O(1)
 
-Solution 2+: Quick Sort idea, three parts each time
+Solution 2+: Quick Sort idea, three parts each time (use [75. Sort Colors])
 Time O(nlogk)    Space O(1)
 
 # Solution 2
@@ -22,7 +22,6 @@ class Solution:
     """
     def sortColors2(self, colors, k):
         # write your code here
-        
         self.sort(colors, 1, k, 0, len(colors)-1)
         
     def sort(self, colors, lower, upper, left, right):
@@ -32,17 +31,16 @@ class Solution:
         
         mid = (lower+upper)//2
         # ....ssssssgggggsgs....gsgss...
-        #     l     j    i          r
-        j = left  # ! made mistake mutiple times to assign j=0 !
-        for i in range(left, right):
-            if colors[i] <= mid:
+        #     l     i    j          r
+        i = left  # ! made mistake mutiple times to assign j=0 !
+        for j in range(left, right+1):
+            if colors[j] <= mid:
                 colors[i], colors[j] = colors[j], colors[i]
-                j += 1
-        # ....ssssssggggggggggggggggg
-        #     l     j               r
-        self.sort(colors, left, j, lower, mid)
-        self.sort(colors, j, right, mid+1, upper)
-        
+                i += 1
+        # ....seseseggggggggggggggggg
+        #     l     i               r
+        self.sort(colors, lower, mid, left, i-1)
+        self.sort(colors, mid+1, upper, i, right)
         
         
         

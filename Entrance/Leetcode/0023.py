@@ -11,7 +11,7 @@ Solution 1: Use merge two sorted lists which takes O(n)
 merge every two for each layer
 Time O(nlogk)
 
-Solution 1+: Use merge two sorted lists which takes O(n)
+Solution 1+: 
 Divide and Conquer (top down)
 Time O(nlogk)
 
