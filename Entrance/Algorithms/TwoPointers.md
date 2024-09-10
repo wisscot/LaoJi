@@ -67,7 +67,7 @@ Medium 2020 2024
 challenge - one pass, constant space 
 
 [Lint143. Sort Colors II](https://www.lintcode.com/problem/sort-colors-ii/description)
-0304G 0326F
+Medium 2020 2024
 Quicksort variation 
 
 
