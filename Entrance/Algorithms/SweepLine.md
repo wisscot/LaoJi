@@ -25,21 +25,21 @@ __Examples:__
 Medium 2020 2024
 typical line sweep 
 
-[218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
-Hard 2020 
-line sweep with hashheap (needs removal) or without
+[253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+Locked
+same idea, max of number of planes in the sky
 
 [Lint821. Time Intersection](https://www.lintcode.com/problem/time-intersection/)
 Locked
 similar idea to plane in the sky problem, just count how many planes in the sky 0/1 -> 2 or 2 -> 0/1 \
 
-[253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
-Locked
-same idea, max of number of planes in the sky
-
 [1326. Minimum Number of Taps to Open to Water a Garden](https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/)
 Hard 2020 
 simplify it
+
+[218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+Hard 2020 
+line sweep with hashheap (needs removal) or without
 
 
 

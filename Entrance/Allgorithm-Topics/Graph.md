@@ -9,7 +9,6 @@ __Exapmle:__
 
 TAG
 [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)
-\
 Dijkstra's Algorithm
 
 ## BFS

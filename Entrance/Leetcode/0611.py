@@ -20,7 +20,7 @@ in sorted array
 1, 2, 3, 4, 5, 6, 7, 8, ...
 ^                    ^
 i                    j
-if sum [i], [j] > target, then all num between i to j + j are > target
+if sum [i], [j] > target, then all num between i to j + [j]  > target
 so res += j - i
 midset: keep an eye on j
 
