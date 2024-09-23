@@ -54,7 +54,7 @@ Medium 2020 2024
 typical backtracking
 
 [46. Permutations](https://leetcode.com/problems/permutations/)
-0312G\
+Medium 2020 2024
 typical backtracking
 
 [47. Permutations II](https://leetcode.com/problems/permutations-ii/)

@@ -7,9 +7,9 @@ __Exapmle:__
 
 [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)
 
-TAG
 [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)
 Dijkstra's Algorithm
+Medium 2020 
 
 ## BFS
 
@@ -23,7 +23,7 @@ Time: O(|E|)
 
 Positive weighted edge
 
-Get distances from one vertex to all other vertices
+Get min distances from one vertex to all other vertices
 
 If there is a negative cycle, Dijkstra algo will go into inf loop
 
@@ -37,13 +37,13 @@ def dijkstra(self, graph, source):
     
     hqueue = [(0, source)] # init priority queue [(dist, node), ...]
     
-    node_dist = {} # save finalized (minimum dist) nodes here
+    min_dist = {} # save finalized (minimum dist) nodes here
     
     while hqueue:
         # node can be added to hqueue mutiple times
         # need to process after pop 
         d, node = heapq.heappop(hqueue)
-        if node in node_dist: 
+        if node in min_dist: 
             continue
         node_dist[node] = d
 

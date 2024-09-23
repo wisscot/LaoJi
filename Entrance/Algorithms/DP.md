@@ -48,18 +48,14 @@ Medium 2020 2024
 Medium 2020 2024
 
 [Lint396. Coins in a Line III](https://www.lintcode.com/problem/coins-in-a-line-iii/)
-\
-Interval
+Locked 2020
 
-[312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)
-\
-think from last step
+[198. House Robber](https://leetcode.com/problems/house-robber/)
+Medium 2020 2024
 
 [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 0213F 0218G \
 use min max as states
-
-[198. House Robber](https://leetcode.com/problems/house-robber/)
 
 [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 \
@@ -108,3 +104,7 @@ TAG
 [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 0218G \
 two solutions, this is the basic for Russian Doll Envelopes
+
+[312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)
+Hard 2020 
+think from last step

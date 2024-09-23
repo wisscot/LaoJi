@@ -19,18 +19,21 @@ Easy 2020 2024
 [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
 Medium 2020 2024
 
-[230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)\
+[230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+Medium 2020 2024
+
 [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+Medium 2020 2024
 
 [270. Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)
-0217G
+Locked 2020
 
 [272. Closest Binary Search Tree Value II](https://leetcode.com/problems/closest-binary-search-tree-value-ii/)
+Locked 2020
 difficult but worth do it again
 
-TAG
 [889. Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)
-0217G
+Medium 2020 2024
 
 TAG
 [951. Flip Equivalent Binary Trees](https://leetcode.com/problems/flip-equivalent-binary-trees/)

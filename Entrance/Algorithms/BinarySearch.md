@@ -45,7 +45,7 @@ bisect.bisect_left(nums, val+1) - 1
 __Examples:__
 
 [704. Binary Search](https://leetcode.com/problems/binary-search/)
-Easy 2024
+Easy 2024*2
 
 [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 Medium 2020 2024
@@ -75,36 +75,32 @@ __Examples:__
 Hard 2020 2024
 typical binary search on result
 
-[Lint586. Sqrt(x) II](https://www.lintcode.com/problem/sqrtx-ii/description?_from=ladder&&fromId=106)
-N/A 2020 
-binary search on result on decimal
-
 [Lint183. Wood Cut](https://www.lintcode.com/problem/wood-cut/description?_from=ladder&&fromId=106)
 Hard 2020 2024
 
 [Lint437. Copy Books](https://www.lintcode.com/problem/copy-books/description?_from=ladder&&fromId=106)
-0128F
+Medium 2020 2024
 
 [Lint438. Copy Books II](https://www.lintcode.com/problem/copy-books-ii/?_from=ladder&&fromId=106)
-0128G \
+Locked 2020
 Similar to Copy Books
 
 [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
-0128G \
+Midium 2020 2024
 Two solutions
 
 [644. Maximum Average Subarray II](https://leetcode.com/problems/maximum-average-subarray-ii/)
 0128F again\
 Typical Binary search on result
 
-TAG
 [410. Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
 
-TAG
 [1011. Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
 0207G, Done
 
-TAG
 [1231. Divide Chocolate](https://leetcode.com/problems/divide-chocolate/)
-\
 Similar to 410, Binary Search or DP
+
+[Lint586. Sqrt(x) II](https://www.lintcode.com/problem/sqrtx-ii/description?_from=ladder&&fromId=106)
+Locked 2020 
+binary search on result on decimal
